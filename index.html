@@ -83,11 +83,15 @@ button{font:inherit;color:inherit}
 .lbl-say{font-size:12px;padding:5px 10px;max-width:220px;white-space:normal;text-align:left;opacity:.96}
 .lbl-bubble{pointer-events:none;padding:6px 11px;border-radius:14px 14px 14px 4px;background:var(--card);color:var(--ink);font-size:13px;font-weight:700;box-shadow:var(--shadow)}
 .lbl-wish{pointer-events:none;padding:3px 9px;border-radius:999px;background:var(--lantern);color:var(--on-accent);font-size:11.5px;font-weight:700}
+.lbl-wish.pulse{animation:wishPulse 1.3s ease-out}
+@keyframes wishPulse{0%{box-shadow:0 0 0 0 rgba(255,210,122,.9)}35%{box-shadow:0 0 0 10px rgba(255,210,122,.35);filter:brightness(1.25)}100%{box-shadow:0 0 0 18px rgba(255,210,122,0)}}
+@media (prefers-reduced-motion: reduce){.lbl-wish.pulse{animation:none}}
 .sign{display:block;min-width:132px;background:var(--sign-bg);color:var(--sign-ink);border-radius:6px;box-shadow:0 6px 18px rgba(30,30,40,.22);overflow:hidden;text-align:center;font-family:var(--f-body)}
 .sign-main{padding:7px 14px 5px;display:flex;flex-direction:column;align-items:center;line-height:1}
 .sign-main b{font-family:"Noto Sans TC",var(--f-body);font-size:26px;font-weight:900;letter-spacing:.08em}
 .sign-main span{font-family:"Barlow Condensed",var(--f-body);font-weight:700;font-size:14px;letter-spacing:.04em;margin-top:3px}
 .sign-band{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--sign-band);color:var(--sign-band-ink);font-size:11px;font-weight:700;padding:4px 8px}
+#labels.compact .lbl .sign-band{display:none}
 .sign-band em{font-style:normal;font-family:var(--f-mono);font-size:10.5px;opacity:.9}
 .sign.minor{min-width:98px}
 .sign.minor .sign-main b{font-size:19px}
@@ -282,7 +286,7 @@ button{font:inherit;color:inherit}
 .gs-stamp svg{width:78px;height:78px;flex:none}
 .gs-stamp p{font-size:13.5px}
 .optlabel{font-size:12.5px;font-weight:700;color:var(--muted);margin-bottom:-6px}
-.lc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.lc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
 .lc{border:2px solid var(--line);background:var(--paper);border-radius:12px;padding:7px 4px;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;font-size:11.5px;font-weight:700;text-align:center}
 .lc i{width:20px;height:24px;clip-path:polygon(12% 0,88% 0,100% 100%,0 100%);border-radius:2px}
 .lc small{font-size:10.5px;font-weight:500;color:var(--muted);line-height:1.3}
@@ -561,7 +565,7 @@ body.racing .zone-banner,body.racing .invite{display:none!important}
 .wl-form input{width:100%;box-sizing:border-box;font:inherit;font-size:16px;font-weight:700;padding:11px 54px 11px 13px;border-radius:12px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink)}
 .wl-form input:focus{border-color:var(--lantern);outline:none}
 .wl-count{position:absolute;right:11px;top:50%;transform:translateY(-50%);font-family:var(--f-mono);font-size:11px;color:var(--muted)}
-.wl-sws{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
+.wl-sws{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
 .wl-sw{border:2px solid var(--line);background:var(--paper);border-radius:11px;padding:5px 3px;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;font-size:11px;font-weight:700;line-height:1.25;text-align:center;min-width:0}
 .wl-sw i{width:16px;height:19px;clip-path:polygon(0 0,100% 0,80% 100%,20% 100%)}
 .wl-sw small{font-size:10px;font-weight:500;color:var(--muted);overflow-wrap:anywhere}
@@ -814,6 +818,8 @@ d('kh_run','奔跑','run','走る','달리기');
 d('kh_act','查看／遊戲','view / play','見る／遊ぶ','보기/게임');
 d('k_drag','拖曳','Drag','ドラッグ','드래그');
 d('kh_names','店名','Names','名前','이름');
+d('kh_baa','咩一聲','Baa','メェ','메에');
+d('tip_baa','點一下小羊（或按 B），牠會咩給你聽','Tap your sheep (or press B) to hear it baa','小羊をタップ（または B キー）するとメェと鳴くよ','양을 탭하거나 B 키를 누르면 "메에" 하고 울어요');
 d('kh_drag','轉視角','rotate','視点を回す','시점 회전');
 d('k_wheel','滾輪','Wheel','ホイール','휠');
 d('kh_wheel','縮放','zoom','ズーム','확대·축소');
@@ -886,7 +892,7 @@ d('baa2','咩咩！','Baa baa!','メェメェ！','메에에!');
 d('baa3','咩～～～','Baaaa~','メェ〜〜〜','메~~~');
 d('dog_woof','汪！','Woof!','ワン！','멍!');
 d('stamps_title','平溪線集章卡','Pingxi Line stamp card','平渓線スタンプカード','핑시선 스탬프 카드');
-d('stamps_all','四枚紀念章都蓋齊了！十分上空為你升起了八色天燈。','All four stamps collected! Lanterns in all eight colors rose over Shifen for you.','4つのスタンプがそろいました！十分の空に8色の天灯が上がりました。','기념 스탬프 4개를 모두 모았어요! 스펀 하늘에 8색 천등이 올랐어요.');
+d('stamps_all','四枚紀念章都蓋齊了！十分上空為你升起了九色天燈。','All four stamps collected! Lanterns in all nine colors rose over Shifen for you.','4つのスタンプがそろいました！十分の空に9色の天灯が上がりました。','기념 스탬프 4개를 모두 모았어요! 스펀 하늘에 9색 천등이 올랐어요.');
 d('stamps_progress','每站玩一個小遊戲，過關就能蓋章。目前蓋了 {n} 枚，還差 {m} 枚。','Clear one mini game per stop to earn its stamp. {n} collected, {m} to go.','各駅のミニゲームをクリアするとスタンプがもらえます。現在 {n} 個、あと {m} 個。','역마다 미니게임을 클리어하면 스탬프를 받아요. 지금 {n}개, 남은 건 {m}개예요.');
 d('best','最佳 {v}','Best {v}','ベスト {v}','최고 {v}');
 d('threshold','過關門檻 {v}','Clear at {v}','クリア条件 {v}','클리어 기준 {v}');
@@ -914,7 +920,7 @@ d('time_toast_day','白天：十分瀑布前有機會看到彩虹','Day: look fo
 d('time_toast_dusk','黃昏：老街的燈籠亮起來了','Dusk: the old-street lanterns are lit','夕方：老街の提灯がともりました','해 질 녘: 옛거리 등불이 켜졌어요');
 d('time_toast_night','夜晚：天燈會發光，望古的螢火蟲也出來了','Night: lanterns glow and fireflies come out at Wanggu','夜：天灯が光り、望古にはホタルが現れます','밤: 천등이 빛나고 왕구에 반딧불이가 나타나요');
 d('dahua_toast','大華站不在這次的四個主題站內，往西搭到十分就能開始玩','Dahua isn’t one of the four featured stops. Ride west to Shifen to start.','大華駅は今回の4駅には含まれません。西の十分から始めましょう。','다화역은 이번 4개 테마 역이 아니에요. 서쪽 스펀에서 시작해 보세요.');
-d('celebrate','四枚紀念章集滿了！十分上空升起八色天燈','All four stamps! Eight-color lanterns are rising over Shifen','4つのスタンプ達成！十分の空に8色の天灯','스탬프 4개 완성! 스펀 하늘에 8색 천등이 떠올라요');
+d('celebrate','四枚紀念章集滿了！十分上空升起九色天燈','All four stamps! Nine-color lanterns are rising over Shifen','4つのスタンプ達成！十分の空に9色の天灯','스탬프 4개 완성! 스펀 하늘에 9색 천등이 떠올라요');
 d('load_1','正在依經緯度鋪設山谷…','Laying out the valley by latitude and longitude…','緯度経度に沿って谷をつくっています…','위도와 경도에 맞춰 계곡을 만드는 중…');
 d('load_2','正在塑造基隆河谷的山稜…','Shaping the ridges of the Keelung River valley…','基隆河の谷の稜線をつくっています…','지룽강 계곡의 능선을 다듬는 중…');
 d('load_3','正在引入基隆河與十分瀑布…','Bringing in the Keelung River and Shifen Waterfall…','基隆河と十分瀑布を流しています…','지룽강과 스펀 폭포를 흐르게 하는 중…');
@@ -1257,19 +1263,19 @@ const stname=id=>{if(id==='end')return zname('end');const n=zname(id);return LAN
 const ZI={
  shifen:{
   en:{tagline:'Old street where lanterns rise from the tracks',intro:'The busiest stop on the Pingxi Line. The track runs right down the middle of the old street, lined with lantern shops and snack stalls. When a train comes, everyone steps back to the shopfronts; once it passes, they return to the tracks to write wishes and release lanterns.',
-   features:['An old street where trains pass right by the shop doors','Release lanterns on the tracks; each of eight colors stands for a wish','A riverside walk leads to Shifen Waterfall'],
+   features:['An old street where trains pass right by the shop doors','Release lanterns on the tracks; each of nine colors stands for a wish','A riverside walk leads to Shifen Waterfall'],
    sights:['Shifen Old Street · Track-side lanterns','Shifen Waterfall','Yanjingdong (Eyeglass) Waterfall','Jing’an Suspension Bridge','New Pingxi Coal Mine Museum','Shifen Visitor Center · Shifen Square (festival venue)','Siguangtan Suspension Bridge','Guanpu Suspension Bridge'],
    shops:['Shifen Liu-ge Grilled Chicken Wing Rice Rolls','Lou-zai-cuo Café & B&B','Old street lantern painting shops','Shifen Happiness Peanut Roll Ice Cream'],
    reasons:['Write a wish and watch your lantern float over the valley','See the water curtain and rainbows of “Taiwan’s Niagara”','Stand by the track as a train rolls into the old street'],
    game:{name:'Sky Lantern Lift',desc:'Pick a lantern, write a wish, dodge wires and branches, and fly it as high as you can.'}},
   ja:{tagline:'線路から天灯が舞い上がる老街',intro:'平渓線でいちばんにぎやかな駅。老街の真ん中を線路が通り、両側には天灯の店や屋台が並びます。列車が来るとみんな店先へよけ、通り過ぎるとまた線路に戻って願いごとを書き、天灯を飛ばします。',
-   features:['店先を列車が通り抜ける鉄道老街','線路の上で天灯を上げる。8色それぞれに願いの意味','基隆河沿いを歩けば十分瀑布へ'],
+   features:['店先を列車が通り抜ける鉄道老街','線路の上で天灯を上げる。9色それぞれに願いの意味','基隆河沿いを歩けば十分瀑布へ'],
    sights:['十分老街・線路の天灯','十分瀑布','眼鏡洞瀑布','静安吊橋','新平渓炭鉱博物園区','十分遊客センター・十分広場（天灯祭会場）','四広潭吊橋','観瀑吊橋'],
    shops:['十分溜哥 焼き手羽先ごはん','楼仔厝カフェ＆民宿','老街の天灯絵付け店','十分幸福 ピーナッツロールアイス'],
    reasons:['願いを書いた天灯が谷の空へ上がるのを見届ける','「台湾のナイアガラ」の水のカーテンと虹','老街に入ってくる列車を線路脇から眺める'],
    game:{name:'天灯フライト',desc:'天灯を選んで願いを書き、電線や枝をよけながらできるだけ高く飛ばそう。'}},
   ko:{tagline:'철길 위에서 천등이 떠오르는 옛거리',intro:'핑시선에서 가장 붐비는 역이에요. 옛거리 한가운데로 철길이 지나가고 양옆에 천등 가게와 먹거리 노점이 늘어서 있어요. 기차가 오면 모두 가게 앞으로 비켜 섰다가, 기차가 지나가면 다시 철길로 나와 소원을 쓰고 천등을 날려요.',
-   features:['가게 문 앞으로 기차가 지나가는 철길 옛거리','철길 위에서 날리는 천등, 8가지 색마다 다른 소원','지룽강을 따라 걸으면 스펀 폭포'],
+   features:['가게 문 앞으로 기차가 지나가는 철길 옛거리','철길 위에서 날리는 천등, 9가지 색마다 다른 소원','지룽강을 따라 걸으면 스펀 폭포'],
    sights:['스펀 옛거리 · 철길 천등','스펀 폭포','옌징둥(안경 동굴) 폭포','징안 현수교','신핑시 탄광 박물관','스펀 관광안내센터 · 스펀광장 (축제 행사장)','쓰광탄 현수교','관푸 현수교'],
    shops:['스펀 류거 닭날개 볶음밥','러우자이춰 카페 & 민박','옛거리 천등 그림 가게','스펀 행복 땅콩 아이스크림 롤'],
    reasons:['소원을 적은 천등이 계곡 위로 오르는 모습 보기','“대만의 나이아가라” 물 커튼과 무지개','옛거리로 들어오는 기차를 철길 옆에서 보기'],
@@ -1506,7 +1512,10 @@ const LANTERN_COLORS=[
   {c:'#6FAEDD',n:{zh:'藍',en:'Blue',ja:'青',ko:'파랑'},m:{zh:'工作順利',en:'Work goes well',ja:'仕事が順調',ko:'일이 술술'}},
   {c:'#9E7BCB',n:{zh:'紫',en:'Purple',ja:'紫',ko:'보라'},m:{zh:'學業進步',en:'Study success',ja:'学業向上',ko:'학업 향상'}},
   {c:'#EE9DB5',n:{zh:'粉',en:'Pink',ja:'ピンク',ko:'분홍'},m:{zh:'幸福快樂',en:'Happiness',ja:'幸せ',ko:'행복'}},
-  {c:'#F3EFE4',n:{zh:'白',en:'White',ja:'白',ko:'하양'},m:{zh:'前途光明',en:'Bright future',ja:'明るい未来',ko:'밝은 앞날'}}];
+  {c:'#F3EFE4',n:{zh:'白',en:'White',ja:'白',ko:'하양'},m:{zh:'前途光明',en:'Bright future',ja:'明るい未来',ko:'밝은 앞날'}},
+  {c:'#E0558E',n:{zh:'桃紅',en:'Rose',ja:'桃色',ko:'진분홍'},m:{zh:'人緣桃花',en:'Friends & romance',ja:'人気・良縁',ko:'인연·인기'}}];
+// picker order: the new rose sits next to pink (indices stay put, so saved wishes and other players' lanterns keep their colors)
+const LANTERN_ORDER=[0,1,2,3,4,5,6,8,7];
 const WISHES={zh:['平安順利','考試順利','發大財','找到真愛','工作順利','身體健康','闔家平安','旅途愉快'],
   en:['Peace','Pass exams','Get rich','True love','Work goes well','Good health','Family peace','Happy travels'],
   ja:['平安無事','合格祈願','金運上昇','良縁成就','仕事順調','無病息災','家内安全','楽しい旅'],
@@ -1602,7 +1611,7 @@ const ZONES={
   shifen:{id:'shifen',name:'十分',en:'Shifen',lat:25.040972,lon:121.775056,km:'6.4',west:'wanggu',east:'dahua',townR:15,ink:'#C8402E',
     tagline:'天燈從鐵軌上升起的老街',
     intro:'平溪線上最熱鬧的一站。鐵軌從老街正中央穿過，兩旁就是天燈店和小吃。火車經過時大家退到店門口，火車一走，又回到鐵軌上寫心願、放天燈。',
-    features:['火車從店家門口開過的鐵道老街','在鐵軌上放天燈，八種顏色各代表一種心願','沿著基隆河散步就能走到十分瀑布'],
+    features:['火車從店家門口開過的鐵道老街','在鐵軌上放天燈，九種顏色各代表一種心願','沿著基隆河散步就能走到十分瀑布'],
     sights:['十分老街・鐵道天燈','十分瀑布','眼鏡洞瀑布','靜安吊橋','新平溪煤礦博物園區','十分遊客中心・十分廣場（天燈節會場）','四廣潭吊橋','觀瀑吊橋'],
     shops:['十分溜哥燒烤雞翅包飯','樓仔厝咖啡民宿','老街天燈彩繪店','十分幸福花生捲冰淇淋'],
     reasons:['親手寫下心願，看天燈飛上山谷','看「台灣尼加拉瀑布」的水簾和彩虹','站在鐵軌旁看火車開進老街'],
@@ -2305,7 +2314,10 @@ const WALLS=['#F3EADB','#EBDFCB','#F5F1E7','#DCE4D5','#E8D8C5','#DADFE4','#F1E2C
 const ROOFS=['#B9654A','#8F9BA4','#6E7980','#A65A40','#C49A72','#7F8B7A'];
 const AWN=['#D4552F','#2F5F86','#E3B04B','#5E8B5A','#C8402E','#8E6BB5'];
 const SIGNC=['#C8402E','#F1C641','#FFFDF6','#2F5F86','#5E8B5A','#D4552F'];
-const LANTERN_GEO=(()=>{const g=new THREE.CylinderGeometry(.36,.25,.66,4,1);g.rotateY(Math.PI/4);return g;})();
+const LANTERN_GEO=(()=>{const g=new THREE.CylinderGeometry(.36,.25,.66,4,3);g.rotateY(Math.PI/4);
+  // the paper puffs out a little between the top and the bamboo ring at the bottom
+  const p=g.attributes.position;for(let i=0;i<p.count;i++){const y=p.getY(i);if(Math.abs(y)<.32){const k=1+.075*Math.sin(Math.PI*(y+.33)/.66);p.setX(i,p.getX(i)*k);p.setZ(i,p.getZ(i)*k);}}
+  g.computeVertexNormals();return g;})();
 function house(o={}){
   const g=new THREE.Group();
   const w=o.w??R(1.9,2.6),d=o.d??R(1.7,2.2),fl=o.floors??(rnd()<.5?2:1),fh=1.05,H=fl*fh+.15;
@@ -2753,8 +2765,16 @@ function buildStations(){
     let obj;
     if(cfg.build==='shifen'){obj=house({w:3.6,d:2,floors:1,wall:'#F4F2EC',roof:'#7C8994',roofH:.7});bx(obj.g,3.62,.16,2.02,'#2F5F86',0,1.05,0);}
     else if(cfg.build==='pingxi'){obj=house({w:2.8,d:1.8,floors:1,wall:'#F1E6CF',roof:'#6F7A82'});}
-    else{const g=new THREE.Group();bx(g,3.4,2.9,1.8,'#EFE8DA',0,-.1,0);bx(g,3.42,.9,1.82,'#6A4B37',0,.45,0);for(const x of [-1.7,-.85,0,.85,1.7])bx(g,.08,1.3,.06,'#4E3628',x,.65,.92);
-      for(const x of [-1.1,1.1])bx(g,.5,.4,.05,WINMAT,x,1.05,.92);const rf=mesh(g,HIP,'#3B3D40',0,1.35,0);rf.scale.set(4.2,1.05,2.6);
+    else{const g=new THREE.Group();
+      // Jingtong: Japanese-era timber station — dark board siding, white trim, a door and paned windows
+      bx(g,3.4,2.9,1.8,'#EFE8DA',0,-.1,0);bx(g,3.42,.95,1.82,'#5E4231',0,.47,0);
+      for(let k=0;k<5;k++)bx(g,3.44,.022,1.84,'#47301F',0,.13+k*.17,0);
+      bx(g,3.46,.06,1.86,'#F3EEE4',0,.97,0);bx(g,3.46,.1,1.86,'#3E2B20',0,.04,0);
+      for(const x of [-1.7,-.85,.85,1.7])for(const z of [.92,-.92])bx(g,.08,1.3,.06,'#3E2B20',x,.65,z);
+      const win=(x,z,w,h,y)=>{const sd=Math.sign(z);bx(g,w+.08,h+.08,.04,'#F3EEE4',x,y,z);bx(g,w,h,.05,WINMAT,x,y,z+sd*.012);bx(g,.03,h,.06,'#F3EEE4',x,y,z+sd*.02);bx(g,w,.03,.06,'#F3EEE4',x,y,z+sd*.02);};
+      for(const x of [-1.27,1.27])for(const z of [.925,-.925])win(x,z,.55,.42,.62);
+      for(const x of [-.58,.58])win(x,.925,.34,.42,.62);for(const x of [-.42,.42])win(x,-.925,.55,.42,.62);
+      bx(g,.62,.84,.05,'#2B211B',0,.42,.93);bx(g,.74,.07,.06,'#F3EEE4',0,.87,.935);for(const x of [-.34,.34])bx(g,.05,.84,.06,'#F3EEE4',x,.42,.935);const rf=mesh(g,HIP,'#3B3D40',0,1.35,0);rf.scale.set(4.2,1.05,2.6);
       const cp=mesh(g,PRISM,'#3B3D40',0,1.05,1.15);cp.scale.set(1.3,.4,.9);obj={g,r:1.9};}
     placeObj(obj,poi.x,poi.z,faceRail(poi.x,poi.z),STATIC,st.id==='pingxi'?railY(st.s)-.12:undefined);
   }
@@ -2825,7 +2845,7 @@ function bhouse(o){
   if(o.shop){bx(g,w*.84,.56,.05,'#4A3F38',0,.31,d/2+.02);bx(g,w*.6,.34,.05,WINMAT,0,.36,d/2+.045);
     const aw=bx(g,w*.96,.05,.46,o.awning??pick(AWN),0,.74,d/2+.2);aw.rotation.x=.32;aw.userData.fr={hw:w*.48,z0:d/2,awn:true,reach:.43,sreach:.22,sz:.24,sp:.1};
     if(fl>1&&rnd()<.75){const sx=(rnd()<.5?-1:1)*(w/2-.1);bx(g,.07,.62,.32,pick(SIGNC),sx,1.18,d/2+.18).userData.fr={x:sx,hw:.04,z0:d/2};}
-    if(o.lanterns&&rnd()<.7){for(let i=0;i<2;i++){const L=mesh(g,LANTERN_GEO,lmat(LANTERN_COLORS[Math.floor(rnd()*8)].c),(i?.22:-.22)*w,.5,d/2+.36);L.scale.setScalar(.36);L.userData.fr={x:(i?.22:-.22)*w,hw:.08,z0:d/2};}}}
+    if(o.lanterns&&rnd()<.7){for(let i=0;i<2;i++){const L=mesh(g,LANTERN_GEO,lmat(LANTERN_COLORS[Math.floor(rnd()*LANTERN_COLORS.length)].c),(i?.22:-.22)*w,.5,d/2+.36);L.scale.setScalar(.36);L.userData.fr={x:(i?.22:-.22)*w,hw:.08,z0:d/2};}}}
   if(o.flat){bx(g,w+.06,.1,d+.06,'#C8C3BA',0,H+.05,0);bx(g,w+.06,.18,.05,wall,0,H+.16,d/2+.01);
     if(rnd()<.55){const tk=mesh(g,cyl(.17,.17,.36,8),'#C9CED3',R(-w/4,w/4),H+.36,R(-d/5,d/5));tk.rotation.z=Math.PI/2;}
     if(rnd()<.3)bx(g,Math.min(.7,w*.5),.42,Math.min(.6,d*.5),'#9AA3A9',R(-w/5,w/5),H+.21,-d/6);}
@@ -2943,8 +2963,8 @@ function buildOSMBuildings(){
       else if(b.k==='p')civicBlock(g,o.W,o.D,b.lv||(o.W>1.6?3:2));
       else if(b.name==='真樸齋'){const h=bhouse({w:o.W,d:o.D,fl:1,wall:'#B5583F',roof:'#7A4A3A',roofH:.5});g.add(h.g);}
       else if(row){const k=Math.max(2,Math.round(o.W/R(.72,.95)));const uw=o.W/k;const f0=b.lv||(street?pick([2,3,3,4]):pick([2,2,3]));
-        for(let i=0;i<k;i++){const fl=clamp(f0+(rnd()<.35?(rnd()<.5?-1:1):0),1,5);const h=bhouse({w:uw-.02,d:o.D*R(.9,1),fl,shop:(b.k==='c'||street)&&rnd()<.75,flat:rnd()<.7,lanterns:street});h.g.position.x=(i-(k-1)/2)*uw;g.add(h.g);}}
-      else{const h=bhouse({w:o.W,d:o.D,fl:b.lv||(b.k==='c'?2:pick([1,2,2,3])),shop:b.k==='c'||street&&rnd()<.5,flat:rnd()<.55,lanterns:street});g.add(h.g);}
+        const flMax=Math.max(2,Math.round(o.D*2.0/FH));for(let i=0;i<k;i++){const fl=clamp(f0+(rnd()<.35?(rnd()<.5?-1:1):0),1,Math.min(5,flMax));const h=bhouse({w:uw-.02,d:o.D*R(.9,1),fl,shop:(b.k==='c'||street)&&rnd()<.75,flat:rnd()<.7,lanterns:street});h.g.position.x=(i-(k-1)/2)*uw;g.add(h.g);}}
+      else{const h=bhouse({w:o.W,d:o.D,fl:Math.min(b.lv||(b.k==='c'?2:pick([1,2,2,3])),Math.max(1,Math.round(Math.min(o.W,o.D)*2.2/FH))),shop:b.k==='c'||street&&rnd()<.5,flat:rnd()<.55,lanterns:street});g.add(h.g);}
       o.H=new THREE.Box3().setFromObject(g).max.y;o.y0=heightAt(o.x,o.z);g.position.set(o.x,o.y0,o.z);g.rotation.y=yaw;trimFront(g);STATIC.add(g);obbAdd(o);osmColl(o);n++;b.placed=true;
     }
   }
@@ -3430,7 +3450,9 @@ function buildGround(){
   const rocks=scatter(240,14000,(x,z)=>{const rd=termAt(TERINFO.rd,x,z);const h=heightAt(x,z);if(rd>-.5||h<-1.1||h>-.4)return null;return {x,y:h+.12,z,sx:R(.6,1.5),sy:R(.4,.8),sz:R(.6,1.4),ry:R(0,6)};});
   inst(ico(.32,0),new THREE.MeshLambertMaterial({flatShading:true}),rocks,['#9C978A','#8C877B','#A8A396','#7F7A6F']);
   const boulders=scatter(150,14000,(x,z)=>{const rd=termAt(TERINFO.rd,x,z);const h=heightAt(x,z);if(rd<.2||rd>3||h>1||termAt(TERINFO.ld,x,z)<3||blocked(x,z,.8)||nearRoad(x,z,2))return null;return {x,y:h+.15,z,s:R(.7,1.5),ry:R(0,6)};});
-  inst(ico(.55,0),new THREE.MeshLambertMaterial({flatShading:true}),boulders,['#9F9A8D','#8F8A7E','#AAA598'],true);
+  // fewer, smaller boulders, and none at the edge of the towns (filtered after the dice, so nothing else moves)
+  const bl=boulders.filter((q,i)=>termAt(TERINFO.dTown,q.x,q.z)>3&&i%3!==2);for(const q of bl)q.s*=.8;
+  inst(craggy(new THREE.IcosahedronGeometry(.55,1),.12,9),new THREE.MeshLambertMaterial({flatShading:true}),bl,['#9F9A8D','#8F8A7E','#AAA598'],true);
 }
 const CLOUDS=[],MISTS=[];
 function buildClouds(){
@@ -3482,15 +3504,21 @@ const sheepName=()=>PREF.name||t('sheep_default');
 const woolMat=new THREE.MeshLambertMaterial({color:WOOLS[PREF.wool]?.c||'#F7F3EA',flatShading:true});
 const faceMat=new THREE.MeshLambertMaterial({color:WOOLS[PREF.wool]?.f||'#3B3330',flatShading:true});
 const scarfMat=new THREE.MeshLambertMaterial({color:SCARVES[PREF.scarf]?.c||'#D4552F',flatShading:true});
+/* little face details shared by every sheep: a soft nose and rosy cheeks */
+const NOSEMAT=new THREE.MeshLambertMaterial({color:'#6B4A44',flatShading:true}),CHEEKMAT=new THREE.MeshBasicMaterial({color:'#F4A3A8',transparent:true,opacity:.75});
+function sheepFace(head){const n=new THREE.Mesh(ico(.034,1),NOSEMAT);n.scale.set(1.35,.75,.7);n.position.set(0,-.075,.212);head.add(n);
+  for(const sd of [-1,1]){const c=new THREE.Mesh(ico(.036,1),CHEEKMAT);c.scale.set(1,.62,.35);c.position.set(.118*sd,-.035,.168);c.rotation.y=.5*sd;head.add(c);}}
 function buildSheep(){
   const body=new THREE.Group();sheepG.add(body);sheepParts.body=body;
   const puffs=[[0,.66,0,.36],[.19,.7,.2,.27],[-.19,.7,.2,.27],[.19,.7,-.2,.27],[-.19,.7,-.2,.27],[0,.86,.04,.27],[0,.66,-.32,.26],[0,.64,.3,.25],[.22,.6,0,.24],[-.22,.6,0,.24]];
-  for(const [x,y,z,r] of puffs){const m=new THREE.Mesh(ico(r,1),woolMat);m.position.set(x,y,z);m.castShadow=true;body.add(m);}
+  for(const [x,y,z,r] of puffs){const m=new THREE.Mesh(ico(r,2),woolMat);m.position.set(x,y,z);m.castShadow=true;body.add(m);}
   const head=new THREE.Group();head.position.set(0,.84,.43);body.add(head);sheepParts.head=head;
   const hm=new THREE.Mesh(ico(.19,1),faceMat);hm.scale.set(.9,1.05,1.15);hm.castShadow=true;head.add(hm);
   const tuft=new THREE.Mesh(ico(.12,1),woolMat);tuft.position.set(0,.16,-.02);head.add(tuft);
-  const eyeW=new THREE.MeshBasicMaterial({color:'#FFFFFF'}),eyeB=new THREE.MeshBasicMaterial({color:'#111111'});
+  const eyeW=new THREE.MeshBasicMaterial({color:'#FFFFFF'}),eyeB=new THREE.MeshBasicMaterial({color:'#111111'});sheepParts.eyes=[];
+  sheepFace(head);
   for(const sd of [-1,1]){const e=new THREE.Mesh(new THREE.SphereGeometry(.045,8,6),eyeW);e.position.set(.085*sd,.04,.17);head.add(e);const pu=new THREE.Mesh(new THREE.SphereGeometry(.024,6,5),eyeB);pu.position.set(.088*sd,.04,.205);head.add(pu);
+    const sh=new THREE.Mesh(new THREE.SphereGeometry(.009,5,4),eyeW);sh.position.set(.095*sd,.052,.226);head.add(sh);sheepParts.eyes.push(e,pu,sh);
     const ear=new THREE.Mesh(BOX,faceMat);ear.scale.set(.18,.05,.09);ear.position.set(.2*sd,.05,-.02);ear.rotation.z=-.4*sd;head.add(ear);sheepParts['ear'+sd]=ear;}
   const legs=[];for(const [x,z] of [[.15,.2],[-.15,.2],[.15,-.2],[-.15,-.2]]){const pivot=new THREE.Group();pivot.position.set(x,.48,z);const l=new THREE.Mesh(cyl(.055,.05,.46,6),faceMat);l.position.y=-.23;l.castShadow=true;pivot.add(l);sheepG.add(pivot);legs.push(pivot);}
   sheepParts.legs=legs;
@@ -3543,7 +3571,12 @@ function spawnLantern(x,y,z,color,opts={}){
 function updateLanterns(dt,t){
   for(let i=LANTERNS.length-1;i>=0;i--){const L=LANTERNS[i];L.life+=dt;
     const dr=L.drift??1;
-    L.g.position.y+=L.vy*dt*Math.min(1,L.life*.8+.2);L.g.position.x+=(.35+Math.sin(t*.4+L.ph)*.25)*dt*dr;L.g.position.z+=(-.18+Math.cos(t*.3+L.ph)*.2)*dt*dr;
+    L.g.position.y+=(L.vy*Math.min(1,L.life*.8+.2)+(L.boost||0))*dt;if(L.boost)L.boost*=Math.exp(-dt*1.3);
+    if(L.sway){L.g.rotation.z=Math.sin(t*1.1+L.ph)*.07;L.g.rotation.x=Math.sin(t*.8+L.ph*1.7)*.05;}
+    if(L.trail&&L.life<8){L.tt=(L.tt||0)-dt;if(L.tt<=0){L.tt=.075;const p=L.g.position,k=L.g.scale.y;glint(p.x+RR(-.16,.16)*k,p.y-.36*k,p.z+RR(-.16,.16)*k,GR()<.55?L.trail:'#FFD27A',{size:RR(.16,.3),life:RR(.8,1.4),vy:RR(-.55,-.15),g:-.25,tw:true});}}
+    if(L.burstAt&&L.life>=L.burstAt){L.burstAt=0;const p=L.g.position;burstGlints(p.x,p.y,p.z,[L.trail||'#FFD27A','#FFD27A','#FFF4D6'],30,3.6,{g:-.7,life:1.5,size:1.15});sfx('twinkle');L.flash=1;if(L.label){L.label.el.classList.remove('pulse');void L.label.el.offsetWidth;L.label.el.classList.add('pulse');}}
+    if(L.flash>0){L.flash=Math.max(0,L.flash-dt*.9);if(L.wish)L.wish.gl.scale.setScalar(2.4*(1+L.flash*.55));}
+    L.g.position.x+=(.35+Math.sin(t*.4+L.ph)*.25)*dt*dr;L.g.position.z+=(-.18+Math.cos(t*.3+L.ph)*.2)*dt*dr;
     if(L.norot>0)L.norot-=dt;else L.g.rotation.y+=dt*.2;
     if(L.label)L.label.pos.copy(L.g.position).y+=(L.labelOff??1.1)*L.g.scale.y;
     if(L.g.position.y>85||L.life>(L.wish?95:75)){scene.remove(L.g);if(L.label)removeLabel(L.label);if(L.wish){disposeWish(L.wish);if(CINE.Lan===L)CINE.Lan=null;}LANTERNS.splice(i,1);}}
@@ -3551,12 +3584,26 @@ function updateLanterns(dt,t){
 const PUFFS=[];const PUFFMAT=new THREE.MeshLambertMaterial({color:'#FFFFFF',transparent:true,opacity:.9,flatShading:true});const DUSTMAT=new THREE.MeshLambertMaterial({color:'#D8C9A8',transparent:true,opacity:.7,flatShading:true});
 function poof(x,y,z,n=10,dust=false){for(let i=0;i<n;i++){const m=new THREE.Mesh(ico(dust?.12:.25,0),(dust?DUSTMAT:PUFFMAT).clone());m.position.set(x,y+(dust?.08:.4),z);scene.add(m);PUFFS.push({m,v:new THREE.Vector3(RR(-1,1),RR(.5,1.6),RR(-1,1)).multiplyScalar(dust?.8:2.2),life:0,dust});}}
 const RIPPLES=[];const RIPMAT=new THREE.MeshBasicMaterial({color:'#FFFFFF',transparent:true,opacity:.6,side:THREE.DoubleSide,depthWrite:false});
-function ripple(x,y,z){const m=new THREE.Mesh(new THREE.RingGeometry(.3,.38,20),RIPMAT.clone());m.rotation.x=-Math.PI/2;m.position.set(x,y,z);scene.add(m);RIPPLES.push({m,life:0});}
+function ripple(x,y,z,color,k=1){const mt=RIPMAT.clone();if(color)mt.color.set(color);const m=new THREE.Mesh(new THREE.RingGeometry(.3,.38,24),mt);m.rotation.x=-Math.PI/2;m.position.set(x,y,z);scene.add(m);RIPPLES.push({m,life:0,k});}
+/* glints: small additive glow sprites for sparks, trails and bursts */
+const GLINTS=[];
+function glint(x,y,z,color,o={}){
+  const m=new THREE.Sprite(new THREE.SpriteMaterial({map:GLOWTEX,color,transparent:true,opacity:0,depthWrite:false,blending:THREE.AdditiveBlending}));
+  const s=o.size??.35;m.scale.set(s,s,1);m.position.set(x,y,z);m.renderOrder=3;scene.add(m);
+  GLINTS.push({m,v:new THREE.Vector3(o.vx||0,o.vy||0,o.vz||0),life:0,max:o.life??1,s,g:o.g??0,op:o.op??1,grow:o.grow??0,tw:o.tw?GR()*6:-1});
+  if(GLINTS.length>280){const q=GLINTS.shift();scene.remove(q.m);q.m.material.dispose();}
+}
+function burstGlints(x,y,z,colors,n,speed,o={}){for(let i=0;i<n;i++){const a=GR()*6.283,b=Math.acos(RR(-1,1)),sp=speed*RR(.55,1);
+  glint(x,y,z,colors[i%colors.length],{vx:Math.sin(b)*Math.cos(a)*sp,vy:Math.cos(b)*sp+(o.up||0),vz:Math.sin(b)*Math.sin(a)*sp,life:RR(.7,1.2)*(o.life||1),size:RR(.22,.42)*(o.size||1),g:o.g??-1.2,tw:true});}}
 const CONF=[];
 function confetti(x,y,z){const cols=['#D4552F','#F1C641','#2F5F86','#79B36F','#9E7BCB'];for(let i=0;i<40;i++){const m=new THREE.Mesh(new THREE.PlaneGeometry(.18,.1),new THREE.MeshBasicMaterial({color:cols[i%5],side:THREE.DoubleSide}));m.position.set(x,y+1,z);scene.add(m);CONF.push({m,v:new THREE.Vector3(RR(-3,3),RR(4,8),RR(-3,3)),r:new THREE.Vector3(RR(-8,8),RR(-8,8),0),life:0});}}
 function updateParticles(dt){
+  for(let i=GLINTS.length-1;i>=0;i--){const p=GLINTS[i];p.life+=dt;const u=p.life/p.max;
+    if(u>=1){scene.remove(p.m);p.m.material.dispose();GLINTS.splice(i,1);continue;}
+    p.v.y+=p.g*dt;p.v.multiplyScalar(Math.exp(-dt*1.4));p.m.position.addScaledVector(p.v,dt);
+    const tw=p.tw>=0?.6+.4*Math.sin(p.life*24+p.tw):1;p.m.material.opacity=p.op*(1-u)*tw*Math.min(1,u*10);const sc=p.s*(1+p.grow*u);p.m.scale.set(sc,sc,1);}
   for(let i=PUFFS.length-1;i>=0;i--){const p=PUFFS[i];p.life+=dt;p.m.position.addScaledVector(p.v,dt);p.v.multiplyScalar(.92);const s=1+p.life*2;p.m.scale.setScalar(s);p.m.material.opacity=Math.max(0,(p.dust?.6:.9)-p.life*1.6);if(p.life>.6){scene.remove(p.m);p.m.material.dispose();PUFFS.splice(i,1);}}
-  for(let i=RIPPLES.length-1;i>=0;i--){const r=RIPPLES[i];r.life+=dt;r.m.scale.setScalar(1+r.life*3);r.m.material.opacity=Math.max(0,.6-r.life*.8);if(r.life>.75){scene.remove(r.m);r.m.geometry.dispose();r.m.material.dispose();RIPPLES.splice(i,1);}}
+  for(let i=RIPPLES.length-1;i>=0;i--){const r=RIPPLES[i];r.life+=dt;r.m.scale.setScalar(1+r.life*3*(r.k||1));r.m.material.opacity=Math.max(0,.6-r.life*.8);if(r.life>.75){scene.remove(r.m);r.m.geometry.dispose();r.m.material.dispose();RIPPLES.splice(i,1);}}
   for(let i=CONF.length-1;i>=0;i--){const c=CONF[i];c.life+=dt;c.v.y-=9*dt;c.m.position.addScaledVector(c.v,dt);c.m.rotation.x+=c.r.x*dt;c.m.rotation.y+=c.r.y*dt;if(c.life>2.4){scene.remove(c.m);c.m.geometry.dispose();c.m.material.dispose();CONF.splice(i,1);}}
 }
 let FF;
@@ -3673,7 +3720,9 @@ function drawPanelText(x,text,cx,cy,w,h,maxFs){
     const fs=Math.max(20,Math.min(maxFs,Math.floor(h/per*.94),Math.floor(w/cols*.88)));x.font=wishFont(fs);const cw=Math.min(w/cols,fs*1.2);
     for(let c=0;c<cols;c++){const seg=ch.slice(c*per,(c+1)*per);const colX=cx+((cols-1)/2-c)*cw;const top=cy-(seg.length-1)/2*fs*1.02;seg.forEach((g2,i)=>x.fillText(g2,colX,top+i*fs*1.02));}
     return;}
-  let fs=maxFs,lines=[text];for(;fs>=20;fs-=4){x.font=wishFont(fs);lines=wrapLines(x,text,w);if(lines.length*fs*1.14<=h&&lines.every(l=>x.measureText(l).width<=w))break;}
+  const words=text.split(/\s+/).filter(Boolean);
+  let fs=maxFs,lines=[text];for(;fs>=20;fs-=4){x.font=wishFont(fs);if(fs>28&&words.some(wd=>x.measureText(wd).width>w))continue;   // shrink before breaking a word
+    lines=wrapLines(x,text,w);if(lines.length*fs*1.14<=h&&lines.every(l=>x.measureText(l).width<=w))break;}
   const top=cy-(lines.length-1)/2*fs*1.14;lines.forEach((l,i)=>x.fillText(l,cx,top+i*fs*1.14));
 }
 function wishTexture(text,ci,zid,name=sheepName()){
@@ -3712,44 +3761,68 @@ function camSpotFor(L){
     if(sc<bs){bs=sc;best=a;}}
   L.cam=best;return best;
 }
+const CT={pop:.2,unfold0:.25,unfold1:1.3,match:1.45,ignite:1.9,cd:2.45,lift:3.75,end:10.8};
+const cineSkippable=()=>CINE.active&&CINE.t>CT.lift+.15;
+const haptic=ms=>{try{if(coarse&&navigator.vibrate)navigator.vibrate(ms);}catch(e){}};
 function startCine(L,text,ci){
   const a=camSpotFor(L);const ux=Math.sin(a),uz=Math.cos(a),vx=Math.cos(a),vz=-Math.sin(a);
   const sx=L.x-ux*.3+vx*.85,sz=L.z-uz*.3+vz*.85;const lx=L.x+ux*.2-vx*.55,lz=L.z+uz*.2-vz*.55;
   const W=makeWishLantern(text,ci,L.zone);
   const cx=L.x+ux*7.2,cz=L.z+uz*7.2;
-  W.g.rotation.y=Math.atan2(cx-lx,cz-lz)-Math.PI/2;W.g.position.set(lx,L.y+.05,lz);W.g.scale.set(WL_S*.45,WL_S*.06,WL_S*.45);scene.add(W.g);
-  Object.assign(CINE,{active:true,t:0,L,W,Lan:null,text,ci,sx,sz,lx,lz,ux,uz,said:1,
+  W.g.rotation.y=Math.atan2(cx-lx,cz-lz)-Math.PI/2;W.g.position.set(lx,L.y+.05,lz);W.g.scale.setScalar(.001);scene.add(W.g);
+  Object.assign(CINE,{active:true,t:0,L,W,Lan:null,text,ci,sx,sz,lx,lz,ux,uz,hops:null,
     cam:new THREE.Vector3(cx,Math.max(L.y+2.2,heightAt(cx,cz)+1.7),cz),look:new THREE.Vector3(lx,L.y+.9,lz)});
   MOVE_T=null;KEYS.clear();closeSheet();if(RIG.mode==='overview')setView('follow');
-  say(t('wl_b1'),1.4);
+  say(t('wl_b1'),1.3);
 }
 function liftOff(){
   const C=CINE,W=C.W;if(!W)return;
-  W.fl.scale.setScalar(1);W.g.scale.setScalar(WL_S);
-  const Lz={g:W.g,vy:.9,ph:GR()*6,life:0,label:null,norot:4,drift:.4,wish:W,labelOff:.5};LANTERNS.push(Lz);
+  W.fl.scale.setScalar(1);W.g.scale.setScalar(WL_S);W.g.rotation.z=0;sheepParts.body.scale.set(1,1,1);
+  const col=LANTERN_COLORS[C.ci].c;
+  const Lz={g:W.g,vy:.9,boost:2.4,ph:GR()*6,life:0,label:null,norot:4,drift:.4,wish:W,labelOff:.5,trail:col,burstAt:3.4,sway:1};LANTERNS.push(Lz);
   Lz.label=addLabel({html:'',cls:'lbl-wish',pos:W.g.position.clone(),kind:'wish'});Lz.label.el.textContent=t('lt_wishlabel',{n:sheepName(),w:C.text});
-  C.Lan=Lz;C.W=null;SHEEP.hop=1;say(t('wl_b3'),2.4);muChime();mpShareLantern(C.text,C.ci,C.L.zone);
+  C.Lan=Lz;C.W=null;SHEEP.hop=1;C.hops=[C.t+.7,C.t+1.4];say(t('wl_b3'),2.4);muChime();sfx('whoosh');haptic(30);
+  ripple(C.lx,C.L.y+.06,C.lz,col,2.4);ripple(C.lx,C.L.y+.07,C.lz,'#FFD27A',1.5);
+  burstGlints(C.lx,C.L.y+.45,C.lz,[col,'#FFD27A'],18,3.2,{up:1.6,g:-2.6,life:.8});
+  mpShareLantern(C.text,C.ci,C.L.zone);
   toast(t('wl_toast',{s:zname(C.L.zone)})+(LANG==='zh'||LANG==='ja'?'':' ')+t('wl_skip'),3800);
 }
+/* elastic ease-out: the folded paper springs open past its size and settles */
+const elasticOut=u=>u<=0?0:u>=1?1:1-Math.pow(2,-9*u)*Math.cos(u*10.5);
 function updateCine(dt){
-  const C=CINE;if(!C.active)return;C.t+=dt;const tt=C.t;
+  const C=CINE;if(!C.active)return;const t0=C.t;C.t+=dt;const tt=C.t;const cross=v=>t0<v&&tt>=v;
   if(tt<1.1){const k=Math.min(1,dt*5);SHEEP.x=lerp(SHEEP.x,C.sx,k);SHEEP.z=lerp(SHEEP.z,C.sz,k);}
-  if(tt<3.4){const ty=Math.atan2(C.lx-SHEEP.x,C.lz-SHEEP.z);let dd=ty-SHEEP.yaw;dd=Math.atan2(Math.sin(dd),Math.cos(dd));SHEEP.yaw+=dd*Math.min(1,dt*8);sheepG.rotation.y=SHEEP.yaw;sheepG.position.x=SHEEP.x;sheepG.position.z=SHEEP.z;}
+  if(tt<CT.lift+.2){const ty=Math.atan2(C.lx-SHEEP.x,C.lz-SHEEP.z);let dd=ty-SHEEP.yaw;dd=Math.atan2(Math.sin(dd),Math.cos(dd));SHEEP.yaw+=dd*Math.min(1,dt*8);sheepG.rotation.y=SHEEP.yaw;sheepG.position.x=SHEEP.x;sheepG.position.z=SHEEP.z;}
   const W=C.W;
   if(W){
-    const u=smooth(.15,1.25,tt);const ob=u<1?1+Math.sin(u*Math.PI)*.14:1;const sy=lerp(.06,1,u);
-    W.g.scale.set(WL_S*lerp(.45,1,u)*ob,WL_S*sy,WL_S*lerp(.45,1,u)*ob);
-    const wob=tt>1.25?Math.sin((tt-1.25)*9)*.025*(1-smooth(1.6,2.5,tt)):0;
-    W.g.position.y=C.L.y+.33*WL_S*sy+.02+wob;
-    const ig=smooth(1.35,1.9,tt);W.fl.scale.setScalar(Math.max(.001,ig*(1+Math.sin(tt*31)*.16)));W.gl.material.opacity=ig*(.38+.55*TIMEV.night);
-    if(tt>1.35&&C.said<2){C.said=2;say(t('wl_b2'),1.1);embers(C.lx,C.L.y+.2,C.lz,9);}
-    if(tt>=2.55)liftOff();
-  }else if(C.Lan){C.Lan.wish.gl.material.opacity=.38+.55*TIMEV.night;}
-  if(tt>2.55&&tt<6.5)sheepParts.head.rotation.x=-.55*smooth(2.55,3.3,tt)*(1-smooth(5.6,6.5,tt));
-  if(tt>11)endCine();
+    if(cross(CT.pop)){sfx('pop');poof(C.lx,C.L.y,C.lz,4);}
+    const pop=smooth(CT.pop,CT.pop+.16,tt);const el=elasticOut(clamp((tt-CT.unfold0)/(CT.unfold1-CT.unfold0),0,1));
+    const sy=Math.max(.06,lerp(.06,1,el)),sxz=lerp(.45,1,el);
+    // once lit, hot air fills the paper: it breathes, tugs upward and sways, more and more before the release
+    const lit=smooth(CT.ignite,CT.ignite+.35,tt),pre=smooth(CT.cd,CT.lift,tt);
+    const br=lit*Math.sin((tt-CT.ignite)*7.5)*.05*(1-smooth(CT.lift-.25,CT.lift,tt));
+    W.g.scale.set(WL_S*sxz*pop*(1+br),WL_S*sy*pop*(1-br*.6),WL_S*sxz*pop*(1+br));
+    const tug=Math.max(0,Math.sin((tt-CT.cd)*10))*.09*pre;
+    W.g.position.y=C.L.y+.33*WL_S*sy*pop+.02+tug;W.g.rotation.z=Math.sin(tt*5.3)*(.03+.04*pre)*lit;
+    const ig=smooth(CT.ignite,CT.ignite+.22,tt);W.fl.scale.setScalar(Math.max(.001,ig*(1.15+Math.sin(tt*31)*.18)));
+    W.gl.material.opacity=ig*(.45+.5*TIMEV.night)*(1+Math.max(0,br)*4);W.side.emissiveIntensity=.04+GLOWNOW*.3+ig*.3;
+    // the match: a spark hops from the sheep to the wick
+    if(cross(CT.match)){say(t('wl_b2'),1.1);sfx('strike');}
+    if(tt>CT.match&&tt<CT.ignite){const k=(tt-CT.match)/(CT.ignite-CT.match);const hx=SHEEP.x+Math.sin(SHEEP.yaw)*.6,hz=SHEEP.z+Math.cos(SHEEP.yaw)*.6;
+      const px=lerp(hx,C.lx,k),pz=lerp(hz,C.lz,k),py=lerp(SHEEP.y+.8,C.L.y+.25,k)+Math.sin(k*Math.PI)*.7;
+      glint(px,py,pz,'#FFE08A',{size:.34,life:.3});if(GR()<.6)glint(px,py,pz,'#FF9A3C',{size:.16,life:.5,vx:RR(-.5,.5),vy:RR(.2,.9),vz:RR(-.5,.5),g:-2.5});}
+    if(cross(CT.ignite)){sfx('ignite');haptic(15);embers(C.lx,C.L.y+.2,C.lz,12);burstGlints(C.lx,C.L.y+.3,C.lz,['#FFB347','#FFE08A'],12,1.7,{up:1.3,g:-1,life:.7,size:.8});}
+    // count down, the sheep crouches… and springs
+    for(let i=0;i<3;i++)if(cross(CT.cd+i*.43)){say(String(3-i),.43);sfx('tick',i);}
+    const cr=smooth(CT.cd,CT.lift-.05,tt);sheepParts.body.scale.set(1+cr*.08,1-cr*.15,1+cr*.08);
+    if(tt>=CT.lift)liftOff();
+  }else if(C.Lan){C.Lan.wish.gl.material.opacity=(.42+.5*TIMEV.night)*(1+(C.Lan.flash||0)*.5);}
+  if(C.hops&&C.hops.length&&tt>=C.hops[0]){C.hops.shift();SHEEP.hop=1;}
+  if(tt>CT.lift-.1&&tt<CT.end-1)sheepParts.head.rotation.x=-.55*smooth(CT.lift-.1,CT.lift+.7,tt)*(1-smooth(CT.end-2.6,CT.end-1.4,tt));
+  if(tt>CT.end)endCine();
 }
 function endCine(){
-  const C=CINE;if(!C.active)return;if(C.W)liftOff();C.active=false;
+  const C=CINE;if(!C.active)return;if(C.W)liftOff();C.active=false;sheepParts.body.scale.set(1,1,1);
   const tx=SHEEP.x,ty=SHEEP.y+.7,tz=SHEEP.z;const dx=camera.position.x-tx,dy=camera.position.y-ty,dz=camera.position.z-tz;const d=Math.max(1,Math.hypot(dx,dy,dz));
   RIG.ct.set(tx,ty,tz);RIG.cy=RIG.yaw=Math.atan2(dx,dz);RIG.cp=Math.asin(clamp(dy/d,-1,1));RIG.pitch=clamp(Math.max(RIG.cp,.5),.32,1.42);RIG.cd=d;RIG.dist=clamp(Math.max(d,18),9,80);
 }
@@ -3774,7 +3847,7 @@ function renderWish(){
   $('wlEyebrow').textContent=`SHEEP LANTERN SPOT · ${z.en.toUpperCase()}`;$('wlTitle').textContent=t('wl_title');$('wlLabel').textContent=t('wl_label');$('wlInput').placeholder=t('wl_ph');
   $('wlColorLabel').textContent=t('wl_color');$('wlIdeaLabel').textContent=t('wl_ideas');$('wlNote').textContent=t('wl_cost',{c:LANTERN_COST,n:COIN.n})+' '+t('wl_note');$('wlGo').textContent=t('wl_go')+'  −'+LANTERN_COST;$('wlCancel').textContent=t('wl_cancel');
   $('wlColors').setAttribute('aria-label',t('wl_color'));
-  $('wlColors').innerHTML=LANTERN_COLORS.map((c,i)=>`<button class="wl-sw" type="button" data-c="${i}" aria-pressed="${i===WL.ci}"><i style="background:${c.c}"></i><b>${esc(c.n[LANG]||c.n.zh)}</b><small>${esc(c.m[LANG]||c.m.zh)}</small></button>`).join('');
+  $('wlColors').innerHTML=LANTERN_ORDER.map(i=>[LANTERN_COLORS[i],i]).map(([c,i])=>`<button class="wl-sw" type="button" data-c="${i}" aria-pressed="${i===WL.ci}"><i style="background:${c.c}"></i><b>${esc(c.n[LANG]||c.n.zh)}</b><small>${esc(c.m[LANG]||c.m.zh)}</small></button>`).join('');
   const ideas=[...new Set([colorWish(WL.ci),...(WISHES[LANG]||WISHES.zh)])].slice(0,9);
   $('wlIdeas').innerHTML=ideas.map(w=>`<button class="chip" type="button" data-w="${esc(w)}">${esc(w)}</button>`).join('');
   updateWishPreview();
@@ -3873,6 +3946,12 @@ function buildNPCs(){
 function updateNPCs(dt){
   for(const n of NPCS){
     n.chk-=dt;
+    if(n.chk<=0&&CINE.active&&CINE.L&&n.hurry<=0){const L=CINE.L,dx=n.x-L.x,dz=n.z-L.z,along=dx*CINE.ux+dz*CINE.uz,across=dx*CINE.uz-dz*CINE.ux;
+      // visitors step aside so the lantern release stays in view
+      if(Math.hypot(dx,dz)<LS_R+1.5||(along>0&&along<8.5&&Math.abs(across)<2.4)){const sd=across>=0?1:-1;
+        let ok=false;for(const r of [LS_R+2.6,LS_R+3.6,LS_R+4.8]){for(const q of [1,-1]){const x=L.x+CINE.uz*sd*q*r-CINE.ux*1.2,z=L.z-CINE.ux*sd*q*r-CINE.uz*1.2;if(walkable(x,z,n.y)&&!collides(x,z,.27)){n.tx=x;n.tz=z;n.wait=0;n.hurry=1.5;ok=true;break;}}if(ok)break;}
+        if(!ok&&Math.hypot(dx,dz)<LS_R+1.5)n.cineHide=true;}}
+    if(n.cineHide&&!CINE.active)n.cineHide=false;n.p.g.visible=!n.cineHide;
     if(n.chk<=0){n.chk=.25;const lc=RAIL.closest(n.x,n.z);n.onRail=lc.d<1.5&&Math.abs(n.y-railY(lc.s))<.9;
       const T=RIDE.active?RIDE.T:TRAIN;
       if(n.onRail&&T.v>.3){const ah=(lc.s-T.s)*T.dir;if(ah>-9.5&&ah<16){const p=RAIL.at(lc.s);const side=((n.x-p.x)*p.nx+(n.z-p.z)*p.nz)>=0?1:-1;let tx=p.x+p.nx*1.05*side,tz=p.z+p.nz*1.05*side;
@@ -3900,7 +3979,7 @@ function updateNPCs(dt){
 /* passers-by say a line now and then: what fits the place, the lantern in their hands, a train coming, or a sheep walking up */
 const SAY={
  any:{zh:['今天天氣真好～','這裡好適合拍照！','等一下要吃什麼？','走累了，休息一下','山上的空氣好舒服'],en:['What lovely weather today!','Great spot for a photo!','What should we eat next?','I need a little rest…','The mountain air feels so nice'],ja:['今日はいい天気だね～','ここ、写真映えする！','次は何を食べる？','ちょっと休憩しよう…','山の空気が気持ちいい'],ko:['오늘 날씨 정말 좋다~','여기 사진 찍기 딱이야!','다음엔 뭐 먹을까?','조금 쉬었다 가자…','산 공기가 참 상쾌해']},
- shifen:{zh:['我要寫「考試順利」！','火車要開進老街了嗎？','雞翅包飯排好長喔','等一下走去十分瀑布','八色天燈好漂亮'],en:['I’m writing “pass my exams”!','Is the train coming down the street?','The line for chicken wing rolls is so long','Let’s walk to the waterfall later','The eight-color lanterns are so pretty'],ja:['「試験合格」って書くんだ！','列車、老街に入ってくるかな？','手羽先ごはんの行列すごいね','あとで十分瀑布まで歩こう','8色の天灯、きれいだね'],ko:['나는 "시험 합격"이라고 쓸 거야!','기차가 옛거리로 들어오려나?','닭날개 볶음밥 줄이 엄청 길다','이따 스펀 폭포까지 걸어가자','8색 천등 너무 예쁘다']},
+ shifen:{zh:['我要寫「考試順利」！','火車要開進老街了嗎？','雞翅包飯排好長喔','等一下走去十分瀑布','九色天燈好漂亮'],en:['I’m writing “pass my exams”!','Is the train coming down the street?','The line for chicken wing rolls is so long','Let’s walk to the waterfall later','All nine lantern colors are so pretty'],ja:['「試験合格」って書くんだ！','列車、老街に入ってくるかな？','手羽先ごはんの行列すごいね','あとで十分瀑布まで歩こう','9色の天灯、きれいだね'],ko:['나는 "시험 합격"이라고 쓸 거야!','기차가 옛거리로 들어오려나?','닭날개 볶음밥 줄이 엄청 길다','이따 스펀 폭포까지 걸어가자','9색 천등 너무 예쁘다']},
  pingxi:{zh:['火車從頭頂開過去了！','來一根烤香腸吧！','去郵局寄張明信片','孝子山看起來好陡','石底橋是電影場景耶'],en:['A train just went right over our heads!','Let’s grab a grilled sausage!','Let’s mail a postcard at the post office','Xiaozi Mountain looks so steep','Shidi Bridge was in a movie!'],ja:['列車が頭の上を通っていった！','焼きソーセージ食べよう！','郵便局で絵はがきを出そう','孝子山、すごく急だね','石底橋って映画のロケ地だよ'],ko:['기차가 머리 위로 지나갔어!','구운 소시지 하나 먹자!','우체국에서 엽서 보내자','샤오쯔산 엄청 가파르다','스디교가 영화에 나온 곳이래!']},
  jingtong:{zh:['掛一支竹筒許願吧','這裡是平溪線的終點站','以前這裡是煤礦小鎮','天燈派出所晚上會發光','來份雞捲吧！'],en:['Let’s hang a bamboo wishing tube','This is the end of the Pingxi Line','This used to be a coal-mining town','The lantern police station glows at night','Let’s get a chicken roll!'],ja:['願いの竹筒をかけよう','ここが平渓線の終点だよ','昔はここ、炭鉱の町だったんだ','天灯派出所は夜に光るんだって','鶏巻き食べようよ！'],ko:['소원 대나무 통 하나 걸자','여기가 핑시선 종점이야','예전엔 여기가 탄광 마을이었대','천등 파출소는 밤에 빛난대','지쥐안 먹자!']},
  lantern:{zh:['祝大家平安健康！','一、二、三，放！','願望要寫大一點','希望明年還能再來'],en:['Health and peace for everyone!','One, two, three, let go!','Write your wish big!','Hope we come back next year'],ja:['みんな健康で平和に！','いち、に、さん、それっ！','願いごとは大きく書こう','来年もまた来られますように'],ko:['모두 건강하고 평안하길!','하나, 둘, 셋, 날려!','소원은 크게 써야지','내년에도 또 올 수 있기를']},
@@ -3990,11 +4069,12 @@ function removeLabel(L){const i=LABELS.indexOf(L);if(i>=0)LABELS.splice(i,1);L.e
 const _v=new THREE.Vector3();
 function updateLabels(){
   const w=renderer.domElement.clientWidth,h=renderer.domElement.clientHeight;const over=RIG.mode==='overview';
+  {const cp=over&&w<620;if(cp!==labelLayer.classList.contains('compact')){labelLayer.classList.toggle('compact',cp);for(const L of LABELS)L.bw=0;}}
   const ref=RIDE.active?RIDE.T.cars[0].position:sheepG.position;
   for(const L of LABELS){
     let show=false,sc=1;
     if(L.kind==='poi'||L.kind==='game'||L.kind==='pad')show=!L.hide&&!over&&!CINE.active&&L.pos.distanceTo(ref)<L.far&&RIG.cd<62;
-    if(L.poi){const near=show&&((promptAct&&promptAct.type==='poi'&&promptAct.poi===L.poi)||Math.hypot(SHEEP.x-L.poi.x,SHEEP.z-L.poi.z)<2.4);if(near!==!!L.near){L.near=near;L.el.classList.toggle('near',near);}if(!show&&PIN_OPEN===L)closePin();}
+    if(L.poi){const near=show&&((promptAct&&promptAct.type==='poi'&&promptAct.poi===L.poi)||Math.hypot(SHEEP.x-L.poi.x,SHEEP.z-L.poi.z)<2.4);if(near!==!!L.near){L.near=near;L.el.classList.toggle('near',near);L.bw=0;}if(!show&&PIN_OPEN===L)closePin();}
     else if(L.kind==='zone'||L.kind==='zoneMinor'){show=over||L.pos.distanceTo(ref)<(L.kind==='zone'?150:70);sc=over?(w<620?.62:.86):clamp(64/L.pos.distanceTo(camera.position),.55,1);}
     else if(L.kind==='space'){show=!CINE.active&&(over||L.pos.distanceTo(ref)<260);sc=over?(w<620?.9:1.1):clamp(95/L.pos.distanceTo(camera.position),.78,1.15);}
     else if(L.kind==='sheep')show=!SHEEP.hidden&&!over;
@@ -4004,10 +4084,36 @@ function updateLabels(){
     else if(L.kind==='race')show=!L.hide&&RACE.phase!=='idle'&&L.pos.distanceTo(ref)<L.far;
     else if(L.kind==='peer'){show=!L.hide&&(over||L.pos.distanceTo(ref)<90);if(over)sc=.85;}
     if(show){_v.copy(L.pos).project(camera);if(_v.z>1||_v.x<-1.2||_v.x>1.2||_v.y<-1.2||_v.y>1.2)show=false;}
+    L._s=show;L._sc=sc;if(show){L.sx=(_v.x+1)/2*w;L.sy=(1-_v.y)/2*h;}
+  }
+  declutterLabels();
+  for(const L of LABELS){const show=L._s;
     if(show!==L.on){L.on=show;L.el.classList.toggle('off',!show);}
-    if(show){const x=(_v.x+1)/2*w,y=(1-_v.y)/2*h;L.sx=x;L.sy=y;if(L.anchor==='pin'){const flip=x>w-190;if(flip!==!!L.flip){L.flip=flip;L.el.classList.toggle('flip',flip);}}
+    if(show){const x=L.sx,y=L.sy,sc=L._sc;if(L.anchor==='pin'){const flip=x>w-190;if(flip!==!!L.flip){L.flip=flip;L.el.classList.toggle('flip',flip);L.bw=0;}}
     L.el.style.transform=L.anchor==='pin'?(L.flip?`translate3d(${(x+12).toFixed(1)}px,${y.toFixed(1)}px,0) translate(-100%,-100%)`:`translate3d(${(x-12).toFixed(1)}px,${y.toFixed(1)}px,0) translateY(-100%)`):`translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0) translate(-50%,${L.anchor==='center'?'-50%':'-100%'})${sc!==1?` scale(${sc.toFixed(3)})`:''}`;}
   }
+}
+/* label declutter: when signs and pins overlap on screen, the more important (then the nearer) one stays and the rest fade out;
+   a hidden label needs a little clear space before it comes back, so nothing flickers at the edge */
+const DC_PRI={game:7,pad:7,npcsay:6,race:6,zone:5,space:4,poi:3,zoneMinor:2,dog:2},DC_KEEP={sheep:1,wish:1,peer:1};
+const DCR=[],DCC=[];let dcIdx=0;
+function lblRect(L){const x=L.sx,y=L.sy,sc=L._sc||1,bw=L.bw*sc,bh=L.bh*sc;
+  if(L.anchor==='pin')return L.flip?[x+12-L.bw,y-L.bh,x+12,y]:[x-12,y-L.bh,x-12+L.bw,y];
+  if(L.anchor==='center')return [x-bw/2,y+L.bh/2-bh,x+bw/2,y+L.bh/2];
+  return [x-bw/2,y-bh,x+bw/2,y];}
+function declutterLabels(){
+  const n=LABELS.length;if(!n)return;const over=RIG.mode==='overview';
+  for(let i=0;i<Math.min(8,n);i++){const L=LABELS[(dcIdx++)%n];L.bw=L.el.offsetWidth;L.bh=L.el.offsetHeight;}
+  DCR.length=0;DCC.length=0;
+  for(const L of LABELS){if(!L._s)continue;if(!L.bw){L.bw=L.el.offsetWidth;L.bh=L.el.offsetHeight;}
+    if(DC_KEEP[L.kind]||(over&&(L.kind==='zone'||L.kind==='space'))){if(L.bw)DCR.push(lblRect(L));L.dc=false;continue;}
+    const p=DC_PRI[L.kind];if(!p||!L.bw){L.dc=false;continue;}
+    L._p=p+(L.near?4:0)+(PIN_OPEN===L?4:0);L._d=L.pos.distanceToSquared(camera.position);DCC.push(L);}
+  DCC.sort((a,b)=>b._p-a._p||a._d-b._d);
+  for(const L of DCC){const r=lblRect(L),pd=L.dc?6:-3;let hit=false;
+    for(const q of DCR)if(r[0]-pd<q[2]&&r[2]+pd>q[0]&&r[1]-pd<q[3]&&r[3]+pd>q[1]){hit=true;break;}
+    L.dc=hit;if(hit)L._s=false;else DCR.push(r);}
+  for(const L of LABELS)if(!L._s&&!DCC.includes(L))L.dc=false;
 }
 function signHTML(st,cls=''){const sub=(SUBNAME[LANG]||SUBNAME.zh)[st.id]||st.en;return `<span class="sign ${cls}"><span class="sign-main"><b>${esc(st.name)}</b><span>${esc(sub)}</span></span><span class="sign-band"><span>← ${esc(zname(st.west))}</span>${st.km?`<em>${st.km}K</em>`:''}<span>${esc(zname(st.east))} →</span></span></span>`;}
 const poiLabelHTML=p=>{const g=PIN_GROUPS[poiGroup(p)];return `<span class="lbl-pin" style="--pc:${g.c}"><span class="pin"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">${g.ic}</svg></span><span class="pin-name">${esc(pt(p,'name'))}</span></span>`;};
@@ -4048,6 +4154,10 @@ function refreshLabels(){
   nameLabel.el.textContent=sheepName();
 }
 let bubbleT=0;
+let baaT=0;
+function sheepBaa(){const now=performance.now();if(now-baaT<450)return;baaT=now;SHEEP.hop=1;say(t(gpick(['baa1','baa2','baa3'])),1.6);sfx('baa',RR(.94,1.08));haptic(12);
+  for(let i=0;i<6;i++)glint(SHEEP.x+RR(-.4,.4),SHEEP.y+1.2+RR(0,.4),SHEEP.z+RR(-.4,.4),i%2?'#FF8FA3':'#FFD27A',{vy:RR(.8,1.6),vx:RR(-.4,.4),vz:RR(-.4,.4),life:RR(.7,1.1),size:RR(.2,.32),g:-.4,tw:true});
+  if(MP.nr)mpBaa();}
 function say(text,dur=2.2){bubbleLabel.el.textContent=text;bubbleLabel.kind='sheep';bubbleT=dur;}
 
 /* =========================================================
@@ -4128,13 +4238,14 @@ addEventListener('keydown',e=>{
   if(guideOpen){if(e.key==='Escape'||e.key==='Enter')hideGuide();return;}
   if(introOpen)return;
   if(wlOpen){if(e.key==='Escape')closeWish();return;}
-  if(CINE.active&&CINE.t>2.7&&(e.key==='Escape'||e.key.toLowerCase()==='e')){endCine();return;}
+  if(cineSkippable()&&(e.key==='Escape'||e.key.toLowerCase()==='e')){endCine();return;}
   const k=e.key.toLowerCase();
   if(['arrowup','arrowdown','arrowleft','arrowright',' '].includes(k))e.preventDefault();
   KEYS.add(k);if(k==='shift')RUN=true;
   if(k==='e'||k==='enter'){if(document.activeElement&&document.activeElement.tagName==='BUTTON'&&k==='enter')return;doInteract();}
   if(k==='escape'){closeSheet();closePin();}
   if(k==='n')setAllNames(!ALLNAMES);
+  if(k==='b'&&!e.repeat&&!CINE.active&&!RIDE.active)sheepBaa();
   if(k==='m')setView(RIG.mode==='overview'?'follow':'overview');
   if(['w','a','s','d','arrowup','arrowdown','arrowleft','arrowright'].includes(k)){MOVE_T=null;if(RIG.mode==='overview')setView('follow');}
 });
@@ -4144,14 +4255,18 @@ const PTR=new Map();let dragMoved=false,pinch0=0,dist0=0,lastTap=null;
 canvas.addEventListener('pointerdown',e=>{closePin();canvas.setPointerCapture(e.pointerId);PTR.set(e.pointerId,{x:e.clientX,y:e.clientY,sx:e.clientX,sy:e.clientY,t:performance.now()});dragMoved=false;
   if(PTR.size===2){const [a,b]=[...PTR.values()];pinch0=Math.hypot(a.x-b.x,a.y-b.y);dist0=RIG.dist;}});
 canvas.addEventListener('pointermove',e=>{const p=PTR.get(e.pointerId);if(!p)return;const dx=e.clientX-p.x,dy=e.clientY-p.y;p.x=e.clientX;p.y=e.clientY;
-  if(PTR.size===1){if(Math.hypot(p.x-p.sx,p.y-p.sy)>6)dragMoved=true;if(dragMoved){if(CINE.active){if(CINE.t>2.7)endCine();else return;}RIG.yaw-=dx*.006;RIG.pitch=clamp(RIG.pitch+dy*.004,.32,1.42);}}
+  if(PTR.size===1){if(Math.hypot(p.x-p.sx,p.y-p.sy)>6)dragMoved=true;if(dragMoved){if(CINE.active){if(cineSkippable())endCine();else return;}RIG.yaw-=dx*.006;RIG.pitch=clamp(RIG.pitch+dy*.004,.32,1.42);}}
   else if(PTR.size===2){dragMoved=true;const [a,b]=[...PTR.values()];const d=Math.hypot(a.x-b.x,a.y-b.y);if(pinch0>0)RIG.dist=clamp(dist0*pinch0/d,RIG.mode==='overview'?80:9,RIG.mode==='overview'?overviewDist()*1.5:80);}});
 const ray=new THREE.Raycaster();const ndc=new THREE.Vector2();
+let hovT=0;canvas.addEventListener('pointermove',e=>{if(coarse||PTR.size||RIG.mode==='overview')return;const now=performance.now();if(now-hovT<120)return;hovT=now;
+  const r=canvas.getBoundingClientRect();ndc.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);ray.setFromCamera(ndc,camera);
+  canvas.style.cursor=!SHEEP.hidden&&ray.intersectObject(sheepG,true).length?'pointer':'';});
 canvas.addEventListener('pointerup',e=>{const p=PTR.get(e.pointerId);PTR.delete(e.pointerId);if(!p)return;
   if(!dragMoved&&performance.now()-p.t<500&&PTR.size===0){
     if(gameOpen||wlOpen)return;
-    if(CINE.active){if(CINE.t>2.7)endCine();return;}
+    if(CINE.active){if(cineSkippable())endCine();return;}
     const r=canvas.getBoundingClientRect();ndc.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);ray.setFromCamera(ndc,camera);
+    if(RIG.mode!=='overview'&&!RIDE.active&&!SHEEP.hidden&&ray.intersectObject(sheepG,true).length){sheepBaa();return;}
     const hit=ray.intersectObject(TERMESH,false)[0];if(!hit)return;
     if(RIG.mode==='overview'){const q=findWalkableNear(hit.point.x,hit.point.z);teleport(q.x,q.z);setView('follow');return;}
     if(RIDE.active)return;
@@ -4273,7 +4388,7 @@ let rippleT=0,graze=0,dustT=0;
 function updateSheep(dt,tt){
   if(SHEEP.hidden){sheepG.visible=false;return;}sheepG.visible=true;
   let ix=0,iz=0;
-  const cineLock=CINE.active&&CINE.t<2.7;
+  const cineLock=CINE.active&&!cineSkippable();
   if(!gameOpen&&!introOpen&&!guideOpen&&!wlOpen&&!RIDE.active&&!cineLock&&!EAT.active&&RACE.phase!=='count'){
     ix=(KEYS.has('d')||KEYS.has('arrowright')?1:0)-(KEYS.has('a')||KEYS.has('arrowleft')?1:0);
     iz=(KEYS.has('w')||KEYS.has('arrowup')?1:0)-(KEYS.has('s')||KEYS.has('arrowdown')?1:0);
@@ -4311,12 +4426,14 @@ function updateSheep(dt,tt){
   {const yr=Math.atan2(Math.sin(SHEEP.yaw-yaw0),Math.cos(SHEEP.yaw-yaw0))/Math.max(dt,1e-4);SHEEP.lean=lerp(SHEEP.lean,clamp(-yr*.045*clamp(SHEEP.speed/8,0,1.4),-.2,.2),Math.min(1,dt*8));}
   const sw=Math.sin(SHEEP.phase)*.65*amp;const L=sheepParts.legs;L[0].rotation.x=sw;L[3].rotation.x=sw;L[1].rotation.x=-sw;L[2].rotation.x=-sw;
   SHEEP.hop=Math.max(0,SHEEP.hop-dt*2.4);const hop=Math.sin(Math.min(1,1-SHEEP.hop)*Math.PI)*(SHEEP.hop>0?.7:0);
-  sheepParts.body.position.y=Math.abs(Math.sin(SHEEP.phase))*.07*amp+hop;
+  // a hop lifts the whole sheep (legs tucked), not just the wool
+  sheepParts.body.position.y=Math.abs(Math.sin(SHEEP.phase))*.07*amp;if(hop>0){const k=hop/.7;L[0].rotation.x=L[1].rotation.x=-.55*k;L[2].rotation.x=L[3].rotation.x=.55*k;}
   if(SHEEP.speed<.3)SHEEP.idle+=dt;else SHEEP.idle=0;
   graze=SHEEP.idle>3.5&&(SHEEP.idle%7)<2.6?Math.min(1,graze+dt*2):Math.max(0,graze-dt*3);
   sheepParts.head.rotation.x=graze*.75+Math.sin(SHEEP.phase*2)*.05*amp;
   sheepParts['ear-1'].rotation.z=.4+Math.sin(tt*3)*.08;sheepParts['ear1'].rotation.z=-.4-Math.sin(tt*3+1)*.08;
-  sheepG.position.set(SHEEP.x,SHEEP.y,SHEEP.z);sheepG.rotation.y=SHEEP.yaw;sheepG.rotation.z=SHEEP.lean;
+  SHEEP.blink=(SHEEP.blink??3)-dt;{const b=SHEEP.blink<0?(SHEEP.blink<-.13?(SHEEP.blink=RR(2.2,5.5),1):.12):1;for(const e of sheepParts.eyes)e.scale.y=b;}
+  sheepG.position.set(SHEEP.x,SHEEP.y+hop,SHEEP.z);sheepG.rotation.y=SHEEP.yaw;sheepG.rotation.z=SHEEP.lean;
   nameLabel.pos.set(SHEEP.x,SHEEP.y+1.85+hop,SHEEP.z);bubbleLabel.pos.set(SHEEP.x+.4,SHEEP.y+2.45+hop,SHEEP.z);
   if(bubbleT>0){bubbleT-=dt;if(bubbleT<=0){bubbleLabel.kind='bubbleOff';bubbleLabel.el.classList.add('off');bubbleLabel.on=false;}}
 }
@@ -4422,7 +4539,7 @@ $('sheetBody').addEventListener('click',e=>{const b=e.target.closest('[data-act]
   else if(a==='ride')rideTo(STATIONS.find(s=>s.id===v));
   else if(a==='wool'){PREF.wool=v;applyPref();openSheepPanel();}
   else if(a==='scarf'){PREF.scarf=v;applyPref();openSheepPanel();}
-  else if(a==='baa'){SHEEP.hop=1;say(t(gpick(['baa1','baa2','baa3'])));mpBaa();}
+  else if(a==='baa'){baaT=0;sheepBaa();}
   else if(a==='mpcreate')mpJoin(mpNewCode(),$('mpPwNew').value,true);
   else if(a==='mpjoin')mpJoin($('mpCode').value,$('mpPw').value,false);
   else if(a==='mpleave')mpLeave();
@@ -4672,7 +4789,7 @@ function sparkle(x,y,z){const mat=new THREE.MeshBasicMaterial({color:'#FFD45A',t
   for(let i=0;i<9;i++){const m=new THREE.Mesh(ico(.06,0),mat.clone());m.position.set(x,y,z);scene.add(m);PUFFS.push({m,v:new THREE.Vector3(RR(-1,1),RR(.6,1.8),RR(-1,1)).multiplyScalar(2.4),life:0,dust:false});}
   mat.dispose();}
 function coinPick(c){
-  c.pt=0;coinsAdd(COIN_VALUE);sparkle(c.x,c.y+.8,c.z);
+  c.pt=0;coinsAdd(COIN_VALUE);sparkle(c.x,c.y+.8,c.z);haptic(8);
   if(MU.ctx&&MU.playing){const now=MU.ctx.currentTime+.02;[84,91].forEach((m,i)=>muVoice({k:'bell',m:[m],d:.5,v:.07},now+i*.07));}
   if(!COIN.first){COIN.first=true;store.set('coinSeen',true);toast(t('coin_first'),4200);}
   else say(t('coin_got',{n:COIN_VALUE}),1.2);
@@ -5362,7 +5479,7 @@ function drawPops(c,list,dt){for(let i=list.length-1;i>=0;i--){const p=list[i];p
 const GLantern={id:'lantern',zone:'shifen',size:[400,600],pass:100,unit:'u_pts',
   color:0,wishIdx:0,wish:null,
   curWish(){return this.wishIdx!=null?WISHES[LANG][this.wishIdx]:(this.wish||WISHES[LANG][0]);},
-  setupHTML(){const cur=this.curWish();const max=LANG==='en'?16:8;return `<p class="optlabel">${esc(t('opt_color'))}</p><div class="lc-grid">${LANTERN_COLORS.map((l,i)=>`<button class="lc" type="button" data-lc="${i}" aria-pressed="${i===this.color}"><i style="background:${l.c}"></i>${esc(l.n[LANG])}<small>${esc(l.m[LANG])}</small></button>`).join('')}</div>
+  setupHTML(){const cur=this.curWish();const max=LANG==='en'?16:8;return `<p class="optlabel">${esc(t('opt_color'))}</p><div class="lc-grid">${LANTERN_ORDER.map(i=>[LANTERN_COLORS[i],i]).map(([l,i])=>`<button class="lc" type="button" data-lc="${i}" aria-pressed="${i===this.color}"><i style="background:${l.c}"></i>${esc(l.n[LANG])}<small>${esc(l.m[LANG])}</small></button>`).join('')}</div>
     <p class="optlabel">${esc(t('opt_wish'))}</p><div class="chips">${WISHES[LANG].map((w,i)=>`<button class="chip" type="button" data-wish="${i}" aria-pressed="${this.wishIdx===i}">${esc(w)}</button>`).join('')}</div>
     <div class="field"><label for="wishInput">${esc(t('opt_custom',{n:max}))}</label><input id="wishInput" maxlength="${max}" value="${esc(cur)}" autocomplete="off"></div>`;},
   bindSetup(root){root.querySelectorAll('[data-lc]').forEach(b=>b.addEventListener('click',()=>{this.color=+b.dataset.lc;root.querySelectorAll('[data-lc]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));}));
@@ -5371,7 +5488,7 @@ const GLantern={id:'lantern',zone:'shifen',size:[400,600],pass:100,unit:'u_pts',
     inp.addEventListener('input',()=>{const v=inp.value.trim();const i=WISHES[LANG].indexOf(v);if(i>=0){this.wishIdx=i;this.wish=null;}else{this.wishIdx=null;this.wish=v;}ws.forEach(x=>x.setAttribute('aria-pressed',String(+x.dataset.wish===this.wishIdx)));});},
   reset(){this.t=0;this.x=200;this.tx=200;this.hearts=3;this.inv=0;this.stars=0;this.alt=0;this.objs=[];this.spawn=.6;this.lastHaz=0;this.done=false;this.kl=0;this.kr=0;this.pops=[];
     this.sky=[];for(let i=0;i<70;i++)this.sky.push({x:GR()*400,y:GR()*600,r:GR()*1.6+.3,p:GR()*6});
-    this.bg=[];for(let i=0;i<12;i++)this.bg.push({x:GR()*400,y:GR()*600,s:GR()*.5+.4,c:LANTERN_COLORS[i%8].c});},
+    this.bg=[];for(let i=0;i<12;i++)this.bg.push({x:GR()*400,y:GR()*600,s:GR()*.5+.4,c:LANTERN_COLORS[i%LANTERN_COLORS.length].c});},
   update(dt){if(this.done)return;this.t+=dt;const v=120+this.t*3.4;this.alt+=dt*(10+this.t*.4);
     if(this.kl)this.tx-=330*dt;if(this.kr)this.tx+=330*dt;this.tx=clamp(this.tx,26,374);this.x+=(this.tx-this.x)*Math.min(1,dt*6.5);
     this.inv=Math.max(0,this.inv-dt);this.spawn-=dt;
@@ -5581,7 +5698,7 @@ function closeGame(){
   }
   lastResult=null;
 }
-function celebrate(){toast(t('celebrate'),4200);const z=ZONES.shifen;for(let i=0;i<8;i++){const p=RAIL.at(z.s+6+i*2.2);spawnLantern(p.x+RR(-1,1),railY(z.s)+1+i*.3,p.z+RR(-1,1),LANTERN_COLORS[i].c,{scale:1.3});}if(Math.hypot(SHEEP.x-z.x,SHEEP.z-z.z)>50)setView('overview');}
+function celebrate(){toast(t('celebrate'),4200);const z=ZONES.shifen;for(let i=0;i<LANTERN_COLORS.length;i++){const p=RAIL.at(z.s+6+i*2.2);spawnLantern(p.x+RR(-1,1),railY(z.s)+1+i*.3,p.z+RR(-1,1),LANTERN_COLORS[i].c,{scale:1.3});}if(Math.hypot(SHEEP.x-z.x,SHEEP.z-z.z)>50)setView('overview');}
 $('gClose').addEventListener('click',closeGame);
 function gpos(e){const r=gc.getBoundingClientRect();return [(e.clientX-r.left)/GSCALE,(e.clientY-r.top)/GSCALE];}
 gc.addEventListener('pointerdown',e=>{if(GSTATE!=='play')return;e.preventDefault();gc.setPointerCapture(e.pointerId);GPTR=true;const [x,y]=gpos(e);if(GAME.down)GAME.down(x,y);if(GAME.id==='lantern')GAME.tx=x;});
@@ -5634,7 +5751,7 @@ function layoutGuide(){
   if(!$('prompt').hidden){const r=$('prompt').getBoundingClientRect();add(esc(t('g_prompt')),{left:(r.left+r.width/2)+'px',bottom:(H-r.top+12)+'px',transform:'translateX(-50%)'},'ar-dc');}
   $('gnotes').innerHTML=notes.join('');
 }
-const TIPKEYS=['g_tap','tip_pins','tip_space','tip_sta','g_dbl','tip_coin','tip_pad','g_mini','tip_mp','tip_train','g_ring','tip_time','tip_music','g_labels','tip_trainst','tip_egret','g_drag'];
+const TIPKEYS=['g_tap','tip_baa','tip_pins','tip_space','tip_sta','g_dbl','tip_coin','tip_pad','g_mini','tip_mp','tip_train','g_ring','tip_time','tip_music','g_labels','tip_trainst','tip_egret','g_drag'];
 let tipIdx=-1,tipT=0;
 function nextTip(reset){if(reset)tipIdx=-1;tipIdx=(tipIdx+1)%TIPKEYS.length;const el=$('tipbar');$('tipText').textContent=t(TIPKEYS[tipIdx]);el.style.animation='none';void el.offsetWidth;el.style.animation='';tipT=8;}
 $('tipClose').addEventListener('click',()=>{$('tipbar').hidden=true;store.set('tipsOff',true);});
@@ -5873,6 +5990,16 @@ function sfx(k,n=1){
   const tone=(type,f0,f1,v,d,t0=now)=>{const o=ctx.createOscillator();o.type=type;o.frequency.setValueAtTime(f0,t0);o.frequency.exponentialRampToValueAtTime(f1,t0+d);
     const g=ctx.createGain();env(g,v,.003,d,t0);o.connect(g);g.connect(out);o.start(t0);o.stop(t0+d+.05);};
   if(k==='shoot'){tone('square',1400,320,.04,.09);tone('sawtooth',720,180,.022,.08);}
+  else if(k==='pop'){tone('sine',380,920,.09,.14);noise('bandpass',2600,1400,.05,.08);}
+  else if(k==='strike'){noise('highpass',5200,2200,.16,.13);noise('bandpass',3200,1300,.06,.3,now+.07);}
+  else if(k==='ignite'){noise('lowpass',240,2400,.18,.6);tone('sine',85,150,.08,.45);}
+  else if(k==='whoosh'){noise('bandpass',320,1600,.14,1.2);tone('sine',220,440,.03,.9);}
+  else if(k==='twinkle'){[84,88,91,96,100].forEach((m,i)=>tone('sine',mf(m),mf(m),.035,.55,now+i*.065));}
+  else if(k==='tick'){const m=n===2?84:79;tone('triangle',mf(m),mf(m),.07,.18);}
+  else if(k==='baa'){const f=n||1;const o=ctx.createOscillator();o.type='sawtooth';o.frequency.setValueAtTime(560*f,now);o.frequency.linearRampToValueAtTime(470*f,now+.45);
+    const lfo=ctx.createOscillator();lfo.frequency.value=8.5;const lg=ctx.createGain();lg.gain.value=30*f;lfo.connect(lg);lg.connect(o.frequency);
+    const bp=ctx.createBiquadFilter();bp.type='bandpass';bp.frequency.value=1150;bp.Q.value=1.3;const g=ctx.createGain();env(g,.16,.04,.48);
+    o.connect(bp);bp.connect(g);g.connect(out);o.start(now);o.stop(now+.6);lfo.start(now);lfo.stop(now+.6);}
   else if(k==='hit'){const v=Math.min(1,.55+n/45);tone('sine',120,36,.6*v,.32);noise('lowpass',1500,180,.5*v,.32);}
   else if(k==='boom'){const v=Math.min(2.4,n);noise('lowpass',2600,140,.2*v,.35+.25*v);tone('sine',90,30,.22*v,.3+.1*v);}
   else if(k==='heal'){[76,79,84,88].forEach((m,i)=>tone('triangle',mf(m),mf(m)*1.01,.07,.32,now+i*.07));}
@@ -5975,7 +6102,7 @@ function makeSheepModel(wool,scarf){
   const g=new THREE.Group();const body=new THREE.Group();g.add(body);
   for(const [x,y,z,r] of [[0,.66,0,.36],[.19,.7,.2,.27],[-.19,.7,.2,.27],[.19,.7,-.2,.27],[-.19,.7,-.2,.27],[0,.86,.04,.27],[0,.66,-.32,.26],[0,.64,.3,.25],[.22,.6,0,.24],[-.22,.6,0,.24]]){const m=new THREE.Mesh(ico(r,1),wm);m.position.set(x,y,z);m.castShadow=true;body.add(m);}
   const head=new THREE.Group();head.position.set(0,.84,.43);body.add(head);
-  const hm=new THREE.Mesh(ico(.19,1),fm);hm.scale.set(.9,1.05,1.15);head.add(hm);const tuft=new THREE.Mesh(ico(.12,1),wm);tuft.position.set(0,.16,-.02);head.add(tuft);
+  const hm=new THREE.Mesh(ico(.19,1),fm);hm.scale.set(.9,1.05,1.15);head.add(hm);const tuft=new THREE.Mesh(ico(.12,1),wm);tuft.position.set(0,.16,-.02);head.add(tuft);sheepFace(head);
   for(const sd of [-1,1]){const e=new THREE.Mesh(EYEG,EYEW);e.position.set(.085*sd,.04,.17);head.add(e);const pu=new THREE.Mesh(PUPG,EYEB);pu.position.set(.088*sd,.04,.205);head.add(pu);
     const ear=new THREE.Mesh(BOX,fm);ear.scale.set(.18,.05,.09);ear.position.set(.2*sd,.05,-.02);ear.rotation.z=-.4*sd;head.add(ear);}
   const legs=[];for(const [x,z] of [[.15,.2],[-.15,.2],[.15,-.2],[-.15,-.2]]){const pv=new THREE.Group();pv.position.set(x,.48,z);const l=new THREE.Mesh(cyl(.055,.05,.46,6),fm);l.position.y=-.23;l.castShadow=true;pv.add(l);g.add(pv);legs.push(pv);}
@@ -6007,7 +6134,7 @@ function mpLantern(rp,L){
   const ci=Number.isInteger(L.c)&&L.c>=0&&L.c<LANTERN_COLORS.length?L.c:0;const text=cleanText(L.t,20)||colorWish(ci);
   const P=LSPOTS[zid];const W=makeWishLantern(text,ci,zid,rp.name);const a=GR()*6.28;
   W.g.position.set(P.x+Math.cos(a)*.9,P.y+.6,P.z+Math.sin(a)*.9);W.g.scale.setScalar(WL_S);W.fl.scale.setScalar(1);W.gl.material.opacity=.38+.55*TIMEV.night;scene.add(W.g);
-  const Lz={g:W.g,vy:.9,ph:GR()*6,life:0,label:null,norot:0,drift:.45,wish:W,labelOff:.5};LANTERNS.push(Lz);
+  const Lz={g:W.g,vy:.9,boost:1.4,ph:GR()*6,life:0,label:null,norot:0,drift:.45,wish:W,labelOff:.5,trail:LANTERN_COLORS[ci].c,burstAt:3.6,sway:1};LANTERNS.push(Lz);
   Lz.label=addLabel({html:'',cls:'lbl-wish',pos:W.g.position.clone(),kind:'wish'});Lz.label.el.textContent=t('lt_wishlabel',{n:rp.name,w:text});
   toast(t('mp_lantern',{n:rp.name,s:zname(zid)}),2600);muChime();
 }
@@ -6029,8 +6156,8 @@ function mpUpdate(dt){
     let dd=rp.tyaw-rp.yaw;dd=Math.atan2(Math.sin(dd),Math.cos(dd));rp.yaw+=dd*Math.min(1,dt*10);
     rp.y=lerp(rp.y,groundY(rp.x,rp.z,rp.y),Math.min(1,dt*12));
     const amp=clamp(rp.spd/8,0,1.3);rp.ph+=dt*(4+rp.spd*1.25);const sw=Math.sin(rp.ph)*.65*amp;const Lg=m.legs;Lg[0].rotation.x=sw;Lg[3].rotation.x=sw;Lg[1].rotation.x=-sw;Lg[2].rotation.x=-sw;
-    rp.hop=Math.max(0,rp.hop-dt*2.4);const hop=Math.sin(Math.min(1,1-rp.hop)*Math.PI)*(rp.hop>0?.7:0);m.body.position.y=Math.abs(Math.sin(rp.ph))*.07*amp+hop;
-    m.g.position.set(rp.x,rp.y,rp.z);m.g.rotation.y=rp.yaw;
+    rp.hop=Math.max(0,rp.hop-dt*2.4);const hop=Math.sin(Math.min(1,1-rp.hop)*Math.PI)*(rp.hop>0?.7:0);m.body.position.y=Math.abs(Math.sin(rp.ph))*.07*amp;if(hop>0){const k=hop/.7;Lg[0].rotation.x=Lg[1].rotation.x=-.55*k;Lg[2].rotation.x=Lg[3].rotation.x=.55*k;}
+    m.g.position.set(rp.x,rp.y+hop,rp.z);m.g.rotation.y=rp.yaw;
     if(rp.label){rp.label.pos.set(rp.x,rp.y+1.85+hop,rp.z);if(rp.bubT>0){rp.bubT-=dt;if(rp.bubT<=0)mpSetLabel(rp,rp.name);}}
   }
 }
@@ -6320,7 +6447,7 @@ $('race').addEventListener('click',e=>{const b=e.target.closest('[data-race]');i
 /* =========================================================
    language switching
    ========================================================= */
-function renderKeyhint(){$('keyhint').innerHTML=[['WASD','kh_walk'],['Shift','kh_run'],['E','kh_act'],['N','kh_names'],[t('k_drag'),'kh_drag'],[t('k_wheel'),'kh_wheel'],[t('k_click'),'kh_click'],[t('k_dbl'),'kh_dbl']].map(([k,v])=>`<span><kbd>${esc(k)}</kbd>${esc(t(v))}</span>`).join('');}
+function renderKeyhint(){$('keyhint').innerHTML=[['WASD','kh_walk'],['Shift','kh_run'],['E','kh_act'],['N','kh_names'],['B','kh_baa'],[t('k_drag'),'kh_drag'],[t('k_wheel'),'kh_wheel'],[t('k_click'),'kh_click'],[t('k_dbl'),'kh_dbl']].map(([k,v])=>`<span><kbd>${esc(k)}</kbd>${esc(t(v))}</span>`).join('');}
 function applyStatic(){
   document.documentElement.lang=LANGS[LANG].html;
   document.querySelectorAll('[data-i18n]').forEach(el=>{el.textContent=t(el.dataset.i18n);});
