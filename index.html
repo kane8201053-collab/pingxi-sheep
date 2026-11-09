@@ -1194,6 +1194,10 @@ d('cat_美食','美食','Food','グルメ','먹거리');
 d('cat_店家','店家','Shop','お店','가게');
 d('cat_車站','車站','Station','駅','역');
 d('cat_步道','步道','Trail','歩道','산책로');
+d('cat_交通','交通','Transit','交通','교통');
+d('grp_bus','公車站','Bus stops','バス停','버스 정류장');
+d('coord_gmap','依 Google 地圖標示的位置','Location as shown on Google Maps','Google マップ上の位置','Google 지도에 표시된 위치');
+d('k_src','資料來源','Sources','出典','출처');
 d('cat_特色','特色','Local custom','名物','특색');
 /* units */
 d('u_pts','分','pts','点','점');
@@ -1450,12 +1454,12 @@ const PI={
  px_shelter:{en:['Pingxi air-raid shelters','During World War II, residents dug five caves into the hillside near Guanyin Rock to hide from air raids, running inside when the warning bell rang. Today visitors can walk in and take photos.','Step into a wartime shelter','Learn the old street’s wartime story'],
   ja:['平渓防空壕','第二次世界大戦中、住民は観音巌近くの山肌に5つの洞穴を掘り、空襲警報の鐘が鳴ると中へ避難しました。今は観光客が中に入って写真を撮れます。','戦時中の避難壕に入ってみる','老街の戦争の記憶を知る'],
   ko:['핑시 방공호','2차 세계대전 때 주민들이 관음암 근처 산비탈에 동굴 다섯 개를 파서, 공습 경보 종이 울리면 그 안으로 피했어요. 지금은 여행자들이 들어가 보고 사진을 찍을 수 있어요.','전쟁 때의 대피 동굴에 들어가 보기','옛거리의 전쟁 기억 알아보기']},
- px_meiyu:{en:['Meiyu Sky Lantern Workshop','Owner Lin Mei-yu retired from finance in 2011 and came home to Pingxi. Since 2016 she has made lanterns from fabric left over from her mother’s qipao sewing, and every lantern in the shop is her own work.','Small lanterns made from qipao fabric','Take home a handmade lantern'],
-  ja:['美玉天灯製作所','店主の林美玉さんは2011年に金融業を退職して故郷へ戻り、2016年から母が仕立てたチャイナドレスの余り布で天灯を作り始めました。店の天灯はすべて彼女の手作りです。','チャイナドレスの布で作る小さな天灯','手作りの天灯をおみやげに'],
-  ko:['메이위 천등 공방','주인 린메이위 씨는 2011년 금융업에서 은퇴하고 고향으로 돌아와, 2016년부터 어머니가 치파오를 짓고 남은 천으로 천등을 만들기 시작했어요. 가게의 천등은 모두 그녀가 직접 만든 거예요.','치파오 천으로 만든 작은 천등','손으로 만든 천등을 기념품으로']},
- px_mishidi:{en:['Mi Shidi','A creative space named after Pingxi’s old name, Shidi, in the roughly 60-year-old family home of owner Kuo Tsung-neng’s father. It offers blue dyeing, pressed-flower and handmade-paper workshops, plus pour-over coffee at window seats where you can watch the trains.','Blue dyeing and handmade-paper workshops','Pour-over coffee by a window facing the trains'],
-  ja:['覓石底','平渓の旧地名「石底」にちなむクリエイティブスペース。店主・郭聡能さんの父の、築60年ほどの実家です。藍染め、押し花、紙すきの体験ができ、窓辺の席でハンドドリップコーヒーを飲みながら列車を眺められます。','藍染めと紙すき体験','列車が見える窓辺でハンドドリップ'],
-  ko:['미스디','핑시의 옛 지명 ‘스디’에서 이름을 딴 공간으로, 주인 궈충넝 씨 아버지가 살던 60년쯤 된 집이에요. 쪽염색, 압화, 종이 뜨기 체험을 할 수 있고, 창가에 앉아 핸드드립 커피를 마시며 기차를 볼 수 있어요.','쪽염색과 종이 뜨기 체험','기차가 보이는 창가의 핸드드립 커피']},
+ px_meiyu:{en:['Meiyu Sky Lantern Workshop','A small workshop that hand-makes sky lanterns from fabric left over from qipao tailoring; every lantern in the shop is made by hand.','Small lanterns made from qipao fabric','Take home a handmade lantern'],
+  ja:['美玉天灯製作所','チャイナドレスの余り布で天灯を手作りする小さな工房。店の天灯はひとつひとつ手作りです。','チャイナドレスの布で作る小さな天灯','手作りの天灯をおみやげに'],
+  ko:['메이위 천등 공방','치파오를 짓고 남은 천으로 천등을 손수 만드는 작은 공방이에요. 가게의 천등은 하나하나 직접 만든 거예요.','치파오 천으로 만든 작은 천등','손으로 만든 천등을 기념품으로']},
+ px_mishidi:{en:['Mi Shidi','A creative space named after Pingxi’s old name, Shidi, in a house about 60 years old. It offers blue dyeing, pressed-flower and handmade-paper workshops, plus pour-over coffee at window seats where you can watch the trains.','Blue dyeing and handmade-paper workshops','Pour-over coffee by a window facing the trains'],
+  ja:['覓石底','平渓の旧地名「石底」にちなむクリエイティブスペース。築60年ほどの古い家にあります。藍染め、押し花、紙すきの体験ができ、窓辺の席でハンドドリップコーヒーを飲みながら列車を眺められます。','藍染めと紙すき体験','列車が見える窓辺でハンドドリップ'],
+  ko:['미스디','핑시의 옛 지명 ‘스디’에서 이름을 딴 공간으로, 60년쯤 된 오래된 집에 있어요. 쪽염색, 압화, 종이 뜨기 체험을 할 수 있고, 창가에 앉아 핸드드립 커피를 마시며 기차를 볼 수 있어요.','쪽염색과 종이 뜨기 체험','기차가 보이는 창가의 핸드드립 커피']},
  px_pingan:{en:['Ping’an Selection','A gift shop beside Pingxi Station run with the Pingxi Farmers’ Association, selling local produce such as Pingxi tea, honey, Chinese yam and pearl scallions.','Pingxi tea and local produce','Bring home a taste of Pingxi'],
   ja:['平安厳選','平渓駅のそばにある、平渓区農会と協力したおみやげ店。平渓茶、はちみつ、山芋、珠ネギなど地元の農産物を扱っています。','平渓茶と地元の農産物','平渓の味をおみやげに'],
   ko:['핑안옌쉬안','핑시역 옆에서 핑시구 농협과 함께 운영하는 기념품 가게로, 핑시 차, 꿀, 마, 쪽파 같은 지역 농산물을 팔아요.','핑시 차와 지역 농산물','핑시의 맛을 집으로']},
@@ -1474,27 +1478,26 @@ const PI={
  jt_museum:{en:['Jingtong Mining Industry Museum','A converted railway staff dormitory that opened in 2005. The ground floor covers Pingxi’s landscape and coal-mining history; upstairs shows mining artifacts and local life.','Old photos and objects from miners’ lives','Get to know the mining town in twenty minutes'],
   ja:['菁桐鉱業生活館','鉄道職員の宿舎を改装し、2005年に開館。1階は平渓の地形と炭鉱の発展、2階は採掘道具や暮らしの展示です。','鉱員の暮らしの古い写真と道具','20分で炭鉱の町を知る'],
   ko:['징퉁 광업 생활관','철도 직원 숙소를 고쳐 2005년에 문을 열었어요. 1층은 핑시의 지형과 탄광의 역사, 2층은 채굴 유물과 마을 생활을 보여 줘요.','광부 생활의 옛 사진과 유물','20분 만에 탄광 마을 이해하기']},
- jt_story:{en:['Jingtong Story House','A railway souvenir shop beside Jingtong Station, run by railway fan Ho Yuan-fu. It sells limited railway goods, snacks and small keepsakes, and has a retro replica mailbox where you can stamp and send mail.','Limited railway goods and commemorative stamps','A treasure hunt for railway fans'],
-  ja:['菁桐故事館','菁桐駅のそばにある鉄道グッズの店。館主の何元富さんは鉄道ファンで、限定の鉄道グッズやお菓子、小さなおみやげが並び、レトロな復刻ポストで記念スタンプを押して手紙も出せます。','限定鉄道グッズと記念スタンプ','鉄道ファンの宝探し'],
-  ko:['징퉁 이야기관','징퉁역 옆의 철도 기념품 가게로, 관장 허위안푸 씨는 철도 마니아예요. 한정 철도 상품과 간식, 작은 기념품이 있고, 복고풍 우체통에서 기념 도장을 찍어 편지를 보낼 수 있어요.','한정 철도 상품과 기념 도장','철도 팬을 위한 보물찾기 가게']},
- jt_incline:{en:['Jingtong Coal Memorial Park · Incline shaft','Coal dug underground was brought to the surface through this inclined shaft. The entrance and track have been preserved.','The shaft mouth leading into the hill','See where the coal came out'],
-  ja:['菁桐炭鉱記念公園・大斜坑','地下で掘った石炭は、この斜坑から地上へ運び出されました。坑口とレールが残っています。','山の中へ続く斜坑の入口','石炭がどこから出てきたのかを見る'],
-  ko:['징퉁 탄광 기념공원 · 대사갱','땅속에서 캔 석탄은 이 경사 갱도를 통해 지상으로 올라왔어요. 갱도 입구와 레일이 보존되어 있어요.','산속으로 이어지는 갱도 입구','석탄이 나오던 곳 직접 보기']},
+ jt_story:{en:['Jingtong Story House','A railway souvenir shop beside Jingtong Station. It sells limited railway goods, snacks and small keepsakes, and has a retro replica mailbox where you can stamp and send mail.','Limited railway goods and commemorative stamps','A treasure hunt for railway fans'],
+  ja:['菁桐故事館','菁桐駅のそばにある鉄道グッズの店。限定の鉄道グッズやお菓子、小さなおみやげが並び、レトロな復刻ポストで記念スタンプを押して手紙も出せます。','限定鉄道グッズと記念スタンプ','鉄道ファンの宝探し'],
+  ko:['징퉁 이야기관','징퉁역 옆의 철도 기념품 가게로, 한정 철도 상품과 간식, 작은 기념품이 있고, 복고풍 우체통에서 기념 도장을 찍어 편지를 보낼 수 있어요.','한정 철도 상품과 기념 도장','철도 팬을 위한 보물찾기 가게']},
+ jt_incline:{en:['Jingtong Coal Memorial Park (Shidi Incline Shaft)','The park keeps the mouth and track of the Shidi incline shaft. Coal dug underground was brought to the surface through it.','The shaft mouth leading into the hill','See where the coal came out'],ja:['菁桐炭鉱記念公園（石底大斜坑）','石底大斜坑の坑口とレールが残る公園。地下で掘った石炭は、この斜坑から地上へ運び出されました。','山の中へ続く斜坑の入口','石炭がどこから出てきたのかを見る'],ko:['징퉁 탄광 기념공원 (스디 대사갱)','스디 대사갱의 입구와 레일이 보존된 공원이에요. 땅속에서 캔 석탄은 이 경사 갱도를 통해 지상으로 올라왔어요.','산속으로 이어지는 갱도 입구','석탄이 나오던 곳 직접 보기']},
  jt_coalcafe:{en:['Coal Plant Café','A café in the old coal-washing plant. From up high you can look down on Jingtong Old Street and the station.','Sea-salt latte, hazelnut latte','Coffee inside a coal-plant ruin while trains come and go'],
   ja:['碳場咖啡','古い選炭場を改装したカフェ。高い場所から菁桐老街と駅を見下ろせます。','海塩ラテ、ヘーゼルナッツラテ','選炭場の遺構でコーヒーを飲みながら列車を眺める'],
   ko:['탄창 카페','옛 선탄장을 고친 카페로, 높은 곳에서 징퉁 옛거리와 역을 내려다볼 수 있어요.','바다소금 라테, 헤이즐넛 라테','탄광 유적에서 커피 마시며 기차 구경']},
  jt_hongbao:{en:['Hongbao Miners’ Canteen','A nostalgic canteen serving miner-style meals. The railway bento comes with stainless steel tableware.','Miner’s rice, railway bento, sweet starch soup','Eat a bento from the mining era'],
   ja:['紅宝鉱工食堂','懐かしい鉱員スタイルの食堂。鉄道弁当にはステンレスの食器がついてきます。','鉱夫めし、鉄道弁当、片栗粉の甘いスープ','炭鉱時代のお弁当を味わう'],
   ko:['훙바오 광부 식당','옛 광부 스타일의 정겨운 식당으로, 철도 도시락에는 스테인리스 식기가 함께 나와요.','광부 밥, 철도 도시락, 전분 디저트 수프','탄광 시대 도시락 맛보기']},
- jt_taizi:{en:['Taizi Guesthouse','A Japanese-style wooden guesthouse built by the Taiyang Mining Company during Japanese rule. It is said to have been built to host the Japanese crown prince, and its garden is well preserved.','Japanese wooden architecture and garden','A glimpse of the mining industry at its height'],
-  ja:['太子賓館','日本統治時代に台陽鉱業が建てた日本式の木造迎賓館。日本の皇太子を迎えるために建てられたと伝えられ、庭園もよく残っています。','日本式木造建築と庭園','炭鉱の全盛期の華やかさにふれる'],
-  ko:['타이쯔 빈관','일본 통치 시대에 타이양 광업이 지은 일본식 목조 영빈관으로, 일본 황태자를 맞이하려고 지었다고 전해지며 정원이 잘 보존되어 있어요.','일본식 목조 건축과 정원','탄광 전성기의 화려함 엿보기']},
+ jt_taizi:{en:['Taizi Guesthouse','A Japanese-style wooden guesthouse built by the Taiyang Mining Company during Japanese rule. It is said to have been built to host the Japanese crown prince, and its garden is well preserved. Today the compound is run by Ikken Jingtong Antique Art Life; visits are by reservation.','Japanese wooden architecture and garden','A glimpse of the mining industry at its height'],ja:['太子賓館','日本統治時代に台陽鉱業が建てた日本式の木造迎賓館。日本の皇太子を迎えるために建てられたと伝えられ、庭園もよく残っています。現在は「一見・菁桐古美術生活」が運営し、見学は予約制です。','日本式木造建築と庭園','炭鉱の全盛期の華やかさにふれる'],ko:['타이쯔 빈관','일본 통치 시대에 타이양 광업이 지은 일본식 목조 영빈관으로, 일본 황태자를 맞이하려고 지었다고 전해지며 정원이 잘 보존되어 있어요. 지금은 「이켄 징퉁 고미술 생활」이 운영하며 예약제로 관람할 수 있어요.','일본식 목조 건축과 정원','탄광 전성기의 화려함 엿보기']},
  jt_yijian:{en:['Yijian Jingtong Art House','The former Shidi Club, built in 1939 and listed as a historic site in 2003. It is now a private museum offering set-menu meals and cultural experiences by reservation.','A Japanese-Western shoin-style building','For an unhurried afternoon'],
   ja:['一見・菁桐古美術生活','1939年に建てられた石底倶楽部を改装し、2003年に古蹟に指定されました。現在は私設の美術館で、おまかせ料理や文化体験を予約制で提供しています。','和洋折衷の書院造の建物','ゆっくり午後を過ごしたい人に'],
   ko:['이젠 징퉁 고미술 생활','1939년에 지은 스디 클럽을 고친 곳으로 2003년 고적으로 지정되었어요. 지금은 개인 미술관으로 코스 요리와 문화 체험을 예약제로 운영해요.','일본식과 서양식이 섞인 서원 건축','느긋하게 오후를 보내고 싶은 사람에게']},
- jt_police:{en:['Sky Lantern Police Station (Pingxi Precinct)','Just west of Jingtong Station, the Pingxi police substation is shaped like a giant sky lantern lit by more than 190,000 LEDs. It opened in 2014, glows at night, and is the first landmark you see when you drive into Jingtong.','A giant lantern-shaped building that glows at night','Take a photo with the “Sky Lantern Police Station”'],
-  ja:['天灯派出所（平渓分駐所）','菁桐駅の西側にある平渓分駐所は、19万個以上のLEDを使った巨大な天灯の形をした建物。2014年に使われ始め、夜には明かりがともり、車で菁桐に入ると最初に目に入る目印です。','夜に光る巨大な天灯の建物','「天灯派出所」と記念撮影'],
-  ko:['천등 파출소 (핑시 분주소)','징퉁역 서쪽에 있는 핑시 분주소는 19만 개가 넘는 LED로 밝히는 거대한 천등 모양 건물이에요. 2014년부터 쓰였고 밤이면 불이 들어와, 차로 징퉁에 들어서면 가장 먼저 보이는 랜드마크예요.','밤에 빛나는 거대한 천등 건물','"천등 파출소"와 기념사진 찍기']},
+ jt_police:{en:['Jingtong Sky Lantern House (former Sky Lantern Police Station)','West of Jingtong Station, this giant lantern-shaped building opened in 2014 as the “Sky Lantern Police Station,” lit by more than 190,000 LEDs. The police post was withdrawn in 2019 and the building now goes by Jingtong Sky Lantern House. It still glows at night and is the first landmark you see driving into Jingtong.','A giant lantern-shaped building that glows at night','Take a photo with the giant lantern building'],ja:['菁桐天灯館（旧・天灯派出所）','菁桐駅の西にある巨大な天灯形の建物。2014年に19万個以上のLEDを使った「天灯派出所」として開所し、2019年に派出所が撤退した後は「菁桐天灯館」として残っています。夜に光る姿は今も菁桐の目印です。','夜に光る巨大な天灯の建物','巨大な天灯の建物と記念撮影'],ko:['징퉁 천등관 (옛 천등 파출소)','징퉁역 서쪽의 거대한 천등 모양 건물로, 2014년 19만 개가 넘는 LED를 단 "천등 파출소"로 문을 열었어요. 2019년 파출소가 철수한 뒤 "징퉁 천등관"으로 남아 있고, 밤에 빛나는 모습은 여전히 징퉁의 랜드마크예요.','밤에 빛나는 거대한 천등 건물','거대한 천등 건물과 기념사진 찍기']},
+jt_dorms:{en:['Jingtong Japanese-style Dormitories','Wooden Japanese-style dormitories left by the Taiyang Mining Company, with black tile roofs, clapboard walls and lattice windows; the mine director’s residence is among them.','A mining neighborhood of black-tiled wooden houses','Picture daily life in the mining era'],ja:['菁桐日式宿舎群','台陽鉱業が残した日本式の木造宿舎群。黒瓦の屋根、下見板張りの外壁、格子窓が今も残り、鉱長の宿舎もその一つです。','黒瓦の木造家屋が並ぶ鉱業の町','鉱業時代の暮らしを想像する'],ko:['징퉁 일본식 기숙사 마을','타이양 광업이 남긴 일본식 목조 기숙사들로, 검은 기와지붕과 판자벽, 격자창이 남아 있고 광장(鑛長)의 숙소도 그중 하나예요.','검은 기와 목조 가옥이 늘어선 광산 마을','광산 시절의 일상을 떠올려 보기']},
+bus_jt:{en:['Jingtongkeng bus stop (Route 795)','A stop on Taiwan Tourist Shuttle 795 (Muzha–Pingxi). From Taipei, take the MRT Wenhu Line to Muzha Station and walk about 100 m to stop A1. The bus runs via Shenkeng and Shiding and stops at Jingtongkeng, Pingxi Old Street, Shifenliao and Shifen Visitor Center. Muzha to Pingxi Old Street takes about 55 minutes.','Direct from Taipei’s Muzha MRT Station','Come from Taipei without changing trains','About 21 buses a day, 10–70 minutes apart; extra shuttles run during the Lantern Festival. Check the latest timetable before you go.'],ja:['菁桐坑バス停（795）','台湾好行795「木柵平渓線」の停留所。台北からMRT文湖線で「木柵駅」へ行き、駅から約100m歩いたA1乗り場で乗車。深坑・石碇を経由して菁桐坑、平渓老街、十分寮、十分遊客中心に停まります。木柵から平渓老街まで約55分。','MRT木柵駅から平渓へ直通','電車を乗り継がずに台北から来られる','1日約21便、間隔は10〜70分ほど。天灯祭りには臨時シャトルも出ます。出発前に最新の時刻表を確認してください。'],ko:['징퉁컹 버스 정류장 (795)','타이완 하오싱 795 무자–핑시선 정류장이에요. 타이베이에서 MRT 원후선을 타고 무자역에서 내려 약 100m 걸어 A1 정류장에서 타요. 선컹, 스딩을 지나 징퉁컹, 핑시 옛거리, 스펀랴오, 스펀 관광안내센터에 서요. 무자에서 핑시 옛거리까지 약 55분 걸려요.','타이베이 MRT 무자역에서 바로','기차를 갈아타지 않고 타이베이에서 올 수 있어요','하루 약 21편, 배차 간격은 10~70분이에요. 천등 축제 때는 셔틀도 있어요. 출발 전 최신 시간표를 확인하세요.']},
+bus_px:{en:['Pingxi Old Street bus stop (Route 795)','A stop on Taiwan Tourist Shuttle 795 (Muzha–Pingxi). From Taipei, take the MRT Wenhu Line to Muzha Station and walk about 100 m to stop A1. The bus runs via Shenkeng and Shiding and stops at Jingtongkeng, Pingxi Old Street, Shifenliao and Shifen Visitor Center. Muzha to Pingxi Old Street takes about 55 minutes.','Direct from Taipei’s Muzha MRT Station','Come from Taipei without changing trains','About 21 buses a day, 10–70 minutes apart; extra shuttles run during the Lantern Festival. Check the latest timetable before you go.'],ja:['平渓老街バス停（795）','台湾好行795「木柵平渓線」の停留所。台北からMRT文湖線で「木柵駅」へ行き、駅から約100m歩いたA1乗り場で乗車。深坑・石碇を経由して菁桐坑、平渓老街、十分寮、十分遊客中心に停まります。木柵から平渓老街まで約55分。','MRT木柵駅から平渓へ直通','電車を乗り継がずに台北から来られる','1日約21便、間隔は10〜70分ほど。天灯祭りには臨時シャトルも出ます。出発前に最新の時刻表を確認してください。'],ko:['핑시 옛거리 버스 정류장 (795)','타이완 하오싱 795 무자–핑시선 정류장이에요. 타이베이에서 MRT 원후선을 타고 무자역에서 내려 약 100m 걸어 A1 정류장에서 타요. 선컹, 스딩을 지나 징퉁컹, 핑시 옛거리, 스펀랴오, 스펀 관광안내센터에 서요. 무자에서 핑시 옛거리까지 약 55분 걸려요.','타이베이 MRT 무자역에서 바로','기차를 갈아타지 않고 타이베이에서 올 수 있어요','하루 약 21편, 배차 간격은 10~70분이에요. 천등 축제 때는 셔틀도 있어요. 출발 전 최신 시간표를 확인하세요.']},
+bus_sfl:{en:['Shifenliao bus stop (Route 795)','A stop on Taiwan Tourist Shuttle 795 (Muzha–Pingxi). From Taipei, take the MRT Wenhu Line to Muzha Station and walk about 100 m to stop A1. The bus runs via Shenkeng and Shiding and stops at Jingtongkeng, Pingxi Old Street, Shifenliao and Shifen Visitor Center. Muzha to Pingxi Old Street takes about 55 minutes.','Direct from Taipei’s Muzha MRT Station','Come from Taipei without changing trains','About 21 buses a day, 10–70 minutes apart; extra shuttles run during the Lantern Festival. Check the latest timetable before you go.'],ja:['十分寮バス停（795）','台湾好行795「木柵平渓線」の停留所。台北からMRT文湖線で「木柵駅」へ行き、駅から約100m歩いたA1乗り場で乗車。深坑・石碇を経由して菁桐坑、平渓老街、十分寮、十分遊客中心に停まります。木柵から平渓老街まで約55分。','MRT木柵駅から平渓へ直通','電車を乗り継がずに台北から来られる','1日約21便、間隔は10〜70分ほど。天灯祭りには臨時シャトルも出ます。出発前に最新の時刻表を確認してください。'],ko:['스펀랴오 버스 정류장 (795)','타이완 하오싱 795 무자–핑시선 정류장이에요. 타이베이에서 MRT 원후선을 타고 무자역에서 내려 약 100m 걸어 A1 정류장에서 타요. 선컹, 스딩을 지나 징퉁컹, 핑시 옛거리, 스펀랴오, 스펀 관광안내센터에 서요. 무자에서 핑시 옛거리까지 약 55분 걸려요.','타이베이 MRT 무자역에서 바로','기차를 갈아타지 않고 타이베이에서 올 수 있어요','하루 약 21편, 배차 간격은 10~70분이에요. 천등 축제 때는 셔틀도 있어요. 출발 전 최신 시간표를 확인하세요.']},
+bus_sfv:{en:['Shifen Visitor Center bus stop (Route 795)','A stop on Taiwan Tourist Shuttle 795 (Muzha–Pingxi). From Taipei, take the MRT Wenhu Line to Muzha Station and walk about 100 m to stop A1. The bus runs via Shenkeng and Shiding and stops at Jingtongkeng, Pingxi Old Street, Shifenliao and Shifen Visitor Center. Muzha to Pingxi Old Street takes about 55 minutes.','Direct from Taipei’s Muzha MRT Station','Come from Taipei without changing trains','About 21 buses a day, 10–70 minutes apart; extra shuttles run during the Lantern Festival. Check the latest timetable before you go.'],ja:['十分遊客中心バス停（795）','台湾好行795「木柵平渓線」の停留所。台北からMRT文湖線で「木柵駅」へ行き、駅から約100m歩いたA1乗り場で乗車。深坑・石碇を経由して菁桐坑、平渓老街、十分寮、十分遊客中心に停まります。木柵から平渓老街まで約55分。','MRT木柵駅から平渓へ直通','電車を乗り継がずに台北から来られる','1日約21便、間隔は10〜70分ほど。天灯祭りには臨時シャトルも出ます。出発前に最新の時刻表を確認してください。'],ko:['스펀 관광안내센터 버스 정류장 (795)','타이완 하오싱 795 무자–핑시선 정류장이에요. 타이베이에서 MRT 원후선을 타고 무자역에서 내려 약 100m 걸어 A1 정류장에서 타요. 선컹, 스딩을 지나 징퉁컹, 핑시 옛거리, 스펀랴오, 스펀 관광안내센터에 서요. 무자에서 핑시 옛거리까지 약 55분 걸려요.','타이베이 MRT 무자역에서 바로','기차를 갈아타지 않고 타이베이에서 올 수 있어요','하루 약 21편, 배차 간격은 10~70분이에요. 천등 축제 때는 셔틀도 있어요. 출발 전 최신 시간표를 확인하세요.']},
  jt_chickenroll:{en:['Jingtong chicken rolls','Chicken rolls you can grab near the station, a small snack while you explore Jingtong.','Freshly fried chicken rolls','A bite while you wait for the train'],
   ja:['菁桐の鶏巻き','駅の近くで買える鶏巻き（ジージュエン）。菁桐散策のちょっとしたおやつに。','揚げたての鶏巻き','列車を待ちながらつまむ'],
   ko:['징퉁 지쥐안','역 근처에서 사 먹을 수 있는 닭고기 말이 튀김으로, 징퉁을 둘러보며 먹기 좋은 간식이에요.','갓 튀긴 지쥐안','기차 기다리며 한 입']},
@@ -1602,11 +1605,12 @@ function densePath(gp,step=1){
 const PIN_GROUPS={food:{c:'#E0702B',k:'grp_food',ic:'<path d="M1.5 7.5h13a6.5 6.5 0 0 1-13 0z"/><path d="M5.5 1.5c-1 1.2 1 2 0 3.5M10 1.5c-1 1.2 1 2 0 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>'},
   view:{c:'#3E9A5A',k:'grp_view',ic:'<path d="M.5 14.5l5.2-9 3 4.6 2.2-3.2 4.6 7.6z"/><circle cx="12" cy="3.5" r="1.8"/>'},
   culture:{c:'#2F6FB0',k:'grp_culture',ic:'<path d="M8 .8l7.2 4H.8z"/><rect x="2" y="6" width="2.2" height="6"/><rect x="6.9" y="6" width="2.2" height="6"/><rect x="11.8" y="6" width="2.2" height="6"/><rect x=".8" y="13" width="14.4" height="2.2"/>'},
+  bus:{c:'#1F7A8C',k:'grp_bus',ic:'<rect x="2.5" y="1.2" width="11" height="11.3" rx="2.2"/><rect x="4" y="2.8" width="8" height="4.4" rx=".6" fill="var(--pc)"/><circle cx="5.2" cy="14" r="1.5"/><circle cx="10.8" cy="14" r="1.5"/>'},
   shop:{c:'#8A63C9',k:'grp_shop',ic:'<path d="M2.6 5.2h10.8L12.4 15H3.6z"/><path d="M5.4 5.2a2.6 2.6 0 0 1 5.2 0" fill="none" stroke="currentColor" stroke-width="1.5"/>'}};
 const VIEW_KEYS=new Set(['sf_street','sf_jingan','sf_siguang','sf_guanpu','sf_eyeglass','sf_falls','wg_qinghe','wg_falls','wg_trail','px_street','px_shidi','px_xiaozi']);
 const SHOP_KEYS=new Set(['sf_lanternshop','px_meiyu','px_pingan','jt_story','jt_yijian','jt_bamboo','jt_police']);
-function poiGroup(p){if(p.cat==='美食'||p.buy)return 'food';if(VIEW_KEYS.has(p.key)||p.cat==='步道')return 'view';if(SHOP_KEYS.has(p.key)||p.cat==='店家')return 'shop';return 'culture';}
-const CAT_COLORS={'景點':'#3E8E7E','美食':'#D4552F','店家':'#9E7BCB','車站':'#2F5F86','步道':'#7A9A3E','特色':'#C9962E'};
+function poiGroup(p){if(p.cat==='美食'||p.buy)return 'food';if(p.cat==='交通')return 'bus';if(VIEW_KEYS.has(p.key)||p.cat==='步道')return 'view';if(SHOP_KEYS.has(p.key)||p.cat==='店家')return 'shop';return 'culture';}
+const CAT_COLORS={'景點':'#3E8E7E','美食':'#D4552F','店家':'#9E7BCB','車站':'#2F5F86','步道':'#7A9A3E','特色':'#C9962E','交通':'#1F7A8C'};
 const ZONES={
   shifen:{id:'shifen',name:'十分',en:'Shifen',lat:25.040972,lon:121.775056,km:'6.4',west:'wanggu',east:'dahua',townR:15,ink:'#C8402E',
     tagline:'天燈從鐵軌上升起的老街',
@@ -1705,21 +1709,26 @@ const POIS=[
   {key:'px_postbox',zone:'pingxi',cat:'景點',name:'平溪郵局・全台最老郵筒',at:{street:[3.3,-1.45]},model:'postoffice',ly:2.6,desc:'平溪郵局門口的圓筒型鑄鐵郵筒，被稱為全台最老、至今仍在使用的郵筒。郵局早年是服務礦工的三等郵便所，因為地處偏遠又有階梯，老郵筒才保留了下來。',sig:'寄一張明信片給自己',why:'看看全台最老的現役郵筒'},
   {key:'px_shidi',zone:'pingxi',cat:'景點',name:'石底橋',at:{xz:[-94.9,71.3]},model:'none',ly:2.6,reach:4,desc:'橫跨基隆河、通往平溪老街的橋，電影《那些年，我們一起追的女孩》男主角向女主角告白的場景就在這裡。',sig:'電影裡的告白場景',why:'從橋頭走進老街'},
   {key:'px_shelter',zone:'pingxi',cat:'景點',name:'平溪防空洞',at:{xz:[-99.6,64.2]},model:'cave',ly:2.8,reach:4,desc:'二次大戰時，居民在觀音巖附近的山壁挖出 5 個洞穴躲避空襲，聽到警報鐘聲就躲進洞裡。現在遊客可以走進去看看、拍照。',sig:'走進戰時的避難洞',why:'認識老街的戰爭記憶'},
-  {key:'px_meiyu',zone:'pingxi',cat:'店家',name:'美玉天燈製作所',at:{street:[-2.5,-1.42]},model:'lanternshop',ly:3.2,desc:'店主林美玉 2011 年從金融業退休回到家鄉，2016 年開始用母親做旗袍剩下的布料製作天燈，店裡每一盞都是她親手做的。',sig:'旗袍布做的小天燈',why:'帶一盞手工天燈回家'},
-  {key:'px_mishidi',buy:{p:100,f:'cup',c:'#6B4A35',zh:'手沖咖啡',en:'Pour-over coffee',ja:'ハンドドリップコーヒー',ko:'핸드드립 커피'},zone:'pingxi',cat:'店家',name:'覓石底',at:{street:[2.1,1.43]},model:'shop',color:'#3E6FA8',wall:'#EDE6D8',ly:3.2,desc:'以平溪舊地名「石底」命名的文創空間，是店主郭聰能父親約 60 年的老家，有藍染、押花、手抄紙體驗，也能坐在窗邊喝手沖咖啡、看火車經過。',sig:'藍染與手抄紙體驗',why:'窗邊看火車的手沖咖啡'},
+  {key:'px_meiyu',zone:'pingxi',cat:'店家',name:'美玉天燈製作所',at:{street:[-2.5,-1.42]},model:'lanternshop',ly:3.2,desc:'用做旗袍剩下的布料手工製作天燈的小工坊，店裡的天燈都是一盞一盞親手做的。',sig:'旗袍布做的小天燈',why:'帶一盞手工天燈回家'},
+  {key:'px_mishidi',buy:{p:100,f:'cup',c:'#6B4A35',zh:'手沖咖啡',en:'Pour-over coffee',ja:'ハンドドリップコーヒー',ko:'핸드드립 커피'},zone:'pingxi',cat:'店家',name:'覓石底',at:{street:[2.1,1.43]},model:'shop',color:'#3E6FA8',wall:'#EDE6D8',ly:3.2,desc:'以平溪舊地名「石底」命名的文創空間，設在一棟約 60 年的老屋裡，有藍染、押花、手抄紙體驗，也能坐在窗邊喝手沖咖啡、看火車經過。',sig:'藍染與手抄紙體驗',why:'窗邊看火車的手沖咖啡'},
   {key:'px_pingan',zone:'pingxi',cat:'店家',name:'平安嚴選',at:{rail:[3.7,-3.1]},model:'shop',color:'#5E8B5A',ly:3.2,desc:'平溪車站旁、和平溪區農會合作的伴手禮店，賣平溪茶、蜂蜜、山藥、珠蔥等在地農產。',sig:'平溪茶與在地農產',why:'把平溪的味道帶回家'},
   {key:'px_xiaozi',zone:'pingxi',cat:'景點',name:'孝子山',at:{geo:[25.02005,121.7397]},model:'spires',ly:11,reach:6,desc:'平溪小鎮旁的尖聳岩峰，登頂要攀爬鐵梯、拉著繩索往上，是平溪最有代表性的山。',sig:'沿著鐵梯攀上岩峰頂',why:'登頂可以俯瞰整個平溪山城',tip:'岩壁陡峭，雨天濕滑時不要上去。'},
   {key:'px_school',zone:'pingxi',cat:'景點',name:'平溪國中・天燈節會場',at:{xz:[-121.2,73.86]},model:'none',ly:2.6,reach:5,desc:'從平溪老街沿靜安路往西走約 10 分鐘，就是基隆河南岸的平溪國中。這裡是平溪天燈節平溪場的施放會場，節慶晚上操場上的天燈一波約 100 盞同時升空。',sig:'操場上的天燈齊放',why:'感受天燈節最熱鬧的夜晚',tip:'平時是學校，非活動期間請勿進入校園。'},
   {key:'jt_station',zone:'jingtong',cat:'車站',name:'菁桐車站',at:{rail:[.4,3.15]},model:'station',ly:2.8,desc:'平溪線的終點站，1929 年隨平溪線通車啟用，保留日治時期的日式木造站房。',sig:'木造站房與一整排許願竹筒',why:'走到終點站，才算玩完平溪線',coord:'zone'},
   {key:'jt_bamboo',zone:'jingtong',cat:'特色',name:'許願竹筒',at:{rail:[3.7,-1.25]},model:'bamboo',ly:2.6,desc:'在竹筒上寫下心願，掛在車站周邊和鐵道旁，一整排竹筒隨風輕輕晃動。',sig:'寫一支自己的竹筒',why:'天燈飛走了，竹筒會留在這裡'},
-  {key:'jt_museum',zone:'jingtong',cat:'景點',name:'菁桐礦業生活館',at:{rail:[7.4,3.0]},model:'museumhouse',ly:3.4,desc:'由台鐵員工宿舍改建，2005 年開館。一樓介紹平溪地景與煤礦發展，二樓展示採礦文物和地方生活。',sig:'礦工生活的老照片與文物',why:'用二十分鐘認識礦業小鎮'},
-  {key:'jt_story',zone:'jingtong',cat:'店家',name:'菁桐故事館',at:{rail:[-3.5,3.0]},model:'shop',color:'#2F5F86',ly:3.2,desc:'菁桐車站旁的鐵道紀念品店，館主何元富是鐵道迷，店裡有限定的鐵道商品、零食和小紀念品，還有復古郵筒可以蓋紀念章寄信。',sig:'鐵道限定商品與紀念章',why:'鐵道迷的尋寶小店'},
-  {key:'jt_incline',zone:'jingtong',cat:'景點',name:'菁桐煤礦紀念公園・大斜坑',at:{geo:[25.02495,121.72404]},model:'incline',ly:3.6,reach:5,desc:'過去在地底採出的煤，就是經由這條斜坑運上地面，坑口和軌道都保留了下來。',sig:'深入山腹的斜坑口',why:'親眼看看煤從哪裡出來',coord:'wiki'},
+  {key:'jt_museum',zone:'jingtong',cat:'景點',name:'菁桐礦業生活館',at:{osm:'菁桐礦業生活館'},model:'museumhouse',ly:3.4,desc:'由台鐵員工宿舍改建，2005 年開館。一樓介紹平溪地景與煤礦發展，二樓展示採礦文物和地方生活。',sig:'礦工生活的老照片與文物',why:'用二十分鐘認識礦業小鎮'},
+  {key:'jt_story',zone:'jingtong',cat:'店家',name:'菁桐故事館',at:{rail:[-3.5,3.0]},model:'shop',color:'#2F5F86',ly:3.2,desc:'菁桐車站旁的鐵道紀念品店，店裡有限定的鐵道商品、零食和小紀念品，還有復古郵筒可以蓋紀念章寄信。',sig:'鐵道限定商品與紀念章',why:'鐵道迷的尋寶小店'},
+  {key:'jt_incline',zone:'jingtong',cat:'景點',name:'菁桐煤礦紀念公園（石底大斜坑）',at:{geo:[25.024816,121.724462]},model:'incline',ly:3.6,reach:5,desc:'公園保留了石底大斜坑的坑口和軌道。過去在地底採出的煤，就是經由這條斜坑運上地面。',sig:'深入山腹的斜坑口',why:'親眼看看煤從哪裡出來',coord:'wiki'},
   {key:'jt_coalcafe',buy:{p:100,f:'cup',c:'#B88A5A',zh:'海鹽拿鐵',en:'Sea-salt latte',ja:'海塩ラテ',ko:'바다소금 라테'},zone:'jingtong',cat:'店家',name:'碳場咖啡',at:{osm:'洗選煤廠',push:1.1},model:'coalplant',ly:5.6,reach:4.5,desc:'由舊選洗煤場改建的咖啡館，坐在高處可以俯瞰菁桐老街和車站。',sig:'海鹽拿鐵、榛果拿鐵',why:'在煤場遺構裡喝咖啡看火車'},
   {key:'jt_hongbao',buy:{p:150,f:'bento',c:'#8A5A2B',zh:'鐵路便當',en:'Railway bento',ja:'鉄道弁当',ko:'철도 도시락'},zone:'jingtong',cat:'美食',name:'紅寶礦工食堂',at:{rail:[6.2,-2.1]},model:'shop',color:'#B8453A',ly:3.4,desc:'懷舊的礦工風味食堂，鐵路便當附上不鏽鋼餐具。',sig:'礦工飯、鐵路便當、太白粉甜湯',why:'吃一頓礦工年代的便當'},
-  {key:'jt_taizi',zone:'jingtong',cat:'景點',name:'太子賓館',at:{rail:[11,-4.2]},model:'villa',ly:2.8,reach:4.5,desc:'日治時期由台陽礦業興建的日式木造招待所，相傳是為了接待日本皇太子而建，庭園保存完整。',sig:'日式木造建築與庭園',why:'看見礦業全盛期的氣派'},
-  {key:'jt_yijian',zone:'jingtong',cat:'店家',name:'一見．菁桐古美術生活',at:{rail:[15.5,-4.4]},model:'villa2',ly:2.8,reach:4.5,desc:'由 1939 年興建的石底俱樂部改建，2003 年被指定為古蹟。現在是私人美術館，提供無菜單料理和文化體驗，採預約制。',sig:'和洋折衷的書院造建築',why:'想慢慢待一個下午的人'},
-  {key:'jt_police',zone:'jingtong',cat:'特色',name:'天燈派出所（平溪分駐所）',at:{osm:'平溪分駐所',fit:[2.6,.95],near:[-178.3,80.3],maxR:1.2,ang:90,yaw:-90},model:'lanternpolice',ly:4.4,reach:5,desc:'菁桐車站西側的平溪分駐所，整棟建築就是一盞超大的 LED 天燈，用了 19 萬多顆 LED，2014 年啟用。晚上亮燈時特別醒目，是開車進菁桐第一眼看到的地標。',sig:'夜裡發光的巨型天燈建築',why:'拍一張和「天燈派出所」的合照'},
+  {key:'jt_taizi',zone:'jingtong',cat:'景點',name:'太子賓館',at:{geo:[25.02243,121.7224],fit:[3.1,3.1],maxR:10},model:'villa',ly:2.8,reach:4.5,desc:'日治時期由台陽礦業興建的日式木造招待所，相傳是為了接待日本皇太子而建，庭園保存完整。現在園區由「一見．菁桐古美術生活」經營，採預約制參觀。',sig:'日式木造建築與庭園',why:'看見礦業全盛期的氣派'},
+  {key:'jt_yijian',zone:'jingtong',cat:'店家',name:'一見．菁桐古美術生活',at:{geo:[25.02236,121.72232],with:'jt_taizi'},model:'none',ly:2.8,reach:4.5,desc:'由 1939 年興建的石底俱樂部改建，2003 年被指定為古蹟。現在是私人美術館，提供無菜單料理和文化體驗，採預約制。',sig:'和洋折衷的書院造建築',why:'想慢慢待一個下午的人'},
+  {key:'jt_police',zone:'jingtong',cat:'特色',name:'菁桐天燈館（天燈派出所舊址）',at:{osm:'平溪分駐所',fit:[2.6,.95],near:[-178.3,80.3],maxR:1.2,ang:90,yaw:-90},model:'lanternpolice',ly:4.4,reach:5,desc:'菁桐車站西側這棟巨型天燈建築，2014 年以「天燈派出所」啟用，用了 19 萬多顆 LED。2019 年派出所撤哨後，建築以「菁桐天燈館」為名保留下來，晚上亮燈時依然是進菁桐第一眼看到的地標。',sig:'夜裡發光的巨型天燈建築',why:'和巨型天燈建築拍張合照'},
+{key:'jt_dorms',zone:'jingtong',cat:'景點',name:'菁桐日式宿舍群',at:{geo:[25.021963,121.721873],fit:[4.4,1.7],maxR:5},model:'jpdorm',ly:2.4,reach:4.5,desc:'台陽礦業留下的日式木造宿舍群，黑瓦屋頂、雨淋板外牆和木格窗都還看得到，臺陽鑛業的鑛長宿舍也在其中。',sig:'黑瓦木屋排成的礦業社區',why:'想像礦業年代職員的日常'},
+{key:'bus_jt',zone:'jingtong',cat:'交通',name:'菁桐坑公車站（795）',at:{bus:[25.023771,121.723656]},model:'busstop',ly:2.4,reach:3,desc:'菁桐坑站是台灣好行 795 木柵平溪線的停靠站。從台北搭捷運文湖線到「木柵站」，出站步行約 100 公尺到 A1 站牌上車，經深坑、石碇進入平溪，沿途停靠菁桐坑、平溪老街、十分寮、十分遊客中心。木柵到平溪老街約 55 分鐘。',sig:'從台北捷運木柵站直達平溪',why:'不轉火車也能從台北來',tip:'每天約 21 班，班距約 10–70 分鐘不等；天燈節另有接駁車，出發前請先查最新時刻表。',src:[['新北市觀光旅遊局（2023）','https://newtaipei.travel/file/2223'],['Tripool 平溪交通整理（2026）','https://www.tripool.app/articles/pingxi-transportation']]},
+{key:'bus_px',zone:'pingxi',cat:'交通',name:'平溪老街公車站（795）',at:{bus:[25.025276,121.738846]},model:'busstop',ly:2.4,reach:3,desc:'平溪老街站是台灣好行 795 木柵平溪線的停靠站。從台北搭捷運文湖線到「木柵站」，出站步行約 100 公尺到 A1 站牌上車，經深坑、石碇進入平溪，沿途停靠菁桐坑、平溪老街、十分寮、十分遊客中心。木柵到平溪老街約 55 分鐘。',sig:'從台北捷運木柵站直達平溪',why:'不轉火車也能從台北來',tip:'每天約 21 班，班距約 10–70 分鐘不等；天燈節另有接駁車，出發前請先查最新時刻表。',src:[['新北市觀光旅遊局（2023）','https://newtaipei.travel/file/2223'],['Tripool 平溪交通整理（2026）','https://www.tripool.app/articles/pingxi-transportation']]},
+{key:'bus_sfl',zone:'shifen',cat:'交通',name:'十分寮公車站（795）',at:{bus:[25.044434,121.77671]},model:'busstop',ly:2.4,reach:3,desc:'十分寮站是台灣好行 795 木柵平溪線的停靠站。從台北搭捷運文湖線到「木柵站」，出站步行約 100 公尺到 A1 站牌上車，經深坑、石碇進入平溪，沿途停靠菁桐坑、平溪老街、十分寮、十分遊客中心。木柵到平溪老街約 55 分鐘。',sig:'從台北捷運木柵站直達平溪',why:'不轉火車也能從台北來',tip:'每天約 21 班，班距約 10–70 分鐘不等；天燈節另有接駁車，出發前請先查最新時刻表。',src:[['新北市觀光旅遊局（2023）','https://newtaipei.travel/file/2223'],['Tripool 平溪交通整理（2026）','https://www.tripool.app/articles/pingxi-transportation']]},
+{key:'bus_sfv',zone:'shifen',cat:'交通',name:'十分遊客中心公車站（795）',at:{bus:[25.047389,121.782853]},model:'busstop',ly:2.4,reach:3,desc:'十分遊客中心站是台灣好行 795 木柵平溪線的停靠站。從台北搭捷運文湖線到「木柵站」，出站步行約 100 公尺到 A1 站牌上車，經深坑、石碇進入平溪，沿途停靠菁桐坑、平溪老街、十分寮、十分遊客中心。木柵到平溪老街約 55 分鐘。',sig:'從台北捷運木柵站直達平溪',why:'不轉火車也能從台北來',tip:'每天約 21 班，班距約 10–70 分鐘不等；天燈節另有接駁車，出發前請先查最新時刻表。',src:[['新北市觀光旅遊局（2023）','https://newtaipei.travel/file/2223'],['Tripool 平溪交通整理（2026）','https://www.tripool.app/articles/pingxi-transportation']]},
   {key:'jt_chickenroll',buy:{p:50,f:'stick',c:'#D69A3C',zh:'現炸雞捲',en:'Fried chicken roll',ja:'揚げたて鶏巻き',ko:'갓 튀긴 지쥐안'},zone:'jingtong',cat:'美食',name:'菁桐雞捲',at:{rail:[4.6,-1.95]},model:'stall',color:'#E3B04B',ly:2.5,desc:'車站附近就吃得到的雞捲，是逛菁桐時的小點心。',sig:'現炸雞捲',why:'邊等火車邊吃'},
 ];
 POIS.forEach((p,i)=>{p.no=i+1;p.id='p'+(i+1);});
@@ -1752,24 +1761,32 @@ renderer.setPixelRatio(Math.min(devicePixelRatio,coarse?1.6:2));
 renderer.setSize(innerWidth,innerHeight,false);
 renderer.setClearColor(0x000000,0);
 renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+const ANISO=Math.min(8,renderer.capabilities.getMaxAnisotropy()||1);   // signs, lanterns and painted ground stay crisp when seen at a slant
 const scene=new THREE.Scene();
 scene.fog=new THREE.Fog(0xdce6da,90,320);
 const camera=new THREE.PerspectiveCamera(40,innerWidth/innerHeight,0.5,4000);
 const hemi=new THREE.HemisphereLight(0xfff6e6,0x8e9f72,1.35);scene.add(hemi);
 const sun=new THREE.DirectionalLight(0xfff1da,2.4);sun.castShadow=true;
-const SH=coarse?1024:2048;sun.shadow.mapSize.set(SH,SH);
+const SH=2048;   // phones too: a 1024 map left saw-toothed shadow edgessun.shadow.mapSize.set(SH,SH);
 {const c=sun.shadow.camera;c.left=-46;c.right=46;c.top=46;c.bottom=-46;c.near=1;c.far=300;}
 sun.shadow.bias=-0.0005;sun.shadow.normalBias=0.05;
 scene.add(sun);scene.add(sun.target);
 
 const MATS=new Map();
 function M(color){let m=MATS.get(color);if(!m){m=new THREE.MeshLambertMaterial({color,flatShading:true});MATS.set(color,m);}return m;}
-const WINMAT=new THREE.MeshLambertMaterial({color:'#56616B',emissive:'#FFC66E',emissiveIntensity:0,flatShading:true});
+const WINMAT=new THREE.MeshPhongMaterial({color:'#56616B',specular:'#B8C8D4',shininess:70,emissive:'#FFC66E',emissiveIntensity:0,flatShading:true});
+WINMAT.onBeforeCompile=sh=>{   // glass in frames: glazing bars, a pale frame, a soft sky gradient and a glint across the panes; only the glass glows at night
+  sh.vertexShader=sh.vertexShader.replace('#include <common>','#include <common>\nvarying vec2 vWUv;').replace('#include <begin_vertex>','#include <begin_vertex>\nvWUv=uv;');
+  sh.fragmentShader=sh.fragmentShader.replace('#include <common>','#include <common>\nvarying vec2 vWUv;').replace('#include <color_fragment>',`#include <color_fragment>
+    vec2 pu=fract(vWUv);vec2 pe=min(pu,1.-pu);float fr=1.-smoothstep(.06,.1,min(pe.x,pe.y));float gs=fract(vWUv.x*.55+vWUv.y*.35);
+    diffuseColor.rgb=mix(diffuseColor.rgb*(.78+.34*pu.y+.22*smoothstep(.5,.56,gs)*(1.-smoothstep(.62,.7,gs))),vec3(.88,.86,.81),fr);`)
+    .replace('#include <emissivemap_fragment>','#include <emissivemap_fragment>\n  totalEmissiveRadiance*=1.-fr;');};
+WINMAT.customProgramCacheKey=()=>'win2';
 const LAMPMAT=new THREE.MeshLambertMaterial({color:'#F6E9C8',emissive:'#FFE2A0',emissiveIntensity:0,flatShading:true});
 const GC=new Map();
 const G=(k,make)=>{let g=GC.get(k);if(!g){g=make();GC.set(k,g);}return g;};
 const BOX=new THREE.BoxGeometry(1,1,1);
-const cyl=(rt,rb,h,s=8)=>G(`c${rt},${rb},${h},${s}`,()=>new THREE.CylinderGeometry(rt,rb,h,s));
+const cyl=(rt,rb,h,s=8)=>{if(s>=8){const r=Math.max(rt,rb);s=Math.max(s,r>=.9?36:r>=.45?24:r>=.2?16:r>=.1?12:s);}return G(`c${rt},${rb},${h},${s}`,()=>new THREE.CylinderGeometry(rt,rb,h,s));};   // round things stay round up close
 const cone=(r,h,s=6)=>G(`k${r},${h},${s}`,()=>new THREE.ConeGeometry(r,h,s));
 const ico=(r,d=0)=>G(`i${r},${d}`,()=>new THREE.IcosahedronGeometry(r,d));
 const PRISM=(()=>{const g=new THREE.BufferGeometry();const x=.5,z=.5,h=1;const v=[-x,0,z,x,0,z,x,h,0,-x,0,z,x,h,0,-x,h,0,x,0,-z,-x,0,-z,-x,h,0,x,0,-z,-x,h,0,x,h,0,-x,0,-z,-x,0,z,-x,h,0,x,0,z,x,0,-z,x,h,0];g.setAttribute('position',new THREE.Float32BufferAttribute(v,3));g.computeVertexNormals();return g;})();
@@ -1801,6 +1818,9 @@ function heightAt(x,z){
   return h11+(h01-h11)*(1-u)+(h10-h11)*(1-v);
 }
 function resolveAt(a,zid){
+  if(a.geo&&a.fit){const g0=geo(a.geo[0],a.geo[1]);const g=warpPt(g0.x,g0.z);const ang=(a.ang||0)*Math.PI/180;return {x:g.x,z:g.z,geoFit:true,osmB:{x:g.x,z:g.z,a:ang,W:a.fit[0]/BSC,D:a.fit[1]/BSC}};}
+  // a bus stop: the surveyed stop snaps to the kerb of the nearest main road, shelter facing the road
+  if(a.bus){const g0=geo(a.bus[0],a.bus[1]);const g=warpPt(g0.x,g0.z);return {x:g.x,z:g.z,busAt:true};}
   if(a.geo){const g=geo(a.geo[0],a.geo[1]);return warpPt(g.x,g.z);}
   if(a.xz)return warpPt(a.xz[0],a.xz[1]);
   if(a.fitxz){const ang=(a.ang||0)*Math.PI/180;const q=fitSpot(a.fitxz[0],a.fitxz[1],ang,a.fit[0],a.fit[1],a.maxR??3,a.lanes??true);return {x:q.x,z:q.z,osmB:{x:q.x,z:q.z,a:ang,W:a.fit[0]/BSC,D:a.fit[1]/BSC}};}
@@ -1990,12 +2010,12 @@ function linkRoads(){
       else{const pts=P.slice();if(e.first)pts.unshift(best.q);else pts.push(best.q);r.path=new Path(pts);}}
   }
 }
-function fitSpot(x0,z0,a,W,D,maxR=6,lanes=true){const c=Math.cos(a),sn=Math.sin(a);
+function fitSpot(x0,z0,a,W,D,maxR=6,lanes=true,pred=null){const c=Math.cos(a),sn=Math.sin(a);
   const rd=(px,pz)=>{let b=1e9;for(const r of gridGet(RGRID,px,pz)){if(!lanes&&r.k==='s'&&!r.b)continue;const d=r.path.closest(px,pz).d-r.hw;if(d<b)b=d;}return b;};
   const ok=(x,z)=>{for(let i=-1;i<=1;i+=.5)for(const j of [-1,0,1]){const u=i*W/2,v=j*D/2;const px=x+u*c-v*sn,pz=z+u*sn+v*c;
       if(RAIL.closest(px,pz).d<1.1)return false;const rc=RIVER.closest(px,pz);if(rc.d<riverW(rc.s)+.55)return false;if(rd(px,pz)<.12)return false;
       for(const k of COLL)if(k.keep&&Math.hypot(px-k.x,pz-k.z)<k.r+.05)return false;}return true;};
-  for(let r=0;r<=maxR;r+=.25){const n=r===0?1:Math.round(r*8);for(let i=0;i<n;i++){const t=i/n*Math.PI*2;const x=x0+Math.cos(t)*r,z=z0+Math.sin(t)*r;if(ok(x,z))return {x,z};}}
+  for(let r=0;r<=maxR;r+=.25){const n=r===0?1:Math.round(r*8);for(let i=0;i<n;i++){const t=i/n*Math.PI*2;const x=x0+Math.cos(t)*r,z=z0+Math.sin(t)*r;if(ok(x,z)&&(!pred||pred(x,z)))return {x,z};}}
   return {x:x0,z:z0};}
 /* where a lantern deck can go: off the tracks and out of the river, as few streets and buildings in the way as possible */
 function padScore(x,z){const R0=LS_R+1.2;
@@ -2089,7 +2109,8 @@ function terrainSample(x,z){
     if(k>0){let tgt=3.9+Math.max(0,fwd)*.22;if(fwd>1.4)tgt-=(1-smooth(.3,1.0,Math.abs(lat)))*.55*smooth(1.6,2.6,fwd);h=Math.max(h,lerp(h,tgt,k));}}}
   return {h,m,rd:rc.d,wr,dTown,dT,ld:lc.d};
 }
-let TERMESH;const TERINFO={};
+let TERMESH,TERTEX=null,TERCOL=null;const TERINFO={};
+const HTEX={value:null},HTB={value:new THREE.Vector4(0,0,1,1)},GAO={value:1};   // the height field as a texture: walls, posts and trunks darken where they meet the ground
 function buildTerrain(){
   SPACEPORT.h=null;SPACEPORT.h=terrainSample(SPACEPORT.x,SPACEPORT.z).h+.2;
   SPROAD.ready=false;{const q=SPROAD.path.p[0];SPROAD.h0=Math.max(.3,terrainSample(q.x,q.z).h);}SPROAD.ready=true;
@@ -2125,26 +2146,79 @@ function buildTerrain(){
   const idx=new Uint32Array((nx-1)*(nz-1)*6);let q=0;
   for(let j=0;j<nz-1;j++)for(let i=0;i<nx-1;i++){const a=j*nx+i,b=a+1,cc=a+nx,d=cc+1;idx[q++]=a;idx[q++]=cc;idx[q++]=b;idx[q++]=b;idx[q++]=cc;idx[q++]=d;}
   const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(pos,3));g.setAttribute('color',new THREE.BufferAttribute(col,3));g.setIndex(new THREE.BufferAttribute(idx,1));g.computeVertexNormals();
-  TERMESH=new THREE.Mesh(g,new THREE.MeshLambertMaterial({vertexColors:true,flatShading:true}));TERMESH.material.userData.grain='terrain';TERMESH.receiveShadow=true;scene.add(TERMESH);
+  {const hd=new Uint16Array(N);for(let k=0;k<N;k++)hd[k]=THREE.DataUtils.toHalfFloat(HGT[k]);HTEX.value=new THREE.DataTexture(hd,nx,nz,THREE.RedFormat,THREE.HalfFloatType);
+    const t=HTEX.value;t.magFilter=t.minFilter=THREE.LinearFilter;t.wrapS=t.wrapT=THREE.ClampToEdgeWrapping;t.needsUpdate=true;HTB.value.set(TER.x0-TER.dx/2,TER.z0-TER.dz/2,TER.dx*nx,TER.dz*nz);}
+  // the colours are painted into a texture at twice the grid resolution, from the smoothly interpolated fields, so the edges of the river banks,
+  // the town paving and the forest run in clean curves instead of following the triangles of the mesh
+  {const RS=2,TW=(nx-1)*RS+1,TH=(nz-1)*RS+1,st=1/RS;const buf=new Uint8Array(TW*TH*4);
+    const bil=(arr,x,z)=>{const fx=clamp((x-TER.x0)/TER.dx,0,nx-1.0001),fz=clamp((z-TER.z0)/TER.dz,0,nz-1.0001);const i=Math.floor(fx),j=Math.floor(fz),u=fx-i,v=fz-j;const k=j*nx+i;
+      return (arr[k]*(1-u)+arr[k+1]*u)*(1-v)+(arr[k+nx]*(1-u)+arr[k+nx+1]*u)*v;};
+    const DEEP=new THREE.Color('#47663F'),DRY=new THREE.Color('#9EAE6C'),PATCH=new THREE.Color('#93AC62'),ROCKF=new THREE.Color('#8E8670'),ROCKD=new THREE.Color('#6F6A5A');
+    const enc=v=>{v=v<=0?0:v>=1?1:v;return Math.round(255*(v<=.0031308?12.92*v:1.055*Math.pow(v,1/2.4)-.055));};
+    const X1=TER.x0+3,X2=TER.x1-3,Z1=TER.z0+3,Z2=TER.z1-3;
+    for(let j=0;j<TH;j++)for(let i=0;i<TW;i++){const x=TER.x0+i*st,z=TER.z0+j*st;const h=heightAt(x,z),m=bil(TERINFO.m,x,z),rdw=bil(TERINFO.rd,x,z),dT=bil(TERINFO.dTown,x,z);
+      const n=vnoise(x*.21,z*.21);
+      c.copy(COL.grass).lerp(COL.grass2,n);{const fv=vnoise(x*.045+3.3,z*.045-8.1);c.lerp(fv>.5?COL.dry:COL.lush,Math.min(1,Math.abs(fv-.5)*1.3)*.55);}
+      {const kk=Math.max(smooth(.06,.32,m),smooth(2.6,6.5,h)*smooth(0,.04,m));if(kk>0)c.lerp(n>.5?COL.forest:COL.forest2,kk*.92);}
+      if(h>34)c.lerp(COL.high,smooth(34,54,h)*.85);
+      if(dT<1)c.lerp(COL.pave,.5*smooth(1,-4,dT));
+      if(rdw<1.9&&h>-.45)c.lerp(COL.bank,smooth(1.9,.3,rdw));
+      if(h<-.45)c.copy(rdw<-.05?COL.bed:COL.rock);
+      const fk=Math.max(smooth(.06,.4,m),smooth(2.6,6.5,h)*smooth(0,.04,m));
+      if(fk>0&&h>=-.45&&x>X1&&x<X2&&z>Z1&&z<Z2){
+        const sl=Math.hypot(heightAt(x+2,z)-heightAt(x-2,z),heightAt(x,z+2)-heightAt(x,z-2))/4;
+        const cv=(heightAt(x+3,z)+heightAt(x-3,z)+heightAt(x,z+3)+heightAt(x,z-3))*.25-h;
+        c.multiplyScalar(1+fk*smooth(3.5,9,h)*canopyN(x,z)*.42);
+        const rv=clamp(cv*.55,-1,1);if(rv>0)c.lerp(DEEP,rv*.5*fk);else c.lerp(DRY,-rv*.32*fk);
+        const pn=vnoise(x*.034+2.2,z*.034-7.1);if(pn>.6)c.lerp(PATCH,smooth(.6,.82,pn)*.35*fk);
+        const rk=smooth(1.6,2.6,sl)*fk*(vnoise(x*.18+5,z*.18)>.5?1:.25);if(rk>0)c.lerp(vnoise(x*.6,z*.6)>.5?ROCKF:ROCKD,rk*.6);}
+      const o=(j*TW+i)*4;buf[o]=enc(c.r);buf[o+1]=enc(c.g);buf[o+2]=enc(c.b);buf[o+3]=255;}
+    const tt=new THREE.DataTexture(buf,TW,TH,THREE.RGBAFormat,THREE.UnsignedByteType);tt.colorSpace=THREE.SRGBColorSpace;tt.wrapS=tt.wrapT=THREE.ClampToEdgeWrapping;
+    tt.magFilter=THREE.LinearFilter;tt.minFilter=THREE.LinearMipmapLinearFilter;tt.generateMipmaps=true;tt.anisotropy=ANISO;tt.needsUpdate=true;
+    const uv=new Float32Array(N*2);for(let j=0;j<nz;j++)for(let i=0;i<nx;i++){const k=j*nx+i;uv[k*2]=(i*RS+.5)/TW;uv[k*2+1]=(j*RS+.5)/TH;}
+    g.setAttribute('uv',new THREE.BufferAttribute(uv,2));TERTEX=tt;}
+  TERMESH=new THREE.Mesh(g,new THREE.MeshLambertMaterial({map:TERTEX}));TERMESH.material.userData.grain='terrain';TERMESH.receiveShadow=true;scene.add(TERMESH);
   const sk=[];const B=-16;
-  const edge=(pts)=>{for(let i=0;i<pts.length-1;i++){const [ax,az]=pts[i],[bx2,bz]=pts[i+1];const ha=heightAt(ax,az),hb=heightAt(bx2,bz);sk.push(ax,ha,az,ax,B,az,bx2,hb,bz,bx2,hb,bz,ax,B,az,bx2,B,bz);}};
+  const skc=[];const ec=(x,z,k)=>{const i=clamp(Math.round((x-TER.x0)/TER.dx),0,nx-1),j=clamp(Math.round((z-TER.z0)/TER.dz),0,nz-1),q=(j*nx+i)*3;skc.push(col[q]*k,col[q+1]*k,col[q+2]*k);};
+  const edge=(pts)=>{for(let i=0;i<pts.length-1;i++){const [ax,az]=pts[i],[bx2,bz]=pts[i+1];const ha=heightAt(ax,az),hb=heightAt(bx2,bz);sk.push(ax,ha,az,ax,B,az,bx2,hb,bz,bx2,hb,bz,ax,B,az,bx2,B,bz);
+    ec(ax,az,.92);ec(ax,az,.5);ec(bx2,bz,.92);ec(bx2,bz,.92);ec(ax,az,.5);ec(bx2,bz,.5);}};
   const top=[],bot=[],lef=[],rig=[];
   for(let i=0;i<nx;i++){const x=TER.x0+i*TER.dx;top.push([x,TER.z0]);bot.push([x,TER.z1]);}
   for(let j=0;j<nz;j++){const z=TER.z0+j*TER.dz;lef.push([TER.x0,z]);rig.push([TER.x1,z]);}
   edge(bot);edge(rig.slice().reverse());edge(top.slice().reverse());edge(lef);
-  const sg=new THREE.BufferGeometry();sg.setAttribute('position',new THREE.Float32BufferAttribute(sk,3));sg.computeVertexNormals();
-  scene.add(new THREE.Mesh(sg,new THREE.MeshLambertMaterial({color:'#A88D70',side:THREE.DoubleSide,flatShading:true})));
+  const sg=new THREE.BufferGeometry();sg.setAttribute('position',new THREE.Float32BufferAttribute(sk,3));sg.setAttribute('color',new THREE.Float32BufferAttribute(skc,3));sg.computeVertexNormals();
+  scene.add(new THREE.Mesh(sg,new THREE.MeshLambertMaterial({vertexColors:true,side:THREE.DoubleSide})));
+  TERCOL=col;
   const base=new THREE.Mesh(new THREE.BoxGeometry(TER.x1-TER.x0,1,TER.z1-TER.z0),M('#8C7359'));base.position.set((TER.x0+TER.x1)/2,B-.5,(TER.z0+TER.z1)/2);scene.add(base);
 }
 function termAt(arr,x,z){const i=clamp(Math.round((x-TER.x0)/TER.dx),0,TER.nx-1),j=clamp(Math.round((z-TER.z0)/TER.dz),0,TER.nz-1);return arr[j*TER.nx+i];}
 
 /* water, waterfall */
 const ANIM=[];
-function ribbon(path,s0,s1,step,width,yfn,mat,yoff=0){
-  const pos=[];const idx=[];let n=0;
+const groundTop=(x,z,tx,tz)=>{let h=heightAt(x,z);for(const [a,b] of [[tx,tz],[-tx,-tz],[-tz,tx],[tz,-tx]])h=Math.max(h,heightAt(x+a*.35,z+b*.35));return h;};   // the highest ground within a short step
+function ribbon(path,s0,s1,step,width,yfn,mat,yoff=0,drape=false){
+  // drape: three vertices across, each laid on the ground (the highest point close by), so the hillside never pokes through a road or a path
+  const pos=[];const idx=[];let n=0;let pl=null,pr=null,pc=null,sg=0;const C=drape?3:2;
+  const ar=(ax,az,bx,bz,cx,cz)=>(bx-ax)*(cz-az)-(bz-az)*(cx-ax);
+  const gy=groundTop;
+  // a round pad where the strip has to be broken (a hairpin tighter than the strip is wide)
+  const disc=(x,z,w,y,tx,tz)=>{const b=pos.length/3;const cy=drape?Math.max(y,gy(x,z,tx,tz)):y;pos.push(x,cy+yoff,z);const K=14;
+    for(let i=0;i<K;i++){const a=i/K*Math.PI*2;const px=x+Math.cos(a)*w,pz=z+Math.sin(a)*w;pos.push(px,(drape?gy(px,pz,tx,tz):y)+yoff,pz);}
+    for(let i=0;i<K;i++){const u=b+1+i,v=b+1+(i+1)%K;if(sg>0)idx.push(b,u,v);else idx.push(b,v,u);}};
+  let rowBase=-1;
   for(let s=s0;;s+=step){const ss=Math.min(s,s1);const p=path.at(ss);const w=typeof width==='function'?width(ss):width;const y=yfn(ss,p);
-    pos.push(p.x+p.nx*w,y+yoff,p.z+p.nz*w,p.x-p.nx*w,y+yoff,p.z-p.nz*w);
-    if(n>0){const a=(n-1)*2;idx.push(a,a+2,a+1,a+1,a+2,a+3);}n++;if(ss>=s1)break;}
+    if(!sg)sg=-Math.sign(p.tx*p.nz-p.tz*p.nx)||1;
+    let L=[p.x+p.nx*w,p.z+p.nz*w],Rr=[p.x-p.nx*w,p.z-p.nz*w];const Cc=[p.x,p.z];let link=pl!==null;
+    // round a bend tighter than the half-width, or at a sharp corner, the strip would twist over itself (a saw-tooth or a hole):
+    // pin the inner edge at the corner; at a hairpin, break the strip and lay a round pad over the turn instead
+    if(pl){const ok=(l,r)=>{const tris=C===2?[[pl,l,pr],[pr,l,r]]:[[pl,l,pc],[pc,l,Cc],[pc,Cc,pr],[pr,Cc,r]];for(const [a,b,c] of tris)if(ar(a[0],a[1],b[0],b[1],c[0],c[1])*sg<-1e-7)return false;return true;};
+      if(!ok(L,Rr)){if(ok(pl,Rr))L=pl;else if(ok(L,pr))Rr=pr;else if(ok(pl,pr)){L=pl;Rr=pr;}else{link=false;disc(pc[0],pc[1],w,y,p.tx,p.tz);disc(p.x,p.z,w,y,p.tx,p.tz);}}}
+    pl=L;pr=Rr;pc=Cc;
+    const b=pos.length/3;
+    if(drape)pos.push(L[0],gy(L[0],L[1],p.tx,p.tz)+yoff,L[1],Cc[0],Math.max(y,gy(Cc[0],Cc[1],p.tx,p.tz))+yoff,Cc[1],Rr[0],gy(Rr[0],Rr[1],p.tx,p.tz)+yoff,Rr[1]);
+    else pos.push(L[0],y+yoff,L[1],Rr[0],y+yoff,Rr[1]);
+    if(link){const a=rowBase,c=b;if(C===2)idx.push(a,c,a+1,a+1,c,c+1);else idx.push(a,c,a+1,a+1,c,c+1,a+1,c+1,a+2,a+2,c+1,c+2);}
+    rowBase=b;n++;if(ss>=s1)break;}
   const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));g.setIndex(idx);g.computeVertexNormals();
   const m=new THREE.Mesh(g,mat);m.receiveShadow=true;return m;
 }
@@ -2167,10 +2241,10 @@ const foamTex=(n,rmax)=>canvasTex(128,128,(x,W,Hh)=>{for(let i=0;i<n;i++){const 
 const waterMat=(map,order)=>{const m=new THREE.MeshBasicMaterial({map,vertexColors:true,transparent:true,depthWrite:false,side:THREE.DoubleSide,fog:true});CURTAINMATS.push(m);m.userData.order=order;return m;};
 const addW=(g,m)=>{const o=new THREE.Mesh(g,m);o.renderOrder=m.userData.order;scene.add(o);return o;};
 function buildWater(){
-  WATERMAT=new THREE.MeshLambertMaterial({color:'#84B6C5',transparent:true,opacity:.9,flatShading:true});WATERMAT.userData.grain='water';
+  WATERMAT=new THREE.MeshPhongMaterial({color:'#84B6C5',specular:'#5C6F73',shininess:140,transparent:true,opacity:.9});WATERMAT.userData.grain='water';
   scene.add(ribbon(RIVER,0,ES,1,s=>riverW(s)+.36,s=>riverSurf(Math.min(s,ES-.01)),WATERMAT));
   scene.add(ribbon(RIVER,ES,SW+.5,1,s=>riverW(Math.min(s,SW))+.36,s=>riverSurf(clamp(s,ES+.01,SW-.01)),WATERMAT));
-  {const wm=new THREE.MeshLambertMaterial({color:'#5E9DB0',transparent:true,opacity:.92,flatShading:true});wm.userData.grain='water';scene.add(ribbon(RIVER,SW+.05,RIVER.len,1,s=>riverW(s)+.4,s=>riverSurf(s),wm));}
+  {const wm=new THREE.MeshPhongMaterial({color:'#5E9DB0',specular:'#5C6F73',shininess:140,transparent:true,opacity:.92});wm.userData.grain='water';scene.add(ribbon(RIVER,SW+.05,RIVER.len,1,s=>riverW(s)+.4,s=>riverSurf(s),wm));}
   /* 十分瀑布: a broad curtain fall (about 20 m high, 40 m wide) pouring over stepped, upstream-dipping rock strata into a foaming plunge pool */
   const p=RIVER.at(SW);const hw=riverW(SW)+.2;const top=riverSurf(SW-1),bot=riverSurf(SW+1);const H=top-bot;
   const T=(u,d,y)=>new THREE.Vector3(p.x+p.nx*u+p.tx*d,y,p.z+p.nz*u+p.tz*d);
@@ -2251,6 +2325,7 @@ function buildWater(){
 }
 
 /* rail, sleepers, ballast, bridges */
+const RAILMAT=new THREE.MeshPhongMaterial({color:'#8A8783',specular:'#E2E6EA',shininess:55});   // worn steel: the rail heads glint
 function buildRail(){
   const sleepers=[];const step=.55;
   for(let s=.3;s<RAIL.len;s+=step){const p=RAIL.at(s);sleepers.push([p.x,railY(s)-.03,p.z,Math.atan2(p.tx,p.tz)]);}
@@ -2259,10 +2334,10 @@ function buildRail(){
   im.receiveShadow=true;scene.add(im);
   for(const side of [-1,1]){
     const pts=[];for(let s=0;s<=RAIL.len;s+=.8){const p=RAIL.at(s);pts.push(new THREE.Vector3(p.x+p.nx*.36*side,railY(s)+.06,p.z+p.nz*.36*side));}
-    const tg=new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts),Math.round(RAIL.len*1.3),.05,4,false);
-    const t=new THREE.Mesh(tg,new THREE.MeshLambertMaterial({color:'#8F8C88'}));t.castShadow=true;scene.add(t);
+    const tg=new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts),Math.round(RAIL.len*1.3),.05,6,false);
+    const t=new THREE.Mesh(tg,RAILMAT);t.castShadow=true;scene.add(t);
   }
-  scene.add(ribbon(RAIL,0,RAIL.len,.8,.85,s=>railY(s)-.09,M('#B9AE9E')));
+  {const bm=M('#B9AE9E');bm.userData.grain='gravel';scene.add(ribbon(RAIL,0,RAIL.len,.8,.85,s=>railY(s)-.09,bm));}   // the ballast: coarse grey-brown gravel
   let start=null;
   for(let s=0;s<=RAIL.len;s+=.5){const p=RAIL.at(s);const rc=RIVER.closest(p.x,p.z);const wet=rc.d<riverW(rc.s)+.9;
     if(wet&&start===null)start=s;if((!wet||s+.5>RAIL.len)&&start!==null){railBridge(start-1.2,s+1.2);start=null;}}
@@ -2301,9 +2376,9 @@ function railBridge(s0,s1,viaduct=false){
 const STREET={};
 function buildTrails(){
   const mat=new THREE.MeshLambertMaterial({color:'#E4D7BB',polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2});
-  for(const t of TRAILS)scene.add(ribbon(t,0,t.len,.8,.75,(s,p)=>heightAt(p.x,p.z),mat,.06));
-  const sp=STREET.path;scene.add(ribbon(sp,0,sp.len,.4,.7,(s,q)=>heightAt(q.x,q.z),new THREE.MeshLambertMaterial({color:'#D8CCB4',polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2}),.07));
-  if(CROSS.road){const road=new THREE.MeshLambertMaterial({color:'#9A968F',polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2});const r=CROSS.road;scene.add(ribbon(r,0,r.len,1,.6,(s,q)=>heightAt(q.x,q.z),road,.05));}
+  for(const t of TRAILS)scene.add(ribbon(t,0,t.len,.5,.75,(s,p)=>heightAt(p.x,p.z),mat,.06,true));
+  const sp=STREET.path;scene.add(ribbon(sp,0,sp.len,.4,.7,(s,q)=>heightAt(q.x,q.z),new THREE.MeshLambertMaterial({color:'#D8CCB4',polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2}),.07,true));
+  if(CROSS.road){const road=new THREE.MeshLambertMaterial({color:'#9A968F',polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2});const r=CROSS.road;scene.add(ribbon(r,0,r.len,.5,.6,(s,q)=>heightAt(q.x,q.z),road,.05,true));}
   buildRoads();buildAreas();
 }
 
@@ -2325,7 +2400,8 @@ function house(o={}){
   bx(g,w,H+1.6,d,wall,0,(H-1.6)/2,0);
   bx(g,w+.06,.24,d+.06,'#B8AD9B',0,.06,0);
   for(let f=0;f<fl;f++){const y=.64+f*fh;const nW=w>2.25?3:2;for(let i=0;i<nW;i++){const x=(i-(nW-1)/2)*(w/nW);if(f===0&&o.shop)continue;bx(g,.42,.42,.06,WINMAT,x,y,d/2+.01);bx(g,.42,.42,.06,WINMAT,x,y,-d/2-.01);
-    if(f>0&&rnd()<.35)bx(g,.5,.05,.1,'#6A6E72',x,y-.25,d/2+.05);}}
+    if(f>0&&rnd()<.35)bx(g,.5,.05,.1,'#6A6E72',x,y-.25,d/2+.05);}
+    if(d>=1.5)for(const sd of [-1,1])for(const z of [-.27,.27])bx(g,.06,.42,.36,WINMAT,sd*(w/2+.01),y,z*d);}   // and in the side walls
   if(o.shop){bx(g,w*.82,.82,.08,'#4A3F38',0,.46,d/2+.02);bx(g,w*.6,.5,.06,WINMAT,0,.5,d/2+.05);const aw=bx(g,w*.94,.07,.78,o.awning??pick(AWN),0,1.02,d/2+.34);aw.rotation.x=.34;aw.userData.fr={hw:w*.47,z0:d/2,awn:true,reach:.73,sreach:.32,sz:.34,sp:.15};
     if(fl>1){const sx=(rnd()<.5?-1:1)*(w/2-.22);bx(g,.09,1.05,.5,pick(SIGNC),sx,1.75,d/2+.3);}}
   if(rnd()<.45){const sd=rnd()<.5?-1:1;bx(g,.12,.32,.48,'#E6E4DF',sd*(w/2+.06),.6+(fl-1)*fh,0);}
@@ -2368,6 +2444,16 @@ function mineCart(g,x,z,coal=true){const c=new THREE.Group();c.position.set(x,0,
   for(const [wx,wz] of [[-.28,-.27],[.28,-.27],[-.28,.27],[.28,.27]])mesh(c,cyl(.11,.11,.05,10),'#26282A',wx,.12,wz).rotation.z=Math.PI/2;
   bx(c,.08,.06,.16,'#2E3234',0,.2,.5);bx(c,.08,.06,.16,'#2E3234',0,.2,-.5);
   if(coal){const h=mesh(c,craggy(new THREE.IcosahedronGeometry(.3,1),.12,x*3+z),'#242120',0,.6,0);h.scale.set(1.0,.42,1.35);}return c;}
+function busSignTex(){const c=document.createElement('canvas');c.width=c.height=256;const x=c.getContext('2d');
+  const rr=(a,b,w,h,r)=>{x.beginPath();x.moveTo(a+r,b);x.arcTo(a+w,b,a+w,b+h,r);x.arcTo(a+w,b+h,a,b+h,r);x.arcTo(a,b+h,a,b,r);x.arcTo(a,b,a+w,b,r);x.closePath();};
+  x.fillStyle='#FFFFFF';x.fillRect(0,0,256,256);x.fillStyle='#1F6FA8';x.beginPath();x.arc(128,100,90,0,Math.PI*2);x.fill();
+  x.fillStyle='#FFFFFF';rr(70,54,116,80,14);x.fill();x.fillStyle='#1F6FA8';x.fillRect(82,66,42,28);x.fillRect(132,66,42,28);x.fillStyle='#FFFFFF';x.beginPath();x.arc(96,140,12,0,7);x.arc(160,140,12,0,7);x.fill();
+  x.fillStyle='#151515';x.font='800 58px "Barlow Condensed", sans-serif';x.textAlign='center';x.textBaseline='middle';x.fillText('795',128,224);
+  const t2=new THREE.CanvasTexture(c);t2.colorSpace=THREE.SRGBColorSpace;return t2;}
+function busBayTex(){const c=document.createElement('canvas');c.width=1024;c.height=128;const x=c.getContext('2d');
+  x.strokeStyle='#F2C230';x.lineWidth=10;x.setLineDash([40,20]);x.strokeRect(8,8,1008,112);x.setLineDash([]);
+  x.fillStyle='#F2C230';x.font='900 62px "Noto Sans TC", sans-serif';x.textAlign='center';x.textBaseline='middle';x.fillText('公車停靠區　BUS',512,68);
+  const t2=new THREE.CanvasTexture(c);t2.colorSpace=THREE.SRGBColorSpace;t2.anisotropy=ANISO;return t2;}
 const MODELS={
   none(){return null;},
   stall(p){const g=new THREE.Group();const c=p.color||'#D4552F';
@@ -2389,7 +2475,9 @@ const MODELS={
     return h;},
   brickhouse(){const g=new THREE.Group();const w=3,d=2.4,H=2.4;
     bx(g,w,H+1.6,d,'#A4553D',0,(H-1.6)/2,0);bx(g,w+.2,.18,d+.2,'#D8CFC1',0,H+.09,0);bx(g,w+.2,.34,.12,'#A4553D',0,H+.35,d/2+.04);bx(g,w+.2,.06,d+.2,'#D8CFC1',0,1.2,0);
-    for(let f=0;f<2;f++)for(let i=-1;i<=1;i++){bx(g,.5,.62,.06,WINMAT,i*.9,.6+f*1.15,d/2+.02);bx(g,.62,.1,.07,'#EDE6DA',i*.9,.96+f*1.15,d/2+.03);}
+    for(let f=0;f<2;f++)for(let i=-1;i<=1;i++){bx(g,.5,.62,.06,WINMAT,i*.9,.6+f*1.15,d/2+.02);bx(g,.62,.1,.07,'#EDE6DA',i*.9,.96+f*1.15,d/2+.03);
+      bx(g,.5,.62,.06,WINMAT,i*.9,.6+f*1.15,-d/2-.02);bx(g,.62,.1,.07,'#EDE6DA',i*.9,.96+f*1.15,-d/2-.03);}   // windows all round, not a blank brick wall at the back
+    for(let f=0;f<2;f++)for(const sd of [-1,1])for(const z of [-.55,.55]){bx(g,.06,.62,.5,WINMAT,sd*(w/2+.02),.6+f*1.15,z);bx(g,.07,.1,.62,'#EDE6DA',sd*(w/2+.03),.96+f*1.15,z);}
     return {g,r:2};},
   museumhouse(){const h=house({floors:2,w:2.2,d:1.4,wall:'#E8DCC6',roof:'#5D6870',roofH:.7});
     for(const x of [-1.05,0,1.05])bx(h.g,.1,2.3,.08,'#6B4E3A',x,1.1,h.d/2+.03);bx(h.g,2.2,.1,.08,'#6B4E3A',0,1.12,h.d/2+.03);return h;},
@@ -2453,15 +2541,36 @@ const MODELS={
       const pl=bx(g,.5,.34,.04,'#2D3B33',-2.25,.65,2.6);pl.rotation.y=.4;}
     const colls=[[0,-5.0,2.7],[3.1,-4.0,1.8],[-3.2,-3.9,1.8],[-.95,PZ,.32],[.95,PZ,.32],[3.0,-.2,1.1],[1.75,.1,.55],[0,2.3,.45],[0,3.4,.45],[-2.3,2.3,.45]];
     return {g,r:0,colls};},
+  // 菁桐日式宿舍群: a row of small black-tiled timber houses with board siding, paned windows and stepping stones
+  jpdorm(p){const g=new THREE.Group();const W=p&&p.at.fit?p.at.fit[0]:4.4,D=p&&p.at.fit?p.at.fit[1]:1.7;const n=3,hw=W/n;
+    for(let i=0;i<n;i++){const x=(i-(n-1)/2)*hw,w=hw-.24,d=D-.4;
+      bx(g,w+.06,.16,d+.06,'#9C9488',x,.08,0);bx(g,w,.9,d,'#5A4434',x,.61,0);
+      for(let k=0;k<4;k++)bx(g,w+.02,.02,d+.02,'#46352A',x,.3+k*.19,0);
+      for(const sx of [-.28,.28]){bx(g,.34,.3,.04,'#F1EEE6',x+sx*w,.72,d/2+.01);bx(g,.27,.23,.05,WINMAT,x+sx*w,.72,d/2+.02);bx(g,.02,.23,.06,'#F1EEE6',x+sx*w,.72,d/2+.03);bx(g,.27,.02,.06,'#F1EEE6',x+sx*w,.72,d/2+.03);}
+      bx(g,.3,.6,.05,'#2E241D',x,.46,d/2+.012);bx(g,.4,.04,.22,'#2F3236',x,.82,d/2+.12);
+      const rf=mesh(g,PRISM,'#2F3236',x,1.06,0);rf.scale.set(w+.3,.5,d+.34);}
+    for(let i=-4;i<=4;i++)mesh(g,ico(.07,0),'#B8B2A4',i*W/9,.04,D/2+.18);
+    return {g,r:Math.max(W,D)*.55,obb:{W,D:D+.3}};},
+  busstop(p){const g=new THREE.Group();
+    for(const x of [-.75,.75])bx(g,.06,1.15,.06,'#5E6A72',x,.58,-.28);
+    bx(g,1.7,.06,.82,'#2F7A8C',0,1.18,-.12).rotation.x=-.08;bx(g,1.6,.68,.04,'#BFD8E0',0,.76,-.52);
+    bx(g,1.2,.06,.3,'#8A6A50',0,.42,-.32);for(const x of [-.5,.5])bx(g,.05,.4,.05,'#5E6A72',x,.2,-.32);
+    mesh(g,cyl(.035,.035,1.9,6),'#7C8A92',1.05,.95,.3);
+    const sg=new THREE.Mesh(new THREE.PlaneGeometry(.6,.6),new THREE.MeshLambertMaterial({map:busSignTex(),side:THREE.DoubleSide}));sg.position.set(1.05,1.6,.34);g.add(sg);
+    const dy=(p&&p.busRoad&&p.busRoad.dy)||0;
+    if(!(p&&p.busRoad&&p.busRoad.far)){const mk=new THREE.Mesh(new THREE.PlaneGeometry(2.8,.34),new THREE.MeshLambertMaterial({map:busBayTex(),transparent:true,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-4,polygonOffsetUnits:-4}));
+    mk.rotation.x=-Math.PI/2;mk.position.set(0,dy+.07,.62+.2);mk.receiveShadow=true;g.add(mk);}
+    return {g,r:.5};},
   villa(){const g=new THREE.Group();
     bx(g,3.8,2.6,2.8,'#F0EBDF',0,0,0);bx(g,3.82,.5,2.82,'#5A4334',0,.25,0);
     for(const x of [-1.9,-.95,0,.95,1.9])bx(g,.1,1.3,.06,'#5A4334',x,.65,1.42);
     const rf=mesh(g,HIP,'#3E4246',0,1.3,0);rf.scale.set(4.6,1.1,3.6);
-    const pond=mesh(g,cyl(1,1,.06,14),'#7FB2C2',2.6,.04,2.4);pond.castShadow=false;
-    for(const [x,z] of [[-2.6,2.2],[3.4,.6]]){mesh(g,cone(.6,1.6,6),'#5F7F55',x,1.1,z);bx(g,.12,.4,.12,'#5A4334',x,.2,z);}
-    bx(g,.3,.5,.3,'#A9A396',1.4,.25,2.3);mesh(g,HIP,'#8E887B',1.4,.5,2.3).scale.set(.5,.3,.5);
-    for(let i=0;i<5;i++)mesh(g,ico(.12,0),'#B8B2A4',2.6+Math.cos(i*1.3)*1.15,.06,2.4+Math.sin(i*1.3)*1.15);
-    return {g,r:2.5};},
+    // a small front garden: pond, stone lantern and a pine, all inside the plot
+    const pond=mesh(g,cyl(.55,.55,.06,14),'#7FB2C2',1.25,.04,1.8);pond.castShadow=false;
+    mesh(g,cone(.42,1.2,6),'#5F7F55',-1.55,.85,1.75);bx(g,.1,.3,.1,'#5A4334',-1.55,.15,1.75);
+    bx(g,.24,.42,.24,'#A9A396',.35,.21,1.8);mesh(g,HIP,'#8E887B',.35,.42,1.8).scale.set(.4,.24,.4);
+    for(let i=0;i<5;i++)mesh(g,ico(.1,0),'#B8B2A4',1.25+Math.cos(i*1.3)*.68,.06,1.8+Math.sin(i*1.3)*.68);
+    g.scale.setScalar(.78);return {g,r:1.7,obb:{W:3.3,D:3.4}};},
   villa2(){const g=new THREE.Group();
     bx(g,3.6,2.6,2.6,'#EDE5D3',0,0,0);bx(g,3.62,.45,2.62,'#6B4E3A',0,.22,0);
     for(const x of [-1.2,0,1.2])bx(g,.8,.6,.06,WINMAT,x,.8,1.31);
@@ -2599,7 +2708,12 @@ function buildRiverLandmark(p){
     const V0=T(side*(w0+1.5),3.4,0);p.x=V0.x;p.z=V0.z;p.labelPos=T(0,.3,top+2.2);p.lookAt=T(0,0,0);
   }else if(p.model==='aframe'){
     const half=wr+1.8;const yaw=Math.atan2(rp.tx,rp.tz);const H=4.4;const tops=[];
-    for(const e of [-1,1]){const cx=rp.x+rp.nx*half*e,cz=rp.z+rp.nz*half*e;const by=heightAt(cx,cz);
+    // a tower never stands on the track bed: it moves to the bank between track and river, or else out past the track
+    const towerAt=e=>{const at=h=>({x:rp.x+rp.nx*h*e,z:rp.z+rp.nz*h*e});const rv=q=>{const c=RIVER.closest(q.x,q.z);return c.d-riverW(c.s);};
+      if(RAIL.closest(at(half).x,at(half).z).d>=1.5)return at(half);
+      for(let h=half-.2;h>wr+.3;h-=.2){const q=at(h);if(RAIL.closest(q.x,q.z).d>=1.3&&rv(q)>.25)return q;}
+      for(let h=half+.2;h<half+7;h+=.2){const q=at(h);if(RAIL.closest(q.x,q.z).d>=2.7)return q;}return at(half);};
+    for(const e of [-1,1]){const tq=towerAt(e);const cx=tq.x,cz=tq.z;const by=heightAt(cx,cz);
       for(const sd of [-1,1]){const leg=bx(STATIC,.2,H*1.03,.2,'#8E5B45',cx+rp.tx*.65*sd,by+H/2,cz+rp.tz*.65*sd,yaw);leg.rotation.set(0,yaw,0);leg.rotateX(-.15*sd);}
       bx(STATIC,.9,.16,.16,'#8E5B45',cx,by+H*.55,cz,yaw);bx(STATIC,.4,.2,.4,'#7C4F3B',cx,by+H,cz,yaw);
       tops.push(new THREE.Vector3(cx,by+H,cz));addColl(cx,cz,.9);}
@@ -2655,7 +2769,7 @@ function buildSmallFall(p){
   {const N=36,pos=[0,.035,0],col=[];const deep=new THREE.Color('#1F6C67'),shal=new THREE.Color('#62B3A3');col.push(deep.r,deep.g,deep.b);
     for(let i=0;i<=N;i++){const a=i/N*Math.PI*2;const r=1.55*(1+.08*Math.sin(a*3+.7)+.05*Math.sin(a*5));pos.push(Math.cos(a)*r,.035,Math.sin(a)*r-.15);col.push(shal.r,shal.g,shal.b);}
     const idx=[];for(let i=1;i<=N;i++)idx.push(0,i+1,i);const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));pg.setAttribute('color',new THREE.Float32BufferAttribute(col,3));pg.setIndex(idx);pg.computeVertexNormals();
-    const pm=new THREE.MeshLambertMaterial({vertexColors:true,transparent:true,opacity:.94});pm.userData.grain='water';const pool=new THREE.Mesh(pg,pm);pool.receiveShadow=true;pool.position.copy(g.position);pool.rotation.copy(g.rotation);scene.add(pool);}
+    const pm=new THREE.MeshPhongMaterial({vertexColors:true,specular:'#5C6F73',shininess:120,transparent:true,opacity:.94});pm.userData.grain='water';const pool=new THREE.Mesh(pg,pm);pool.receiveShadow=true;pool.position.copy(g.position);pool.rotation.copy(g.rotation);scene.add(pool);}
   for(let i=0;i<15;i++){const a=(i/15)*Math.PI*2+RR(-.1,.1);if(Math.cos(a)<-.88)continue;const r=1.68+RR(0,.25);const s=RR(.24,.46);const b=mesh(g,ico(s,0),pick(ROCK),Math.sin(a)*r,s*.35,-Math.cos(a)*r-.15);b.scale.set(1.2,.7,1);b.rotation.y=GR()*6;
     if(GR()<.6){const mm=mesh(g,ico(s*.82,0),pick(MOSS),Math.sin(a)*r,s*.62,-Math.cos(a)*r-.15);mm.scale.set(1.1,.35,.95);}}
   // tree ferns and undergrowth hugging the grotto
@@ -2706,7 +2820,7 @@ function signTexture(st){
   x.font='700 30px "Barlow Condensed", sans-serif';x.fillText(st.en,256,132);
   x.fillStyle='#2F5F86';x.fillRect(0,150,512,50);
   x.fillStyle='#FFFFFF';x.font='700 26px "Noto Sans TC", sans-serif';x.textAlign='left';x.fillText('← '+ZNAME.zh[st.west],18,184);x.textAlign='right';x.fillText(ZNAME.zh[st.east]+' →',494,184);
-  const t2=new THREE.CanvasTexture(c);t2.colorSpace=THREE.SRGBColorSpace;t2.anisotropy=4;return t2;
+  const t2=new THREE.CanvasTexture(c);t2.colorSpace=THREE.SRGBColorSpace;t2.anisotropy=ANISO;return t2;
 }
 function textTexture(txt,w=256,h=128,fs=64){const c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d');x.fillStyle='#FFFFFF';x.fillRect(0,0,w,h);x.fillStyle='#151515';x.textAlign='center';x.textBaseline='middle';x.font=`700 ${fs}px "Barlow Condensed", sans-serif`;x.fillText(txt,w/2,h/2+4);const t2=new THREE.CanvasTexture(c);t2.colorSpace=THREE.SRGBColorSpace;return t2;}
 function platform(s,off,len,furnish){
@@ -2841,7 +2955,8 @@ function bhouse(o){
   const nW=Math.max(1,Math.round(w/.6));
   for(let f=0;f<fl;f++){const y=.46+f*FH;for(let i=0;i<nW;i++){const x=(i-(nW-1)/2)*(w/nW);if(!(f===0&&o.shop))bx(g,.28,.3,.05,WINMAT,x,y,d/2+.01);if(d>.85&&rnd()<.8)bx(g,.28,.3,.05,WINMAT,x,y,-d/2-.01);}
     if(f>0&&rnd()<.4)bx(g,w*.8,.04,.16,'#6A6E72',0,y-.22,d/2+.08);
-    if(f>0&&GR()<.42){const ax=(GR()-.5)*Math.max(0,w-.42),az=GR()<.62?1:-1;bx(g,.3,.2,.13,'#E6E3DC',ax,y-.2,az*(d/2+.07));bx(g,.15,.12,.02,'#8A9096',ax+.05,y-.2,az*(d/2+.14));}}   // wall AC units
+    if(f>0&&GR()<.42){const ax=(GR()-.5)*Math.max(0,w-.42),az=GR()<.62?1:-1;bx(g,.3,.2,.13,'#E6E3DC',ax,y-.2,az*(d/2+.07));bx(g,.15,.12,.02,'#8A9096',ax+.05,y-.2,az*(d/2+.14));}   // wall AC units
+    if(o.side&&d>=.7){const nS=Math.max(1,Math.round(d/.62));for(let i=0;i<nS;i++){const z=(i-(nS-1)/2)*(d/nS);for(const sd of [-1,1])bx(g,.05,.3,.28,WINMAT,sd*(w/2+.01),y,z);}}}   // a house standing on its own has windows in its side walls too
   if(o.shop){bx(g,w*.84,.56,.05,'#4A3F38',0,.31,d/2+.02);bx(g,w*.6,.34,.05,WINMAT,0,.36,d/2+.045);
     const aw=bx(g,w*.96,.05,.46,o.awning??pick(AWN),0,.74,d/2+.2);aw.rotation.x=.32;aw.userData.fr={hw:w*.48,z0:d/2,awn:true,reach:.43,sreach:.22,sz:.24,sp:.1};
     if(fl>1&&rnd()<.75){const sx=(rnd()<.5?-1:1)*(w/2-.1);bx(g,.07,.62,.32,pick(SIGNC),sx,1.18,d/2+.18).userData.fr={x:sx,hw:.04,z0:d/2};}
@@ -2964,7 +3079,7 @@ function buildOSMBuildings(){
       else if(b.name==='真樸齋'){const h=bhouse({w:o.W,d:o.D,fl:1,wall:'#B5583F',roof:'#7A4A3A',roofH:.5});g.add(h.g);}
       else if(row){const k=Math.max(2,Math.round(o.W/R(.72,.95)));const uw=o.W/k;const f0=b.lv||(street?pick([2,3,3,4]):pick([2,2,3]));
         const flMax=Math.max(2,Math.round(o.D*2.0/FH));for(let i=0;i<k;i++){const fl=clamp(f0+(rnd()<.35?(rnd()<.5?-1:1):0),1,Math.min(5,flMax));const h=bhouse({w:uw-.02,d:o.D*R(.9,1),fl,shop:(b.k==='c'||street)&&rnd()<.75,flat:rnd()<.7,lanterns:street});h.g.position.x=(i-(k-1)/2)*uw;g.add(h.g);}}
-      else{const h=bhouse({w:o.W,d:o.D,fl:Math.min(b.lv||(b.k==='c'?2:pick([1,2,2,3])),Math.max(1,Math.round(Math.min(o.W,o.D)*2.2/FH))),shop:b.k==='c'||street&&rnd()<.5,flat:rnd()<.55,lanterns:street});g.add(h.g);}
+      else{const h=bhouse({w:o.W,d:o.D,fl:Math.min(b.lv||(b.k==='c'?2:pick([1,2,2,3])),Math.max(1,Math.round(Math.min(o.W,o.D)*1.6/FH))),shop:b.k==='c'||street&&rnd()<.5,flat:rnd()<.55,lanterns:street,side:true});g.add(h.g);}
       o.H=new THREE.Box3().setFromObject(g).max.y;o.y0=heightAt(o.x,o.z);g.position.set(o.x,o.y0,o.z);g.rotation.y=yaw;trimFront(g);STATIC.add(g);obbAdd(o);osmColl(o);n++;b.placed=true;
     }
   }
@@ -3021,10 +3136,10 @@ function buildRoads(){
     if(r.b){const a=P.p[0],b=P.p[P.p.length-1];r.wet0=heightAt(a.x,a.z)<-.2;r.wet1=heightAt(b.x,b.z)<-.2;}
     const yf=r.b?(s,q)=>bridgeY(P,s,q,r):(s,q)=>heightAt(q.x,q.z);
     if(r.b){scene.add(ribbon(P,0,P.len,.25,r.hw,yf,mats[r.k],.05));roadBridge(r);continue;}
-    const m=ribbon(P,0,P.len,.45,r.hw,yf,mats[r.k],.05);put(mats[r.k],m.geometry);
+    const m=ribbon(P,0,P.len,.45,r.hw,yf,mats[r.k],.05,true);put(mats[r.k],m.geometry);
     for(const e of [P.p[0],P.p[P.p.length-1]])cap(e.x,e.z,r.hw,mats[r.k]);
     if(r.k==='p'&&P.len>3)for(let s=.9;s<P.len-.9;s+=1.05){const a=P.at(s),b=P.at(Math.min(P.len,s+.45));const w=.035;const pos=[];
-      for(const q of [a,b]){const y=heightAt(q.x,q.z)+.075;pos.push(q.x+q.nx*w,y,q.z+q.nz*w,q.x-q.nx*w,y,q.z-q.nz*w);}
+      for(const q of [a,b]){const y=groundTop(q.x,q.z,q.tx,q.tz)+.075;pos.push(q.x+q.nx*w,y,q.z+q.nz*w,q.x-q.nx*w,y,q.z-q.nz*w);}
       const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));g.setAttribute('normal',new THREE.Float32BufferAttribute([0,1,0,0,1,0,0,1,0,0,1,0],3));g.setIndex([0,2,1,1,2,3]);DASH.push(g);}
   }
   if(DASH.length){const dm=new THREE.MeshLambertMaterial({color:'#EEE8DC',polygonOffset:true,polygonOffsetFactor:-4,polygonOffsetUnits:-4});dm.userData.noGrain=true;const m=new THREE.Mesh(mergeGeometries(DASH,false),dm);m.receiveShadow=true;scene.add(m);}
@@ -3169,7 +3284,7 @@ function lanternTex(){if(LANTERN_TEX)return LANTERN_TEX;
   const words=['小羊號','平安','小羊號','順利'];x.fillStyle='#7A1E10';x.textAlign='center';x.textBaseline='middle';x.shadowColor='rgba(255,230,160,.9)';x.shadowBlur=10;
   words.forEach((w,i)=>{const ch=Array.from(w);const fs=ch.length>2?104:130;x.font=`900 ${fs}px "Noto Serif TC","Noto Sans TC",serif`;const top=256-(ch.length-1)*fs*.55;ch.forEach((c,k)=>x.fillText(c,i*256+128,top+k*fs*1.1));});
   x.shadowBlur=0;
-  LANTERN_TEX=new THREE.CanvasTexture(cv);LANTERN_TEX.colorSpace=THREE.SRGBColorSpace;LANTERN_TEX.anisotropy=4;return LANTERN_TEX;}
+  LANTERN_TEX=new THREE.CanvasTexture(cv);LANTERN_TEX.colorSpace=THREE.SRGBColorSpace;LANTERN_TEX.anisotropy=ANISO;return LANTERN_TEX;}
 /* 小羊號: still a paper sky lantern at heart (the panels, the flame, the sheep in its gondola), rebuilt as a spaceship:
    gunmetal frame with neon edge strips, a crown with an antenna, a spinning halo ring, swept fins carrying the cannons,
    an energy core under the flame and twin plasma thrusters under the pod */
@@ -3256,7 +3371,7 @@ function buildSpaceport(){
   bx(g,3.4,1.9,2.4,'#DCE1E6',-5.6,.95,2.6);const roof=mesh(g,cyl(1.2,1.2,3.42,12),'#8F9BA4',-5.6,1.9,2.6);roof.rotation.z=Math.PI/2;bx(g,1.4,1.3,.06,'#2F5F86',-5.6,.65,3.82);
   STATIC.add(g);
   {const P=SPROAD.path;const rm=new THREE.MeshLambertMaterial({color:'#9C978F',polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2});rm.userData.grain='road';
-    scene.add(ribbon(P,0,P.len,.35,.62,(t,q)=>heightAt(q.x,q.z),rm,.08));
+    scene.add(ribbon(P,0,P.len,.35,.62,(t,q)=>heightAt(q.x,q.z),rm,.08,true));
     const curb=M('#D8D2C6');for(let t=1;t<P.len;t+=1.6)for(const sd of [-1,1]){const q=P.at(t);const x=q.x+q.nx*sd*.72,z=q.z+q.nz*sd*.72;bx(STATIC,.12,.16,.6,curb,x,heightAt(x,z)+.08,z,Math.atan2(q.tx,q.tz));}
     let side=1;for(let t=3;t<P.len-4;t+=6.5){const q=P.at(t);side=-side;const x=q.x+q.nx*side*.95,z=q.z+q.nz*side*.95;const yy=heightAt(x,z);bx(STATIC,.08,1.5,.08,'#5D4A36',x,yy+.75,z);
       const l=new THREE.Mesh(LANTERN_GEO,lmat('#F2A443'));l.scale.setScalar(.7);l.position.set(x,yy+1.75,z);STATIC.add(l);addColl(x,z,.14);}
@@ -3284,9 +3399,26 @@ function buildSpaceport(){
   addColl(S.x+3.2,S.z,1.0);addColl(S.x,S.z,1.7);addColl(S.x-5.6,S.z+2.6,1.4);addColl(S.x-5.6+1.5,S.z+2.6,1.0);addColl(S.x-5.6-1.5,S.z+2.6,1.0);
 }
 /* POIs */
+// a bus stop: the surveyed stop snaps to the kerb of the nearest main road, shelter facing the road (runs once the terrain exists)
+function snapBus(p){
+  // main roads first (where the bus actually runs), then town streets
+  for(const kinds of [['p','t'],['s']]){let best=null;
+    for(const r of OSMR){if(r.acc||r.sus||!r.path||!kinds.includes(r.k))continue;const c=r.path.closest(p.x,p.z);if(!best||c.d<best.d)best={r,s:c.s,d:c.d};}
+    if(!best||best.d>9)continue;const r=best.r;
+    for(const ds of [0,.8,-.8,1.6,-1.6,2.4,-2.4,3.2,-3.2,4,-4,5,-5,6,-6,7.5,-7.5,9,-9])for(const sd of [1,-1]){const s=clamp(best.s+ds,1.5,r.path.len-1.5);const q=r.path.at(s);const off=r.hw+.62;const x=q.x+q.nx*off*sd,z=q.z+q.nz*off*sd;
+      if(roadD(x,z)<.4||RAIL.closest(x,z).d<1.7||blocked(x,z,.7))continue;const rc=RIVER.closest(x,z);if(rc.d<riverW(rc.s)+.45)continue;const dy=heightAt(q.x,q.z)-heightAt(x,z);if(Math.abs(dy)>.7)continue;
+      p.x=x;p.z=z;p.busYaw=Math.atan2(-q.nx*sd,-q.nz*sd);p.busRoad={hw:r.hw,dy};return;}}
+  // no free kerb nearby (a crowded old street): take the nearest free spot and face the closest road
+  {const f=fitSpot(p.x,p.z,0,1.8,1.0,4,true);let bq=null,bd=1e9;for(const r2 of OSMR){if(r2.acc||r2.sus||!r2.path)continue;const c=r2.path.closest(f.x,f.z);if(c.d<bd){bd=c.d;bq={q:r2.path.at(c.s),hw:r2.hw};}}
+    p.x=f.x;p.z=f.z;if(bq){const dx=bq.q.x-f.x,dz=bq.q.z-f.z;p.busYaw=Math.atan2(dx,dz);p.busRoad={hw:bq.hw,dy:heightAt(bq.q.x,bq.q.z)-heightAt(f.x,f.z),far:bd-bq.hw>1.2};}else p.busYaw=0;}}
 function buildPOIs(){
   for(const p of POIS){
-    if(p.model==='none'){if(p.bridge&&p.bridge.mid){p.x=p.bridge.mid.x;p.z=p.bridge.mid.z;}continue;}
+    if(p.busAt&&p.busYaw==null)snapBus(p);
+    // a surveyed spot that needs room for its building: find the nearest free plot now that roads and banks exist
+    if(p.geoFit&&!p.fitted){const a=p.at;const bank=(x,z)=>{const c=RIVER.closest(x,z);const r=RIVER.at(c.s);return Math.sign((x-r.x)*r.nx+(z-r.z)*r.nz);};const b0=bank(p.x,p.z);
+      // stay on the surveyed river bank: the game's river and roads are drawn wider than life, so a riverside plot may sit a little up the street
+      const q=fitSpot(p.x,p.z,p.osmB.a,a.fit[0],a.fit[1],a.maxR??4,a.lanes??true,(x,z)=>bank(x,z)===b0);p.x=p.osmB.x=q.x;p.z=p.osmB.z=q.z;p.fitted=true;}
+    if(p.model==='none'){if(p.bridge&&p.bridge.mid){p.x=p.bridge.mid.x;p.z=p.bridge.mid.z;}if(p.at.with){const h=POIS.find(q=>q.key===p.at.with);if(h){p.x=h.x+1.1;p.z=h.z+.9;}}continue;}
     if(p.model==='station')continue;
     if(['suspension','eyeglass','aframe'].includes(p.model)){buildRiverLandmark(p);continue;}
     if(p.model==='smallfall'){buildSmallFall(p);continue;}
@@ -3298,6 +3430,7 @@ function buildPOIs(){
     else if(p.at.geo||p.at.xz){yaw=(p.model==='incline'||p.model==='coalmuseum'||p.model==='spires')?0:faceRail(p.x,p.z);}
     else yaw=faceRail(p.x,p.z);
     if(p.model==='bamboo'){const q=RAIL.at(p.s);yaw=Math.atan2(q.tx,q.tz)+Math.PI/2;}
+    if(p.busYaw!=null)yaw=p.busYaw;
     if(p.at.yaw!=null)yaw=p.at.yaw*Math.PI/180;
     if(obj.obb&&(p.at.street||p.at.fit||p.at.rail)){const o=obj.obb;const a=-yaw;const c=Math.cos(a),sn=Math.sin(a);
       const fx=Math.sin(yaw),fz=Math.cos(yaw);
@@ -3322,6 +3455,7 @@ function buildPOIs(){
 }
 /* trees, bamboo, ground cover, clouds */
 const TUNG=(x,z)=>x>-62&&x<40&&z>-5&&z<62;
+let TREECUT=0;
 function buildTrees(){
   // a subtropical broadleaf forest: crowns grow in clumps of several, cedar plantations sit in patches on the upper slopes,
   // tree ferns crowd the damp stream banks and a ragged hem of shrubs marks where the forest meets the fields
@@ -3362,12 +3496,17 @@ function buildTrees(){
   for(let i=0;i<50000&&shrubs.length<1300;i++){const x=R(TER.x0+2,TER.x1-2),z=R(TER.z0+2,TER.z1-2);const m=termAt(TERINFO.m,x,z);if(m<.025||m>.4)continue;
     const rd=termAt(TERINFO.rd,x,z),dt=termAt(TERINFO.dt,x,z),ld=termAt(TERINFO.ld,x,z),dT=termAt(TERINFO.dTown,x,z);if(rd<1.4||dt<1.5||ld<2.6||dT<.4||nearC(x,z,.5)||nearRoad(x,z,1.1))continue;
     const s=R(.6,1.25);shrubs.push({x,y:heightAt(x,z)+.18*s,z,sx:s*R(1,1.4),sy:s*R(.55,.8),sz:s*R(1,1.4),ry:rnd()*6,c:pick(['#5C8049','#678A50','#557A45','#749655','#6B8B4C'])});}
+  // trees do not cling to bare cliffs (those faces now read as rock): drop what grows where the ground is steeper than ~55°
+  // (filtered after the dice, so nothing else moves)
+  {const steep=(x,z)=>{let lo=1e9,hi=-1e9;for(const [a,b] of [[1,0],[-1,0],[0,1],[0,-1],[0,0]]){const y=heightAt(x+a,z+b);lo=Math.min(lo,y);hi=Math.max(hi,y);}return (hi-lo)/2;};
+    let cut=0;for(const L of [broad,con,trunks,flecks,ferns]){const k=L.filter(q=>{if(steep(q.x,q.z)>=1.4)return false;const d=q.y-heightAt(q.x,q.z),sc=Math.max(q.sx,q.sy,q.sz);return d<3.2*sc+1.2&&d>-1.2*sc-.6;});   // and none hanging in the air off a ledge or buried in it
+   cut+=L.length-k.length;L.length=0;L.push(...k);}TREECUT=cut;}
   const o=new THREE.Object3D(),col=new THREE.Color();
   const inst=(list,geom,mat,shadow)=>{const by=new Map();for(const q of list){const k=chunk(q.x,q.z);if(!by.has(k))by.set(k,[]);by.get(k).push(q);}
     for(const arr of by.values()){const im=new THREE.InstancedMesh(geom,mat,arr.length);
       arr.forEach((q,i)=>{o.position.set(q.x,q.y,q.z);o.rotation.set(q.rx||0,q.ry||0,q.rz||0);o.scale.set(q.sx,q.sy,q.sz);o.updateMatrix();im.setMatrixAt(i,o.matrix);if(q.c){col.set(q.c);im.setColorAt(i,col);}});
       im.castShadow=shadow;im.receiveShadow=true;im.computeBoundingSphere();scene.add(im);if(shadow)FOREST_IMS.push(im);}};
-  const leafMat=()=>{const m=new THREE.MeshLambertMaterial({flatShading:true});m.userData.sway=true;return m;};
+  const leafMat=(lf)=>{const m=new THREE.MeshLambertMaterial({flatShading:true});m.userData.sway=true;if(lf)m.userData.lf=lf;return m;};
   // a crown is one faceted lump; the clumping above makes the canopy read as many trees pressed together
   const crownG=(()=>{const g=new THREE.IcosahedronGeometry(.95,0);const p=g.attributes.position;for(let i=0;i<p.count;i++){const y=p.getY(i);if(y<-.3)p.setY(i,y*.72-.06);}g.computeVertexNormals();return g;})();
   const cedarG=(()=>{const a=new THREE.ConeGeometry(.82,1.5,7).toNonIndexed(),b=new THREE.ConeGeometry(.6,1.2,7).toNonIndexed(),c=new THREE.ConeGeometry(.36,.9,7).toNonIndexed();a.translate(0,.45,0);b.translate(0,1.12,0);c.translate(0,1.7,0);const g=mergeGeometries([a,b,c],false);g.computeVertexNormals();return g;})();
@@ -3383,12 +3522,22 @@ function buildTrees(){
       const m=2+Math.floor(rnd()*3);for(let k=0;k<m;k++){const a=rnd()*6.283,r=k?R(.9,1.7):0;const px=x+Math.cos(a)*r,pz=z+Math.sin(a)*r;if(px>TER.x0-.5&&px<TER.x1+.5&&pz>TER.z0-.5&&pz<TER.z1+.5)continue;const ph=farAt(FARH.pos,px,pz,3,1);const sc=R(1.05,1.8);n0++;
         if(isCon){const s2=sc*R(.95,1.25);con.push({x:px,y:ph+.45*s2,z:pz,sx:s2,sy:s2*R(.95,1.2),sz:s2,ry:rnd()*6,c:pick(['#4B6D4A','#547651','#466645'])});}
         else broad.push({x:px,y:ph+sc*1.15,z:pz,sx:sc*R(1,1.32),sy:sc*R(.74,1),sz:sc*R(1,1.32),ry:rnd()*6,rx:R(-.12,.12),c:pick(pal)});}}}
-  inst(broad,crownG,leafMat(),true);
+  // a denser fringe of woods just past the edge, wherever the map's own edge is wooded, from dice of its own (nothing else moves),
+  // so the forest does not stop along a straight line
+  if(FARH.pos){const r2=mulberry32(4242);const RR2=(a,b)=>a+(b-a)*r2();let n1=0;const CAP2=coarse?1300:2800;
+    for(let i=0;i<60000&&n1<CAP2;i++){const x=RR2(TER.x0-32,TER.x1+32),z=RR2(TER.z0-32,TER.z1+32);if(x>TER.x0-.6&&x<TER.x1+.6&&z>TER.z0-.6&&z<TER.z1+.6)continue;
+      const d=Math.hypot(Math.max(TER.x0-x,0,x-TER.x1),Math.max(TER.z0-z,0,z-TER.z1));const cx=clamp(x,TER.x0,TER.x1),cz=clamp(z,TER.z0,TER.z1);
+      const m=termAt(TERINFO.m,cx,cz),h0=heightAt(cx,cz);const fk=Math.max(smooth(.06,.4,m),smooth(2.6,6.5,h0)*smooth(0,.04,m));
+      if(r2()>fk*(1-smooth(8,32,d))||farAt(FARH.valA,x,z)>.2)continue;const h=farAt(FARH.pos,x,z,3,1);if(h<.5)continue;
+      const pv=vnoise(x*.055-4,z*.055+6);const pal=PAL[pv<.34?0:pv<.62?1:pv<.84?2:3];const isCon=h>7&&vnoise(x*.028+9.1,z*.028+3.7)>.64;const sc=RR2(1.05,1.6);n1++;
+      if(isCon){const s2=sc*RR2(.95,1.25);con.push({x,y:h+.45*s2,z,sx:s2,sy:s2*RR2(.95,1.2),sz:s2,ry:r2()*6,c:['#4B6D4A','#547651','#466645'][Math.floor(r2()*3)]});}
+      else broad.push({x,y:h+sc*1.15,z,sx:sc*RR2(1,1.32),sy:sc*RR2(.74,1),sz:sc*RR2(1,1.32),ry:r2()*6,rx:RR2(-.12,.12),c:pal[Math.floor(r2()*4)]});}}
+  inst(broad,crownG,leafMat([-.8,.85]),true);
   inst(flecks,ico(.2,0),leafMat(),false);
-  inst(con,cedarG,leafMat(),true);
+  inst(con,cedarG,leafMat([-.35,1.9]),true);
   inst(trunks,cyl(.11,.16,1,5),M('#6B5243'),true);
-  {const fm=leafMat();fm.vertexColors=true;inst(ferns,fernG,fm,true);}
-  inst(shrubs,ico(.55,0),leafMat(),false);
+  {const fm=leafMat([1.2,2.2]);fm.vertexColors=true;inst(ferns,fernG,fm,true);}
+  inst(shrubs,ico(.55,0),leafMat([-.55,.5]),false);
   // bamboo: clumps round the villages and in the gullies near the river, culms leaning out under feathery tops
   const bam=[],bamTop=[];
   const clump=(cx,cz)=>{const n=7+Math.floor(rnd()*5);for(let k=0;k<n;k++){const h=R(2.4,4.2),lx=R(-.11,.11),lz=R(-.11,.11);const x=cx+R(-.6,.6),z=cz+R(-.6,.6);const y=heightAt(x,z);
@@ -3396,7 +3545,7 @@ function buildTrees(){
   for(const zid of ['jingtong','pingxi','wanggu','lingjiao']){const z=ZONES[zid];for(let k=0;k<7;k++){const a=R(0,6.28),r=z.townR+R(2,7);const cx=z.x+Math.cos(a)*r,cz=z.z+Math.sin(a)*r;if(heightAt(cx,cz)>4||termAt(TERINFO.rd,cx,cz)<2||termAt(TERINFO.ld,cx,cz)<3||nearC(cx,cz,1.2))continue;clump(cx,cz);}}
   for(let i=0;i<20000&&bamTop.length<520;i++){const x=R(TER.x0+3,TER.x1-3),z=R(TER.z0+3,TER.z1-3);if(!clear(x,z))continue;const rd=termAt(TERINFO.rd,x,z),h=heightAt(x,z);if(rd>14||h>7||h<.3||nearC(x,z,1.3)||rnd()>.3)continue;clump(x,z);}
   inst(bam,cyl(.06,.08,1,5),M('#8DAA5C'),true);
-  inst(bamTop,new THREE.ConeGeometry(.55,1.1,6),leafMat(),true);
+  inst(bamTop,new THREE.ConeGeometry(.55,1.1,6),leafMat([-.55,.5]),true);
 }
 /* the hills go on past the edge of the map, fading into the haze, and the river valley runs on at both ends */
 const FARH={},FOREST_IMS=[];
@@ -3413,7 +3562,7 @@ function buildFarHills(){
     if((onX&&z>=TER.z0-.01&&z<=TER.z1+.01)||(onZ&&x>=TER.x0-.01&&x<=TER.x1+.01))for(let q=-S;q<=S;q++)h=Math.min(h,onZ?heightAt(clamp(cx+q,TER.x0,TER.x1),cz):heightAt(cx,clamp(cz+q,TER.z0,TER.z1)));
     return h-.05;}
   const pos=new Float32Array(nx*nz*3),colA=new Float32Array(nx*nz*3),keep=new Uint8Array(nx*nz),valA=new Float32Array(nx*nz);const c=new THREE.Color();
-  const HAZE=new THREE.Color('#A9BDB3'),F1=new THREE.Color('#4E6F45'),F2=new THREE.Color('#628451'),F3=new THREE.Color('#7C9A5E'),VAL=new THREE.Color('#A9B98A'),WET=new THREE.Color('#8FA78A');
+  const EC=new THREE.Color(),HAZE=new THREE.Color('#A9BDB3'),F1=new THREE.Color('#4E6F45'),F2=new THREE.Color('#628451'),F3=new THREE.Color('#7C9A5E'),VAL=new THREE.Color('#A9B98A'),WET=new THREE.Color('#8FA78A');
   for(let j=0;j<nz;j++)for(let i=0;i<nx;i++){const k=j*nx+i;const x=X0+i*S,z=Z0+j*S;let h,valley=0;
     if(inside(x,z)){h=-40;}
     else{const dx=Math.max(TER.x0-x,0,x-TER.x1),dz=Math.max(TER.z0-z,0,z-TER.z1);const d=Math.hypot(dx,dz);const eh=edgeH(x,z);
@@ -3423,15 +3572,18 @@ function buildFarHills(){
       keep[k]=1;}
     pos[k*3]=x;pos[k*3+1]=h;pos[k*3+2]=z;valA[k]=valley;
     const n=vnoise(x*.26+1,z*.26-3),n2=vnoise(x*.021,z*.021);c.copy(F1).lerp(F2,n).lerp(F3,smooth(.55,.85,n2)*.55);c.multiplyScalar(.9+.2*vnoise(x*.6-2,z*.6+5));if(valley>.5)c.lerp(valley>.9?WET:VAL,smooth(.5,.95,valley));
-    if(!inside(x,z)){const dd=Math.hypot(Math.max(TER.x0-x,0,x-TER.x1),Math.max(TER.z0-z,0,z-TER.z1));c.lerp(HAZE,smooth(25,230,dd)*.62);}
+    if(!inside(x,z)){const dd=Math.hypot(Math.max(TER.x0-x,0,x-TER.x1),Math.max(TER.z0-z,0,z-TER.z1));
+      if(TERCOL&&dd<48){const i=clamp(Math.round(clamp(x,TER.x0,TER.x1)-TER.x0),0,TER.nx-1),j=clamp(Math.round(clamp(z,TER.z0,TER.z1)-TER.z0),0,TER.nz-1),q=(j*TER.nx+i)*3;
+        EC.setRGB(TERCOL[q],TERCOL[q+1],TERCOL[q+2]);c.lerp(EC,1-smooth(0,48,dd));}   // no straight seam where the map ends: its edge colours carry on and fade into the hills
+      c.lerp(HAZE,smooth(25,230,dd)*.62);}
     colA[k*3]=c.r;colA[k*3+1]=c.g;colA[k*3+2]=c.b;}
   const idx=[];for(let j=0;j<nz-1;j++)for(let i=0;i<nx-1;i++){const a=j*nx+i,b=a+1,d=a+nx,e=d+1;if(!keep[a]&&!keep[b]&&!keep[d]&&!keep[e])continue;
     const x=X0+(i+.5)*S,z=Z0+(j+.5)*S;if(inside(x,z))continue;idx.push(a,d,b,b,d,e);}
   Object.assign(FARH,{pos,valA,nx,nz,X0,Z0,S});
   const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(pos,3));g.setAttribute('color',new THREE.BufferAttribute(colA,3));g.setIndex(idx);g.computeVertexNormals();
-  const m=new THREE.MeshLambertMaterial({vertexColors:true,flatShading:true,side:THREE.DoubleSide});m.userData.grain='terrain';const mesh=new THREE.Mesh(g,m);mesh.receiveShadow=true;scene.add(mesh);
+  const m=new THREE.MeshLambertMaterial({vertexColors:true,side:THREE.DoubleSide});m.userData.grain='terrain';const mesh=new THREE.Mesh(g,m);mesh.receiveShadow=true;scene.add(mesh);
   // the river runs on out of the map at both ends
-  const wm=new THREE.MeshLambertMaterial({color:'#6FA5B4',flatShading:true,transparent:true,opacity:.92});wm.userData.grain='water';
+  const wm=new THREE.MeshPhongMaterial({color:'#6FA5B4',specular:'#62777B',shininess:110,transparent:true,opacity:.92});wm.userData.grain='water';
   for(const e of ends){const pts=[];for(let t=0;t<=220;t+=5){const w=e.w+t*.012;const cx=e.x+e.tx*t,cz=e.z+e.tz*t;const y=e.surf+t*e.up;pts.push(cx-e.tz*w,y,cz+e.tx*w,cx+e.tz*w,y,cz-e.tx*w);}
     const id=[];for(let q=0;q<pts.length/6-1;q++){const a=q*2;id.push(a,a+2,a+1,a+1,a+2,a+3);}const wg=new THREE.BufferGeometry();wg.setAttribute('position',new THREE.Float32BufferAttribute(pts,3));wg.setIndex(id);wg.computeVertexNormals();scene.add(new THREE.Mesh(wg,wm));}
 }
@@ -3442,10 +3594,13 @@ function buildGround(){
   const okGround=(x,z,mmax)=>{const m=termAt(TERINFO.m,x,z),rd=termAt(TERINFO.rd,x,z),dt=termAt(TERINFO.dt,x,z),ld=termAt(TERINFO.ld,x,z),dT=termAt(TERINFO.dTown,x,z);const h=heightAt(x,z);
     return m<mmax&&rd>1.3&&dt>1.3&&ld>2.3&&dT>-2.5&&h>-.2&&h<7&&!blocked(x,z,.3)&&!nearRoad(x,z,1.6);};
   const grass=scatter(2400,14000,(x,z)=>okGround(x,z,.32)?{x,y:heightAt(x,z)+.18,z,s:R(.7,1.4),ry:R(0,6)}:null);
+  const inB=q=>!obbFree({x:q.x,z:q.z,a:0,W:.2,D:.2});const keepOut=L=>{const k=L.filter(q=>!inB(q));L.length=0;L.push(...k);};keepOut(grass);   // nothing sprouting inside a house
   inst(cone(.16,.42,4),new THREE.MeshLambertMaterial({flatShading:true}),grass,['#8FA867','#A3B874','#7E9A5C','#B4C27F','#97AE6C']);
   const flowers=scatter(1000,12000,(x,z)=>{if(!okGround(x,z,.22))return null;const w=TUNG(x,z)&&rnd()<.6;return {x,y:heightAt(x,z)+.2,z,s:R(.7,1.3),c:w?'#F7F4EA':pick(['#F4F1E6','#F1C641','#EE9DB5','#B39BD6','#F29E6A'])};});
+  keepOut(flowers);
   inst(ico(.09,0),new THREE.MeshLambertMaterial({flatShading:true,emissive:'#222018',emissiveIntensity:.25}),flowers,['#F4F1E6']);
   const reeds=scatter(520,16000,(x,z)=>{const rd=termAt(TERINFO.rd,x,z);const h=heightAt(x,z);if(rd<-.4||rd>1.5||h<-.7||h>.6||termAt(TERINFO.ld,x,z)<2.4||blocked(x,z,.3))return null;const s=R(.6,1.3);return {x,y:h+s*.5,z,sx:1,sy:s,sz:1,rx:R(-.15,.15),rz:R(-.15,.15)};});
+  {const k=reeds.filter(q=>roadD(q.x,q.z)>.15&&trailD(q.x,q.z)>TRAIL_HW+.1);reeds.length=0;reeds.push(...k);}
   inst(cyl(.025,.035,1,4),new THREE.MeshLambertMaterial({flatShading:true}),reeds,['#A4AE6C','#B8B07A','#8F9E5E']);
   const rocks=scatter(240,14000,(x,z)=>{const rd=termAt(TERINFO.rd,x,z);const h=heightAt(x,z);if(rd>-.5||h<-1.1||h>-.4)return null;return {x,y:h+.12,z,sx:R(.6,1.5),sy:R(.4,.8),sz:R(.6,1.4),ry:R(0,6)};});
   inst(ico(.32,0),new THREE.MeshLambertMaterial({flatShading:true}),rocks,['#9C978A','#8C877B','#A8A396','#7F7A6F']);
@@ -3469,11 +3624,19 @@ function buildClouds(){
   for(let i=0;i<162;i++)rnd();   // (the valley mist banks are gone; keep the random sequence the same for everything placed after)
 }
 function bake(){
-  STATIC.updateMatrixWorld(true);const groups=new Map();
-  STATIC.traverse(o=>{if(!o.isMesh)return;let g=o.geometry.index?o.geometry.toNonIndexed():o.geometry.clone();g.applyMatrix4(o.matrixWorld);
-    for(const k of Object.keys(g.attributes))if(k!=='position'&&k!=='normal')g.deleteAttribute(k);
+  STATIC.updateMatrixWorld(true);const groups=new Map();const keepT=[];
+  const ws=new THREE.Vector3();
+  STATIC.traverse(o=>{if(!o.isMesh)return;if(o.material&&o.material.map){keepT.push(o);return;}let g=o.geometry.index?o.geometry.toNonIndexed():o.geometry.clone();
+    // windows keep their face coordinates, counted in panes, so the glass can be drawn with frames and glazing bars
+    const win=o.material===WINMAT;if(win){o.getWorldScale(ws);if(!g.attributes.uv)g.setAttribute('uv',new THREE.Float32BufferAttribute(new Float32Array(g.attributes.position.count*2),2));
+      const uv=g.attributes.uv,nm=g.attributes.normal;const pn=(a,b,step)=>a<.3?1:Math.max(b,Math.round(a/step));
+      for(let i=0;i<uv.count;i++){const nx=Math.abs(nm.getX(i)),nz=Math.abs(nm.getZ(i));const su=nz>.5?ws.x:nx>.5?ws.z:ws.x,sv=nz>.5||nx>.5?ws.y:ws.z;
+        uv.setXY(i,uv.getX(i)*pn(su,2,.3),uv.getY(i)*pn(sv,1,.45));}}
+    g.applyMatrix4(o.matrixWorld);
+    for(const k of Object.keys(g.attributes))if(k!=='position'&&k!=='normal'&&!(win&&k==='uv'))g.deleteAttribute(k);
     if(!g.attributes.normal)g.computeVertexNormals();
     const key=o.material.uuid;if(!groups.has(key))groups.set(key,{mat:o.material,geos:[]});groups.get(key).geos.push(g);});
+  for(const o of keepT)scene.attach(o);
   scene.remove(STATIC);
   for(const {mat,geos} of groups.values()){const mg=mergeGeometries(geos,false);if(!mg)continue;const m=new THREE.Mesh(mg,mat);m.castShadow=true;m.receiveShadow=true;scene.add(m);}
 }
@@ -3543,7 +3706,9 @@ function makeCar(){
 }
 function makeTrain(){const t2=new THREE.Group();const c1=makeCar(),c2=makeCar();t2.add(c1,c2);scene.add(t2);return {g:t2,cars:[c1,c2],s:0,dir:1,v:0,wait:0};}
 let TRAIN;const RIDE={active:false};const STOPS=[];
-function placeTrain(T){for(let i=0;i<2;i++){const s=clamp(T.s-T.dir*i*4.65-T.dir*2.2,0,RAIL.len);const p=RAIL.at(s);const c=T.cars[i];c.position.set(p.x,railY(s)+.04,p.z);c.rotation.y=Math.atan2(p.tx,p.tz);}}
+function placeTrain(T){for(let i=0;i<2;i++){const s=clamp(T.s-T.dir*i*4.65-T.dir*2.2,0,RAIL.len);const p=RAIL.at(s);const c=T.cars[i];
+  const sa=clamp(s+1.9,0,RAIL.len),sb=clamp(s-1.9,0,RAIL.len);const ya=railY(sa),yb=railY(sb);const A=RAIL.at(sa),B=RAIL.at(sb);const run=Math.hypot(A.x-B.x,A.z-B.z)||1;
+  c.rotation.order='YXZ';c.position.set(p.x,(ya+yb)/2+.04,p.z);c.rotation.set(-Math.atan2(ya-yb,run),Math.atan2(p.tx,p.tz),0);}}
 function trainStep(T,target,dt){const dist=(target-T.s)*T.dir;const acc=3.2,vmax=10;
   T.v=Math.min(vmax,T.v+acc*dt,Math.sqrt(Math.max(0,2*acc*dist))+.25);T.s+=T.dir*T.v*dt;
   if((target-T.s)*T.dir<=0.02){T.s=target;T.v=0;return true;}return false;}
@@ -3650,7 +3815,7 @@ function padSignTexture(){
   x.font='900 46px "Noto Sans TC", sans-serif';x.fillText('小羊專屬',150,74);x.fillText('天燈施放區',150,130);
   x.fillStyle='#2F5F86';x.font='700 31px "Barlow Condensed", sans-serif';x.fillText('SHEEP LANTERN SPOT',152,186);
   x.fillStyle='#FFFFFF';x.font='700 17px "Noto Sans TC", sans-serif';x.fillText('鐵軌外施放・SAFE ZONE OFF THE TRACKS',18,245);
-  const tx=new THREE.CanvasTexture(c);tx.colorSpace=THREE.SRGBColorSpace;tx.anisotropy=4;return tx;
+  const tx=new THREE.CanvasTexture(c);tx.colorSpace=THREE.SRGBColorSpace;tx.anisotropy=ANISO;return tx;
 }
 function padFloorTexture(){
   const c=document.createElement('canvas');c.width=c.height=256;const x=c.getContext('2d');
@@ -3733,7 +3898,7 @@ function wishTexture(text,ci,zid,name=sheepName()){
     if(i===0||i===2)drawPanelText(x,text,px+128,252,188,420,112);
     else if(i===1){drawPanelText(x,name,px+128,206,180,300,96);x.font='600 25px "IBM Plex Mono", monospace';x.textAlign='center';x.fillText(todayStr(),px+128,436);}
     else{drawPanelText(x,zname(zid),px+128,196,180,280,108);x.font='700 36px "Barlow Condensed", sans-serif';x.textAlign='center';x.fillText(ZONES[zid].en.toUpperCase(),px+128,392);x.font='600 21px "IBM Plex Mono", monospace';x.fillText('PINGXI LINE',px+128,436);}}
-  const tx=new THREE.CanvasTexture(c);tx.colorSpace=THREE.SRGBColorSpace;tx.anisotropy=4;return tx;
+  const tx=new THREE.CanvasTexture(c);tx.colorSpace=THREE.SRGBColorSpace;tx.anisotropy=ANISO;return tx;
 }
 const WL_S=1.6;
 function makeWishLantern(text,ci,zid,name){
@@ -4106,11 +4271,11 @@ function declutterLabels(){
   for(let i=0;i<Math.min(8,n);i++){const L=LABELS[(dcIdx++)%n];L.bw=L.el.offsetWidth;L.bh=L.el.offsetHeight;}
   DCR.length=0;DCC.length=0;
   for(const L of LABELS){if(!L._s)continue;if(!L.bw){L.bw=L.el.offsetWidth;L.bh=L.el.offsetHeight;}
-    if(DC_KEEP[L.kind]||(over&&(L.kind==='zone'||L.kind==='space'))){if(L.bw)DCR.push(lblRect(L));L.dc=false;continue;}
+    if(DC_KEEP[L.kind]||(over&&(L.kind==='zone'||L.kind==='space'))||(ALLNAMES&&L.kind==='poi')){if(L.bw)DCR.push(lblRect(L));L.dc=false;continue;}
     const p=DC_PRI[L.kind];if(!p||!L.bw){L.dc=false;continue;}
     L._p=p+(L.near?4:0)+(PIN_OPEN===L?4:0);L._d=L.pos.distanceToSquared(camera.position);DCC.push(L);}
   DCC.sort((a,b)=>b._p-a._p||a._d-b._d);
-  for(const L of DCC){const r=lblRect(L),pd=L.dc?6:-3;let hit=false;
+  for(const L of DCC){const r=lblRect(L),pin=L.anchor==='pin',pd=L.dc?(pin?4:6):(pin?-7:-3);let hit=false;
     for(const q of DCR)if(r[0]-pd<q[2]&&r[2]+pd>q[0]&&r[1]-pd<q[3]&&r[3]+pd>q[1]){hit=true;break;}
     L.dc=hit;if(hit)L._s=false;else DCR.push(r);}
   for(const L of LABELS)if(!L._s&&!DCC.includes(L))L.dc=false;
@@ -4278,27 +4443,51 @@ canvas.addEventListener('pointerup',e=>{const p=PTR.get(e.pointerId);PTR.delete(
 canvas.addEventListener('pointercancel',e=>PTR.delete(e.pointerId));
 canvas.addEventListener('wheel',e=>{e.preventDefault();const lo=RIG.mode==='overview'?80:9,hi=RIG.mode==='overview'?overviewDist()*1.5:80;RIG.dist=clamp(RIG.dist*(1+e.deltaY*.0012),lo,hi);},{passive:false});
 const GTIME={value:0};
-const GRAIN_GLSL=`varying vec3 vGPos;uniform float uGAmt,uGScale,uPAmt,uPScale,uGTime,uGWater,uGRoof;
+const GRAIN_GLSL=`varying vec3 vGPos;varying float vGLy;uniform float uGAmt,uGScale,uPAmt,uPScale,uGTime,uGWater,uGRoof,uGStreak,uGWood,uGSlope,uGAO,uGDetail,uGBrick;uniform vec2 uGLeaf;uniform sampler2D uHT;uniform vec4 uHTB;
 float gH(vec3 p){p=fract(p*.3183099+.1);p*=17.;return fract(p.x*p.y*p.z*(p.x+p.y+p.z));}
 float gN(vec3 x){vec3 i=floor(x),f=fract(x);f=f*f*(3.-2.*f);
- return mix(mix(mix(gH(i),gH(i+vec3(1,0,0)),f.x),mix(gH(i+vec3(0,1,0)),gH(i+vec3(1,1,0)),f.x),f.y),mix(mix(gH(i+vec3(0,0,1)),gH(i+vec3(1,0,1)),f.x),mix(gH(i+vec3(0,1,1)),gH(i+vec3(1,1,1)),f.x),f.y),f.z);}`;
+ return mix(mix(mix(gH(i),gH(i+vec3(1,0,0)),f.x),mix(gH(i+vec3(0,1,0)),gH(i+vec3(1,1,0)),f.x),f.y),mix(mix(gH(i+vec3(0,0,1)),gH(i+vec3(1,0,1)),f.x),mix(gH(i+vec3(0,1,1)),gH(i+vec3(1,1,1)),f.x),f.y),f.z);}
+vec3 gBump(vec3 sp,vec3 sn,float h){vec3 dx=dFdx(sp),dy=dFdy(sp);vec3 r1=cross(dy,sn),r2=cross(sn,dx);float det=dot(dx,r1);vec3 gr=sign(det)*(dFdx(h)*r1+dFdy(h)*r2);return normalize(abs(det)*sn-gr);}`;
 function grain(mat,cfg){
-  mat.onBeforeCompile=sh=>{Object.assign(sh.uniforms,{uGAmt:{value:cfg.a},uGScale:{value:cfg.s},uPAmt:{value:cfg.pa||0},uPScale:{value:cfg.ps||.1},uGTime:GTIME,uGWater:{value:cfg.w?1:0},uGRoof:{value:cfg.r?1:0}});
-    sh.vertexShader=sh.vertexShader.replace('#include <common>','#include <common>\nvarying vec3 vGPos;').replace('#include <project_vertex>',`#include <project_vertex>
+  mat.onBeforeCompile=sh=>{Object.assign(sh.uniforms,{uGAmt:{value:cfg.a},uGScale:{value:cfg.s},uPAmt:{value:cfg.pa||0},uPScale:{value:cfg.ps||.1},uGTime:GTIME,uGWater:{value:cfg.w?1:0},uGRoof:{value:cfg.r?1:0},uGStreak:{value:cfg.st?1:0},uGWood:{value:cfg.wd?1:0},uGSlope:{value:cfg.sl?1:0},uGAO:cfg.ao?GAO:{value:0},uGDetail:{value:cfg.dt?1:0},uGBrick:{value:cfg.bk?1:0},uGLeaf:{value:new THREE.Vector2(...(cfg.lf||[0,0]))},uHT:HTEX,uHTB:HTB});
+    sh.vertexShader=sh.vertexShader.replace('#include <common>','#include <common>\nvarying vec3 vGPos;varying float vGLy;').replace('#include <project_vertex>',`#include <project_vertex>
+      vGLy=position.y;
       #ifdef USE_INSTANCING
         vGPos=(modelMatrix*instanceMatrix*vec4(transformed,1.)).xyz;
       #else
         vGPos=(modelMatrix*vec4(transformed,1.)).xyz;
       #endif`);
     sh.fragmentShader=sh.fragmentShader.replace('#include <common>','#include <common>\n'+GRAIN_GLSL).replace('#include <color_fragment>',`#include <color_fragment>
+      float gDist=length(vGPos-cameraPosition);
       {vec3 gp=vGPos;float n=(gN(gp*uGScale)-.5)*1.3+(gN(gp*uGScale*3.7)-.5)*.7;float pn=gN(gp*uPScale)-.5;
        diffuseColor.rgb*=1.+uGAmt*n+uPAmt*pn*2.;
+       if(uGDetail>.5){float fd=1.-smoothstep(10.,44.,gDist);diffuseColor.rgb*=1.+fd*((gN(gp*9.5)-.5)*.2+(gN(gp*23.)-.5)*.12);}   // grass tufts and grit, close to the camera only
+       if(uGLeaf.y>uGLeaf.x)diffuseColor.rgb*=mix(.76,1.1,smoothstep(uGLeaf.x,uGLeaf.y,vGLy));   // a crown is lit on top and shaded underneath
+       if(uGStreak>.5){float st=gN(vec3(gp.x*7.,gp.y*.5,gp.z*7.))*.7+gN(vec3(gp.x*19.,gp.y*1.3,gp.z*19.))*.3;diffuseColor.rgb*=1.-smoothstep(.45,.85,st)*.2;}   // rain streaks down weathered walls
 
+       if(uGWater>.5){vec2 hu=(vGPos.xz-uHTB.xy)/uHTB.zw;if(hu.x>0.&&hu.x<1.&&hu.y>0.&&hu.y<1.){float dep=vGPos.y-texture2D(uHT,hu).r;
+           diffuseColor.rgb=mix(diffuseColor.rgb,diffuseColor.rgb*vec3(.7,.84,.9),smoothstep(.3,1.4,dep)*.55);   // deeper water reads darker
+           float fo=(1.-smoothstep(.03,.24,dep))*(.5+.5*gN(vec3(gp.x*3.1,uGTime*.6,gp.z*3.1)));diffuseColor.rgb=mix(diffuseColor.rgb,vec3(.93,.96,.95),fo*.5);   // a lace of foam along the shore
+           diffuseColor.a*=smoothstep(-.03,.12,dep);}}   // and the edge fades out instead of cutting a saw-tooth line into the bank
        if(uGWater>.5){float w=gN(vec3(gp.x*1.3+uGTime*.45,uGTime*.3,gp.z*1.3-uGTime*.25));float w2=gN(vec3(gp.x*3.2-uGTime*.35,uGTime*.55,gp.z*3.2));
          diffuseColor.rgb+=vec3(.92,.96,1.)*(smoothstep(.70,.93,w)*.15+smoothstep(.80,.96,w2)*.10);}}`).replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>
+      if(uGDetail>.5){float fd=1.-smoothstep(8.,32.,gDist);if(fd>0.)normal=gBump(-vViewPosition,normal,(gN(vGPos*2.3)*.6+gN(vGPos*6.1)*.4)*.07*fd);}   // the ground is a little lumpy underfoot
+      if(uGWater>.5){float fw=1.-smoothstep(16.,60.,gDist);vec3 P=vGPos*1.8;float t=uGTime;float a=gN(vec3(P.x+t*.55,t*.4,P.z)),bx=gN(vec3(P.x+.3+t*.55,t*.4,P.z)),bz=gN(vec3(P.x+t*.55,t*.4,P.z+.3));
+        float a2=gN(vec3(P.x*2.6-t*.4,t*.6,P.z*2.6+t*.3)),bx2=gN(vec3(P.x*2.6+.3-t*.4,t*.6,P.z*2.6+t*.3)),bz2=gN(vec3(P.x*2.6-t*.4,t*.6,P.z*2.6+.3+t*.3));
+        vec3 wn=normalize(vec3(((a-bx)*.75+(a2-bx2)*.4)*fw,1.,((a-bz)*.75+(a2-bz2)*.4)*fw));normal=normalize((viewMatrix*vec4(wn,0.)).xyz);}   // ripples catch the sun
+      if(uGAO>.5){vec2 hu=(vGPos.xz-uHTB.xy)/uHTB.zw;if(hu.x>0.&&hu.x<1.&&hu.y>0.&&hu.y<1.){float d=vGPos.y-texture2D(uHT,hu).r;vec3 wn=inverseTransformDirection(normal,viewMatrix);
+        diffuseColor.rgb*=mix(1.,mix(.68,1.,smoothstep(-.05,1.1,d)),1.-smoothstep(.5,.85,abs(wn.y)));}}   // walls, posts and trunks darken where they meet the ground
+      if(uGBrick>.5){vec3 wn=inverseTransformDirection(normal,viewMatrix);float fb=1.-smoothstep(9.,26.,gDist);
+        if(abs(wn.y)<.5&&fb>0.){vec2 t=normalize(vec2(-wn.z,wn.x)+1e-5);float v=vGPos.y*14.;float row=floor(v);float u=dot(vGPos.xz,t)*6.5+.5*mod(row,2.);
+          float mort=max(1.-smoothstep(.0,.1,fract(v))*smoothstep(1.,.9,fract(v)),1.-smoothstep(0.,.06,fract(u))*smoothstep(1.,.94,fract(u)));
+          diffuseColor.rgb=mix(diffuseColor.rgb,mix(diffuseColor.rgb*(.88+.24*gH(vec3(floor(u),row,7.))),vec3(.74,.7,.64),mort*.7),fb);}}   // brick courses and mortar, up close
       if(uGRoof>.5){vec3 wn=inverseTransformDirection(normal,viewMatrix);float ny=abs(wn.y);
         if(ny>.25&&ny<.96){vec2 d=normalize(wn.xz+vec2(1e-5));float c=dot(vGPos.xz,d)*6.;float f=fract(c);   // rows of tiles down a pitched roof
-          diffuseColor.rgb*=mix(.72,1.,smoothstep(0.,.24,f))*(.94+.12*gH(vec3(floor(c),floor(dot(vGPos.xz,vec2(-d.y,d.x))*2.5),3.)));}}`);};
+          diffuseColor.rgb*=mix(.72,1.,smoothstep(0.,.24,f))*(.94+.12*gH(vec3(floor(c),floor(dot(vGPos.xz,vec2(-d.y,d.x))*2.5),3.)));}}
+      if(uGWood>.5){vec3 wn=inverseTransformDirection(normal,viewMatrix);vec3 q=abs(wn.y)>.7?vec3(vGPos.x*1.1,vGPos.z*26.,0.):vec3(vGPos.x*1.1+vGPos.z*1.1,vGPos.y*26.,3.);
+        float g=gN(q)*.65+gN(q*vec3(3.,2.3,1.))*.35;diffuseColor.rgb*=.88+.2*g;}   // fine wood grain along the boards
+      if(uGSlope>.5){vec3 wn=inverseTransformDirection(normal,viewMatrix);float k=smoothstep(.3,.62,1.-wn.y+(gN(vGPos*.8)-.5)*.3);
+        diffuseColor.rgb=mix(diffuseColor.rgb,diffuseColor.rgb*vec3(.84,.81,.75)+vec3(.065,.06,.05),k*.6);}   // bare rock shows on the steep faces`);};
   if(mat.userData.sway){const ob=mat.onBeforeCompile;mat.onBeforeCompile=sh=>{ob(sh);
     sh.vertexShader=sh.vertexShader.replace('#include <common>','#include <common>\nuniform float uGTime;').replace('#include <begin_vertex>',`#include <begin_vertex>
       {
@@ -4309,13 +4498,16 @@ function grain(mat,cfg){
       #endif
         float sw=sin(uGTime*1.5+ip.x*.37+ip.z*.29)*.6+sin(uGTime*2.6+ip.x*.13-ip.z*.21)*.4;float hk=max(position.y+.7,0.);
         transformed.x+=sw*.045*hk;transformed.z+=sw*.032*hk;}`);};}
-  mat.customProgramCacheKey=()=>'grain'+(cfg.w?'w':'')+(cfg.r?'r':'')+(mat.userData.sway?'s':'');mat.needsUpdate=true;}
-const GRAIN_CFG={terrain:{a:.07,s:1.8,pa:.11,ps:.06},road:{a:.17,s:6.5,pa:.04,ps:.4},water:{a:.04,s:1.2,w:1},plain:{a:.08,s:3.4,pa:.035,ps:.35},wall:{a:.12,s:2.6,pa:.05,ps:.3},roof:{a:.045,s:3.,pa:.04,ps:.35,r:1}};
+  mat.customProgramCacheKey=()=>'grain2'+(cfg.w?'w':'')+(cfg.r?'r':'')+(cfg.st?'t':'')+(cfg.wd?'d':'')+(cfg.sl?'l':'')+(cfg.ao?'o':'')+(cfg.dt?'e':'')+(cfg.lf?'f':'')+(cfg.bk?'b':'')+(mat.userData.sway?'s':'');mat.needsUpdate=true;}
+const GRAIN_CFG={wood:{a:.06,s:4,pa:.04,ps:.4,wd:1,ao:1},terrain:{a:.07,s:1.8,pa:.11,ps:.06,sl:1,dt:1},road:{a:.17,s:6.5,pa:.04,ps:.4},water:{a:.04,s:1.2,w:1},plain:{a:.08,s:3.4,pa:.035,ps:.35,ao:1},wall:{a:.12,s:2.6,pa:.05,ps:.3,st:1,ao:1},roof:{a:.045,s:3.,pa:.04,ps:.35,r:1},gravel:{a:.3,s:11,pa:.06,ps:.7},brick:{a:.06,s:3,pa:.04,ps:.3,ao:1,bk:1}};
 /* after everything is built: give every plain (untextured) Lambert surface its grain */
 function applyGrain(){const seen=new Set();
   for(const c of ROOFS.concat(['#7A4A3A','#6F7A82','#3B3D40','#7C8994','#6E7378']))if(MATS.has(c))MATS.get(c).userData.grain='roof';
   for(const c of WALLS)if(MATS.has(c))MATS.get(c).userData.grain='wall';
-  scene.traverse(o=>{if(!o.isMesh)return;for(const m of (Array.isArray(o.material)?o.material:[o.material])){if(!m||seen.has(m)||!m.isMeshLambertMaterial||m.map||m.userData.noGrain)continue;seen.add(m);grain(m,GRAIN_CFG[m.userData.grain]||GRAIN_CFG.plain);}});
+  for(const c of ['#A4553D'])if(MATS.has(c))MATS.get(c).userData.grain='brick';
+  for(const c of ['#8A6A50','#6B4E3A','#6E5340','#5A4334','#5A4639','#6B5442','#6E5A4A','#5E4231','#46352A','#5B4636','#93683F','#B98A5A','#8C6A4C','#47301F','#3E2B20','#4E3628','#6E5A4A','#7A5A44'])if(MATS.has(c)&&!MATS.get(c).userData.grain)MATS.get(c).userData.grain='wood';
+  scene.traverse(o=>{if(!o.isMesh)return;for(const m of (Array.isArray(o.material)?o.material:[o.material])){if(!m||seen.has(m)||!(m.isMeshLambertMaterial||(m.isMeshPhongMaterial&&m.userData.grain))||(m.map&&m!==TERMESH.material)||m.userData.noGrain)continue;seen.add(m);
+    const cfg=GRAIN_CFG[m.userData.grain]||GRAIN_CFG.plain;grain(m,m.userData.lf?Object.assign({},cfg,{lf:m.userData.lf}):cfg);}});
   return seen.size;}
 /* tap to walk: A* over a half-unit grid round houses, stalls and steep ground; wading only where there is no bridge */
 function findPath(sx,sz,tx,tz,relax=false,M=9){
@@ -4565,12 +4757,17 @@ function goPOI(p){
   if(coarse)closeSheet();
 }
 const catChip=c=>`<span class="cat"><i style="background:${CAT_COLORS[c]}"></i>${esc(catName(c))}</span>`;
-function mapsUrl(p){const q=p.coord==='zone'?`${ZONES[p.zone].name}車站`:p.coord==='wiki'?`${p.at.geo[0]},${p.at.geo[1]}`:`${p.name} 平溪`;return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;}
+/* Google Maps: each spot checked on Google Maps (name as Google lists it, lat, lng, place id); spots Google does not list open at their position */
+const GMAP={"sf_station": ["十分車站", 25.040984, 121.774972, "0x345d50e7eb444ba9:0x782f40fafb55f0c2"], "sf_street": ["十分老街", 25.042397, 121.776366, "0x345d512fffffffff:0xf6dec4403a7273be"], "sf_lanternshop": ["十分老街", 25.042397, 121.776366, "0x345d512fffffffff:0xf6dec4403a7273be"], "sf_jingan": ["靜安吊橋", 25.041251, 121.776163, "0x345d50e7de6fdce5:0x9fd726de1940258"], "sf_visitor": ["十分遊客中心", 25.047389, 121.782853, "0x345d50dcf59d8e03:0x9998e376049df45a"], "sf_siguang": ["四廣潭吊橋", 25.047433, 121.783301, "0x345d50edc1ffebd7:0x8b7c6216b13fab93"], "sf_guanpu": ["觀瀑吊橋", 25.048711, 121.785404, "0x345d50f27dcaa011:0xc11b1e44ce42b31d"], "sf_parking": ["十分停車場", 25.046822, 121.782406, ""], "sf_eyeglass": ["眼鏡洞瀑布", 25.048874, 121.784984, "0x345d50f27b3adfb1:0x20a81e4de01025e7"], "sf_falls": ["十分瀑布", 25.048961, 121.787451, "0x345d50f2cb669ef1:0xb011f7e3a0982949"], "sf_coalmuseum": ["新平溪煤礦博物園區", 25.052447, 121.773247, "0x345d50fb1e0989b1:0x4b0b4d8d7578d8df"], "sf_wing": ["十分溜哥燒烤雞翅包飯", 25.041282, 121.775348, "0x345d50e89a4a797b:0x6df5875a4c06675d"], "sf_louzaicuo": ["十分樓仔厝咖啡民宿", 25.042129, 121.776589, "0x345d51011db7703b:0x8de55d61392b58e8"], "sf_tofu": ["十分寶桂臭豆腐", 25.042117, 121.776185, "0x345d51356e99b25b:0x4ff195b5b24c48f1"], "sf_bao": ["蒸珍飽", 25.044244, 121.778872, "0x345d51005dffd4cb:0xe6f3d462d8dcd430"], "sf_yuyuan": ["遇見芋圓", 25.044258, 121.778893, "0x345d512c5191fb49:0x4a0bddf5cc0d473d"], "sf_amei": ["阿美的食堂", 25.044051, 121.778706, "0x345d50e7c245ff6f:0xbd5fa4a054292913"], "sf_beef": ["十分河邊牛肉麵店", 25.044999, 121.777429, "0x345d50e8b3641a0f:0x9f2c591bed99aa95"], "sf_peanutice": ["十分幸福花生捲冰淇淋", 25.04204, 121.776081, "0x345d50e7d4e444c9:0x9a12500b8598c72f"], "wg_station": ["望古車站", 25.034559, 121.763776, "0x345d5127bb3e886b:0xc6d9bbdeae5c6b44"], "wg_qinghe": ["慶和吊橋遺跡", 25.034139, 121.762539, "0x345d5127b4641dd1:0xe6376130838f89ee"], "wg_falls": ["望古瀑布", 25.034865, 121.758798, "0x345d56b50cc7a499:0xa58efb5dac696ee1"], "wg_trail": ["嶺腳寮登山步道", 25.031346, 121.74852, "0x345d51314e5bd353:0xff0bcb8193bd9e69"], "lj_tsai": ["蔡家洋樓", 25.030901, 121.748796, "0x345d513158133e11:0x8187930c10c6e2a4"], "px_station": ["平溪車站", null, null, "0x345d56b5177335e1:0x5a53904a0361c9b7"], "px_street": ["平溪老街", 25.025276, 121.738846, "0x345d56b46f4a3d4f:0xab9e344066a75fba"], "px_postbox": ["平溪郵局", 25.025917, 121.738595, "0x345d56b4c272dadb:0x7967a924a6a693ab"], "px_shidi": ["石底橋", 25.024651, 121.738756, "0x345d56b4f8bcc5df:0xbd40842388e336ef"], "px_meiyu": ["美玉天燈製作所", 25.025277, 121.739299, "0x345d56b4fc55f329:0x1d9cf24c1902ee1c"], "px_xiaozi": ["孝子山步道", 25.023004, 121.739445, "0x345d56b433383e65:0xfd78c1ec83116b7d"], "px_school": ["新北市立平溪國民中學", 25.023365, 121.733002, "0x345d512fffffffff:0xb7c1d8d0edae97c4"], "px_sausage": ["鐵道熱腸", 25.025205, 121.738881, "0x345d56b4f9de0edb:0x7a923036b482d8cf"], "px_peanut": ["平溪橋頭花生捲冰淇淋", 25.025255, 121.739052, "0x345d514b57f57f01:0xe8871777ed626458"], "px_miancha": ["平溪古早味麵茶", 25.02579, 121.738678, "0x345d56b4ee9f12dd:0xe68c1ee917ff2908"], "px_taro": ["平溪芋圓地瓜圓", 25.025215, 121.738775, "0x345d56b4f74d095d:0xdf552ad925667ffa"], "px_greece": ["平溪小希臘", 25.02497, 121.740537, "0x345d57b69cc83e1f:0xa54a656cc4807d2e"], "px_mishidi": ["覓石底", 25.024961, 121.737822, "0x345d5700035f34dd:0x1b6229102fecd67c"], "jt_station": ["菁桐車站", 25.023926, 121.723899, "0x345d56a9178f0b5b:0x14fc08ebc6fee72f"], "jt_bamboo": ["菁桐車站", 25.023926, 121.723899, "0x345d56a9178f0b5b:0x14fc08ebc6fee72f"], "jt_museum": ["菁桐礦業生活館", 25.023948, 121.724259, "0x345d56ae7f351499:0x4ca25263edbd159a"], "jt_story": ["菁桐老街", 25.023793, 121.723513, "0x345d56a919926f3b:0xed8d5b4994a7eb4e"], "jt_incline": ["菁桐煤礦紀念公園", 25.024816, 121.724462, "0x345d56aec906e939:0xdab3121a791503a3"], "jt_taizi": ["平溪一見菁桐古美術生活", 25.022427, 121.722403, "0x345d570093baf361:0xc14afcce9fad8314"], "jt_yijian": ["平溪一見菁桐古美術生活", 25.022427, 121.722403, "0x345d570093baf361:0xc14afcce9fad8314"], "jt_police": ["菁桐天燈館", 25.023288, 121.722561, "0x345d56a8ffaea861:0x4aea2d9aa1171223"], "jt_dorms": ["菁桐日式宿舍群", 25.021963, 121.721873, "0x345d56a86534a4d7:0x595ba4d0b17cbaad"], "jt_coalcafe": ["碳場咖啡", 25.024101, 121.723156, "0x345d56a9131a2073:0x1d6e16d941d1ec2c"], "jt_hongbao": ["紅寶礦工食堂", 25.023522, 121.722915, "0x345d56a900e22f07:0xa25a4216dcfbb7fa"], "jt_chickenroll": ["楊家雞捲", 25.023791, 121.724103, "0x345d56a922d15971:0xd9ed021c390ed2cd"], "bus_jt": ["菁桐坑", 25.023771, 121.723656, "0x345d56a91bcc8081:0xf4d12687927458c5"], "bus_px": ["平溪老街", 25.025276, 121.738846, ""], "bus_sfl": ["十分寮", 25.044434, 121.77671, "0x345d50e600445ca1:0xe3b4defdade3827e"], "bus_sfv": ["十分遊客中心", 25.047389, 121.782853, "0x345d50dcf59d8e03:0x9998e376049df45a"]};
+function mapsUrl(p){const g=GMAP[p.key];const ll=g&&g[1]!=null?{lat:g[1],lon:g[2]}:ungeo(p.x,p.z);
+  if(g&&g[3])return `https://www.google.com/maps/place/${encodeURIComponent(g[0])}/@${ll.lat.toFixed(6)},${ll.lon.toFixed(6)},17z/data=!4m2!3m1!1s${g[3]}`;
+  return `https://www.google.com/maps/search/?api=1&query=${ll.lat.toFixed(6)}%2C${ll.lon.toFixed(6)}`;}
 function openPOI(p){
   const z=ZONES[p.zone];
-  let coordLine;
-  if(p.coord==='zone')coordLine=`<p class="note mono">${fmtLL(z.lat,z.lon)}・${esc(t('coord_station'))}</p>`;
-  else if(p.coord==='wiki')coordLine=`<p class="note mono">${fmtLL(p.at.geo[0],p.at.geo[1])}・${esc(t('coord_real'))}</p>`;
+  let coordLine;const gmc=GMAP[p.key];
+  if(gmc&&gmc[1]!=null)coordLine=`<p class="note mono">${fmtLL(gmc[1],gmc[2])}・${esc(t('coord_gmap'))}</p>`;
+  else if(p.coord==='zone')coordLine=`<p class="note mono">${fmtLL(z.lat,z.lon)}・${esc(t('coord_station'))}</p>`;
+  else if(p.coord==='wiki'&&p.at.geo)coordLine=`<p class="note mono">${fmtLL(p.at.geo[0],p.at.geo[1])}・${esc(t('coord_real'))}</p>`;
   else coordLine=`<p class="note">${esc(t('coord_est'))}</p>`;
   const tip=pt(p,'tip');
   const html=`<div class="meta">${catChip(p.cat)}<span class="fact">${esc(stname(p.zone))}</span></div>
@@ -4578,6 +4775,7 @@ function openPOI(p){
   <dl class="kv"><div><dt>${esc(t('k_sig'))}</dt><dd>${esc(pt(p,'sig'))}</dd></div><div><dt>${esc(t('k_why'))}</dt><dd>${esc(pt(p,'why'))}</dd></div>${tip?`<div><dt>${esc(t('k_tip'))}</dt><dd>${esc(tip)}</dd></div>`:''}</dl>
   ${p.buy?buyHTML(p):''}
   ${coordLine}
+  ${p.src?`<p class="note">${esc(t('k_src'))}：${p.src.map(([n,u])=>`<a href="${u}" target="_blank" rel="noopener">${esc(n)}</a>`).join('、')}</p>`:''}
   <div class="row"><button class="btn dark" type="button" data-act="gopoi" data-v="${p.id}">${esc(t('btn_go'))}</button><a class="btn ghost" href="${mapsUrl(p)}" target="_blank" rel="noopener">${esc(t('btn_gmaps'))}</a><button class="btn ghost" type="button" data-act="zone" data-v="${p.zone}">${esc(t('btn_zone',{s:stname(p.zone)}))}</button></div>`;
   openSheet('poi',`SPOT ${String(p.no).padStart(2,'0')} · ${z.en.toUpperCase()}`,pt(p,'name'),html,()=>openPOI(p));
 }
@@ -5081,10 +5279,10 @@ function spClear(){const S=SPACE;const sc=S.scene;for(const L of [S.objs,S.shots
 function openSpace(){
   if(!atPort()){openSpaceInfo();return;}
   if(gameOpen||wlOpen||RIDE.active)return;if(CINE.active)endCine();
-  spInit();closeSheet();KEYS.clear();MOVE_T=null;SPACE.open=true;$('space').hidden=false;spResize();MU.duck=.7;muSwitch(SONG_BATTLE);muLevel();
+  spInit();closeSheet();KEYS.clear();MOVE_T=null;SPACE.open=true;GAO.value=0;$('space').hidden=false;spResize();MU.duck=.7;muSwitch(SONG_BATTLE);muLevel();
   spClear();SPACE.state='intro';spResetShip();spSky(0,true);spPlanetsFor(0,true);SPACE.cam.position.set(0,1.4,5.6);SPACE.cam.lookAt(0,0,0);spIntro();
 }
-function closeSpace(){if(!SPACE.open)return;SPACE.open=false;SPACE.state='off';$('space').hidden=true;spClear();MU.duck=1;muSwitch(SONG);muLevel();promptKey='';canvas.focus({preventScroll:true});}
+function closeSpace(){if(!SPACE.open)return;SPACE.open=false;GAO.value=1;SPACE.state='off';$('space').hidden=true;spClear();MU.duck=1;muSwitch(SONG);muLevel();promptKey='';canvas.focus({preventScroll:true});}
 function spResetShip(){const sh=SPACE.ship;sh.position.set(0,0,0);sh.rotation.set(0,0,0);sh.scale.setScalar(1);sh.visible=true;SPACE.tx=SPACE.ty=0;SPACE.vx=SPACE.vy=0;}
 function spScreen(html){const sc=$('spScreen');sc.innerHTML=html;sc.hidden=false;}
 function spIntro(){
@@ -6124,17 +6322,22 @@ function mpApply(rp,pr){
   if(isFinite(r))rp.tyaw=r;
   rp.hidden=!!pr.h||rp.tx==null;
   const L=pr.l;
-  if(L&&typeof L==='object'&&typeof L.id==='string'&&L.id.length<=24&&L.id!==rp.lan){const first=rp.lan==null;rp.lan=L.id;const age=Date.now()-(+L.at||0);if(!first||Math.abs(age)<45000)mpLantern(rp,L);}
+  if(L&&typeof L==='object'&&typeof L.id==='string'&&L.id.length<=24&&L.id!==rp.lan){const first=rp.lan==null;rp.lan=L.id;const age=Date.now()-(+L.at||0);const now=performance.now();
+    // flood guard: one lantern per player every few seconds (a release takes longer than that anyway)
+    if((!first||Math.abs(age)<45000)&&now-(rp.lanT??-1e9)>=MP_LAN_GAP){rp.lanT=now;mpLantern(rp,L);}}
   const RA=pr.ra;rp.ra=null;
   if(RA&&typeof RA==='object'&&typeof RA.i==='string'&&RA.i.length>0&&RA.i.length<=16&&['l','c','r','d'].includes(RA.p))rp.ra={i:RA.i,h:RA.h===1,p:RA.p,rd:RA.rd===1,c:clamp(Math.floor(+RA.c)||0,0,5),d:clamp(+RA.d||0,0,999),f:clamp(Math.floor(+RA.f)||0,0,3600000)};
   const E=Number.isInteger(pr.e)?pr.e:0;if(rp.em==null)rp.em=E;else if(E!==rp.em){rp.em=E;rp.hop=1;rp.bubT=2.2;mpSetLabel(rp,`${rp.name}：${t('baa1')}`);}
 }
+const MP_LAN_GAP=5000,MP_LAN_MAX=12;
 function mpLantern(rp,L){
+  // at most a dozen of other players' wish lanterns in the sky at once: the oldest makes room
+  const mine=LANTERNS.filter(q=>q.remote);if(mine.length>=MP_LAN_MAX){const o=mine[0];const i=LANTERNS.indexOf(o);scene.remove(o.g);if(o.label)removeLabel(o.label);if(o.wish)disposeWish(o.wish);LANTERNS.splice(i,1);}
   const zid=own(LSPOTS,L.z)?L.z:null;if(!zid)return;
   const ci=Number.isInteger(L.c)&&L.c>=0&&L.c<LANTERN_COLORS.length?L.c:0;const text=cleanText(L.t,20)||colorWish(ci);
   const P=LSPOTS[zid];const W=makeWishLantern(text,ci,zid,rp.name);const a=GR()*6.28;
   W.g.position.set(P.x+Math.cos(a)*.9,P.y+.6,P.z+Math.sin(a)*.9);W.g.scale.setScalar(WL_S);W.fl.scale.setScalar(1);W.gl.material.opacity=.38+.55*TIMEV.night;scene.add(W.g);
-  const Lz={g:W.g,vy:.9,boost:1.4,ph:GR()*6,life:0,label:null,norot:0,drift:.45,wish:W,labelOff:.5,trail:LANTERN_COLORS[ci].c,burstAt:3.6,sway:1};LANTERNS.push(Lz);
+  const Lz={g:W.g,vy:.9,boost:1.4,ph:GR()*6,life:0,label:null,norot:0,drift:.45,wish:W,labelOff:.5,trail:LANTERN_COLORS[ci].c,burstAt:3.6,sway:1,remote:true};LANTERNS.push(Lz);
   Lz.label=addLabel({html:'',cls:'lbl-wish',pos:W.g.position.clone(),kind:'wish'});Lz.label.el.textContent=t('lt_wishlabel',{n:rp.name,w:text});
   toast(t('mp_lantern',{n:rp.name,s:zname(zid)}),2600);muChime();
 }
